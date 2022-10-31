@@ -31,18 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sistemasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.buscarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultaDeUnClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informacionCreadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.todosLosClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesDeudoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesPorBarrioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.StatusConexion = new System.Windows.Forms.StatusStrip();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +52,7 @@
             this.listadoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(546, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(422, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -66,40 +64,6 @@
             this.sistemasToolStripMenuItem.Name = "sistemasToolStripMenuItem";
             this.sistemasToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.sistemasToolStripMenuItem.Text = "Sistemas";
-            // 
-            // clientesToolStripMenuItem
-            // 
-            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarClienteToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.buscarClienteToolStripMenuItem,
-            this.consultaDeUnClienteToolStripMenuItem});
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.clientesToolStripMenuItem.Text = "Clientes";
-            // 
-            // agregarClienteToolStripMenuItem
-            // 
-            this.agregarClienteToolStripMenuItem.Name = "agregarClienteToolStripMenuItem";
-            this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.agregarClienteToolStripMenuItem.Text = "Agregar Cliente";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(191, 6);
-            // 
-            // buscarClienteToolStripMenuItem
-            // 
-            this.buscarClienteToolStripMenuItem.Name = "buscarClienteToolStripMenuItem";
-            this.buscarClienteToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.buscarClienteToolStripMenuItem.Text = "Buscar Cliente";
-            // 
-            // consultaDeUnClienteToolStripMenuItem
-            // 
-            this.consultaDeUnClienteToolStripMenuItem.Name = "consultaDeUnClienteToolStripMenuItem";
-            this.consultaDeUnClienteToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.consultaDeUnClienteToolStripMenuItem.Text = "Consulta de un Cliente";
             // 
             // informacionCreadorToolStripMenuItem
             // 
@@ -113,13 +77,26 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
-            // statusStrip1
+            // clientesToolStripMenuItem
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 328);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(546, 22);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
+            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarClienteToolStripMenuItem,
+            this.buscarClienteToolStripMenuItem});
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.clientesToolStripMenuItem.Text = "Clientes";
+            // 
+            // agregarClienteToolStripMenuItem
+            // 
+            this.agregarClienteToolStripMenuItem.Name = "agregarClienteToolStripMenuItem";
+            this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarClienteToolStripMenuItem.Text = "Agregar Cliente";
+            // 
+            // buscarClienteToolStripMenuItem
+            // 
+            this.buscarClienteToolStripMenuItem.Name = "buscarClienteToolStripMenuItem";
+            this.buscarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarClienteToolStripMenuItem.Text = "Buscar Cliente";
             // 
             // listadoToolStripMenuItem
             // 
@@ -149,12 +126,20 @@
             this.clientesPorBarrioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientesPorBarrioToolStripMenuItem.Text = "Clientes por Barrio";
             // 
+            // StatusConexion
+            // 
+            this.StatusConexion.Location = new System.Drawing.Point(0, 301);
+            this.StatusConexion.Name = "StatusConexion";
+            this.StatusConexion.Size = new System.Drawing.Size(422, 22);
+            this.StatusConexion.TabIndex = 1;
+            this.StatusConexion.Text = "statusStrip1";
+            // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(546, 350);
-            this.Controls.Add(this.statusStrip1);
+            this.ClientSize = new System.Drawing.Size(422, 323);
+            this.Controls.Add(this.StatusConexion);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -174,12 +159,10 @@
         private System.Windows.Forms.ToolStripMenuItem sistemasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarClienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem buscarClienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultaDeUnClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem informacionCreadorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.StatusStrip StatusConexion;
         private System.Windows.Forms.ToolStripMenuItem listadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem todosLosClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesDeudoresToolStripMenuItem1;

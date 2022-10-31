@@ -39,7 +39,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmClientesDeudores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmClientesDeudores";
+            this.Text = "Clientes Deudores";
             this.ResumeLayout(false);
 
         }

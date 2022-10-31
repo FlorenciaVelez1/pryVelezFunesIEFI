@@ -38,7 +38,7 @@
             this.ClientSize = new System.Drawing.Size(519, 356);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBuscarCliente";
-            this.Text = "frmBuscarCliente";
+            this.Text = "Buscar Cliente";
             this.ResumeLayout(false);
 
         }

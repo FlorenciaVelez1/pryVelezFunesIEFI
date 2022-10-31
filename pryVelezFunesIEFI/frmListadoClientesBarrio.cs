@@ -16,5 +16,9 @@ namespace pryVelezFunesIEFI
         {
             InitializeComponent();
         }
+        private void cmdSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();   
+        }
     }
 }

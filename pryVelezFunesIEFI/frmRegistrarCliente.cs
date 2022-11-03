@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pryVelezFunesIEFI
 {
-    public partial class frmClientesDeudores : Form
+    public partial class frmRegistrarCliente : Form
     {
-        public frmClientesDeudores()
+        public frmRegistrarCliente()
         {
             InitializeComponent();
         }

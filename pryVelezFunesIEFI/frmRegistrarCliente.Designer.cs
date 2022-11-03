@@ -1,6 +1,6 @@
 ﻿namespace pryVelezFunesIEFI
 {
-    partial class frmClientesDeudores
+    partial class frmRegistrarCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmClientesDeudores));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistrarCliente));
             this.SuspendLayout();
             // 
-            // frmClientesDeudores
+            // frmAgregarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 350);
+            this.ClientSize = new System.Drawing.Size(519, 379);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmClientesDeudores";
+            this.Name = "frmAgregarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Clientes Deudores";
+            this.Text = "Agregar Cliente";
             this.ResumeLayout(false);
 
         }

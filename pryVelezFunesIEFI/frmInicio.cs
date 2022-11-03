@@ -16,10 +16,30 @@ namespace pryVelezFunesIEFI
         {
             InitializeComponent();
         }
-
-        private void listadoDeTodosLosCliejtesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void registrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmRegistrarCliente Registrar = new frmRegistrarCliente();
+            Registrar.ShowDialog();
+        }
+        private void buscarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBuscarCliente BuscarCliente = new frmBuscarCliente();
+            BuscarCliente.ShowDialog(); 
+        }
+        private void todosLosClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListadoClientes ListadoClientes = new frmListadoClientes();
+            ListadoClientes.ShowDialog();
+        }
+        private void clientesDeudoresToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmListadoDeudores ListadosDeudores = new frmListadoDeudores();
+            ListadosDeudores.ShowDialog();
+        }
+        private void clientesPorBarrioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListadoClientesBarrio ListadoBarrio = new frmListadoClientesBarrio();
+            ListadoBarrio.ShowDialog();
         }
     }
 }

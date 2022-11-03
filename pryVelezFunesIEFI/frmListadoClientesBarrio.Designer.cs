@@ -29,62 +29,85 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListadoClientesBarrio));
+            this.GrillaBarrio = new System.Windows.Forms.DataGridView();
             this.cmdSalir = new System.Windows.Forms.Button();
-            this.cmdListar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.cmdConsultar = new System.Windows.Forms.Button();
+            this.lstBarrio = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.GrillaBarrio)).BeginInit();
             this.SuspendLayout();
+            // 
+            // GrillaBarrio
+            // 
+            this.GrillaBarrio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GrillaBarrio.Location = new System.Drawing.Point(12, 53);
+            this.GrillaBarrio.Name = "GrillaBarrio";
+            this.GrillaBarrio.Size = new System.Drawing.Size(446, 249);
+            this.GrillaBarrio.TabIndex = 3;
             // 
             // cmdSalir
             // 
             this.cmdSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdSalir.Location = new System.Drawing.Point(12, 267);
+            this.cmdSalir.Location = new System.Drawing.Point(278, 308);
             this.cmdSalir.Name = "cmdSalir";
-            this.cmdSalir.Size = new System.Drawing.Size(75, 23);
+            this.cmdSalir.Size = new System.Drawing.Size(86, 27);
             this.cmdSalir.TabIndex = 5;
             this.cmdSalir.Text = "Salir";
             this.cmdSalir.UseVisualStyleBackColor = true;
-            this.cmdSalir.Click += new System.EventHandler(this.cmdSalir_Click);
             // 
-            // cmdListar
+            // cmdConsultar
             // 
-            this.cmdListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdListar.Location = new System.Drawing.Point(384, 268);
-            this.cmdListar.Name = "cmdListar";
-            this.cmdListar.Size = new System.Drawing.Size(74, 23);
-            this.cmdListar.TabIndex = 4;
-            this.cmdListar.Text = "Listar";
-            this.cmdListar.UseVisualStyleBackColor = true;
+            this.cmdConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdConsultar.Location = new System.Drawing.Point(370, 308);
+            this.cmdConsultar.Name = "cmdConsultar";
+            this.cmdConsultar.Size = new System.Drawing.Size(86, 27);
+            this.cmdConsultar.TabIndex = 4;
+            this.cmdConsultar.Text = "Consultar";
+            this.cmdConsultar.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // lstBarrio
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(446, 249);
-            this.dataGridView1.TabIndex = 3;
+            this.lstBarrio.FormattingEnabled = true;
+            this.lstBarrio.Location = new System.Drawing.Point(74, 19);
+            this.lstBarrio.Name = "lstBarrio";
+            this.lstBarrio.Size = new System.Drawing.Size(121, 21);
+            this.lstBarrio.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 16);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Barrio";
             // 
             // frmListadoClientesBarrio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 299);
+            this.ClientSize = new System.Drawing.Size(470, 347);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lstBarrio);
             this.Controls.Add(this.cmdSalir);
-            this.Controls.Add(this.cmdListar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.cmdConsultar);
+            this.Controls.Add(this.GrillaBarrio);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListadoClientesBarrio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Listado ClientesBarrio";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "Listado Clientes por Barrio";
+            ((System.ComponentModel.ISupportInitialize)(this.GrillaBarrio)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.DataGridView GrillaBarrio;
         private System.Windows.Forms.Button cmdSalir;
-        private System.Windows.Forms.Button cmdListar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button cmdConsultar;
+        private System.Windows.Forms.ComboBox lstBarrio;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -16,5 +16,10 @@ namespace pryVelezFunesIEFI
         {
             InitializeComponent();
         }
+
+        private void frmListadoDeudores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

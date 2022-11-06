@@ -41,5 +41,10 @@ namespace pryVelezFunesIEFI
             frmListadoClientesBarrio ListadoBarrio = new frmListadoClientesBarrio();
             ListadoBarrio.ShowDialog();
         }
+        private void informacionCreadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmInformacionCreador InfoCreador = new frmInformacionCreador();
+            InfoCreador.ShowDialog();
+        }
     }
 }

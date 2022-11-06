@@ -16,5 +16,9 @@ namespace pryVelezFunesIEFI
         {
             InitializeComponent();
         }
+        private void mrcInformacion_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

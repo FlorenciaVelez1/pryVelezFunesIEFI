@@ -10,15 +10,11 @@ using System.Windows.Forms;
 
 namespace pryVelezFunesIEFI
 {
-    public partial class frmListadoClientesBarrio : Form
+    public partial class frmAgregarBarrio : Form
     {
-        public frmListadoClientesBarrio()
+        public frmAgregarBarrio()
         {
             InitializeComponent();
-        }
-        private void cmdSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();   
         }
     }
 }

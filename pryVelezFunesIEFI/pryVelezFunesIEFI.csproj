@@ -46,7 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsSocio.cs" />
+    <Compile Include="clsActividad.cs" />
+    <Compile Include="clsBarrio.cs" />
+    <Compile Include="clsGimnasio.cs" />
+    <Compile Include="frmAgregarBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarBarrio.Designer.cs">
+      <DependentUpon>frmAgregarBarrio.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistrarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,20 +85,18 @@
     <Compile Include="frmListadoClientes.Designer.cs">
       <DependentUpon>frmListadoClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListadoClientesBarrio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmListadoClientesBarrio.Designer.cs">
-      <DependentUpon>frmListadoClientesBarrio.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmListadoDeudores.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmListadoDeudores.Designer.cs">
       <DependentUpon>frmListadoDeudores.cs</DependentUpon>
     </Compile>
+    <Compile Include="clsInscripcion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAgregarBarrio.resx">
+      <DependentUpon>frmAgregarBarrio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarCliente.resx">
       <DependentUpon>frmRegistrarCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,9 +111,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmListadoClientes.resx">
       <DependentUpon>frmListadoClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmListadoClientesBarrio.resx">
-      <DependentUpon>frmListadoClientesBarrio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListadoDeudores.resx">
       <DependentUpon>frmListadoDeudores.cs</DependentUpon>

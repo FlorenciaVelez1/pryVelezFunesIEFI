@@ -29,129 +29,111 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.sistemasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.informacionCreadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.todosLosClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesDeudoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesPorBarrioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.StatusConexion = new System.Windows.Forms.StatusStrip();
+            this.msMenu = new System.Windows.Forms.MenuStrip();
+            this.tmsSistemas = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmInformacion = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmSalir = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmCliente = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmRegistrarCliente = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmBuscarCliente = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmListado = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmClientes = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmClientesDeudores = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.menuStrip1.SuspendLayout();
+            this.msMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // msMenu
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sistemasToolStripMenuItem,
-            this.clientesToolStripMenuItem,
-            this.listadoToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(796, 28);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.msMenu.BackColor = System.Drawing.SystemColors.Control;
+            this.msMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.msMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tmsSistemas,
+            this.tsmCliente,
+            this.tsmListado});
+            this.msMenu.Location = new System.Drawing.Point(0, 0);
+            this.msMenu.Name = "msMenu";
+            this.msMenu.Size = new System.Drawing.Size(799, 30);
+            this.msMenu.TabIndex = 0;
+            this.msMenu.Text = "menuStrip1";
             // 
-            // sistemasToolStripMenuItem
+            // tmsSistemas
             // 
-            this.sistemasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.informacionCreadorToolStripMenuItem,
-            this.salirToolStripMenuItem});
-            this.sistemasToolStripMenuItem.Name = "sistemasToolStripMenuItem";
-            this.sistemasToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
-            this.sistemasToolStripMenuItem.Text = "Sistemas";
+            this.tmsSistemas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmInformacion,
+            this.tsmSalir});
+            this.tmsSistemas.Name = "tmsSistemas";
+            this.tmsSistemas.Size = new System.Drawing.Size(81, 26);
+            this.tmsSistemas.Text = "Sistemas";
             // 
-            // informacionCreadorToolStripMenuItem
+            // tsmInformacion
             // 
-            this.informacionCreadorToolStripMenuItem.Name = "informacionCreadorToolStripMenuItem";
-            this.informacionCreadorToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
-            this.informacionCreadorToolStripMenuItem.Text = "Información Creador";
-            this.informacionCreadorToolStripMenuItem.Click += new System.EventHandler(this.informacionCreadorToolStripMenuItem_Click);
+            this.tsmInformacion.Name = "tsmInformacion";
+            this.tsmInformacion.Size = new System.Drawing.Size(229, 26);
+            this.tsmInformacion.Text = "Información Creador";
+            this.tsmInformacion.Click += new System.EventHandler(this.tsmInformacion_Click);
             // 
-            // salirToolStripMenuItem
+            // tsmSalir
             // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
-            this.salirToolStripMenuItem.Text = "Salir";
+            this.tsmSalir.Name = "tsmSalir";
+            this.tsmSalir.Size = new System.Drawing.Size(229, 26);
+            this.tsmSalir.Text = "Salir";
+            this.tsmSalir.Click += new System.EventHandler(this.tsmSalir_Click);
             // 
-            // clientesToolStripMenuItem
+            // tsmCliente
             // 
-            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarClienteToolStripMenuItem,
-            this.buscarClienteToolStripMenuItem});
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
-            this.clientesToolStripMenuItem.Text = "Clientes";
+            this.tsmCliente.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmRegistrarCliente,
+            this.tsmBuscarCliente});
+            this.tsmCliente.Name = "tsmCliente";
+            this.tsmCliente.Size = new System.Drawing.Size(75, 26);
+            this.tsmCliente.Text = "Clientes";
             // 
-            // registrarClienteToolStripMenuItem
+            // tsmRegistrarCliente
             // 
-            this.registrarClienteToolStripMenuItem.Name = "registrarClienteToolStripMenuItem";
-            this.registrarClienteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.registrarClienteToolStripMenuItem.Text = "Registrar Cliente";
-            this.registrarClienteToolStripMenuItem.Click += new System.EventHandler(this.registrarClienteToolStripMenuItem_Click);
+            this.tsmRegistrarCliente.Name = "tsmRegistrarCliente";
+            this.tsmRegistrarCliente.Size = new System.Drawing.Size(201, 26);
+            this.tsmRegistrarCliente.Text = "Registrar Cliente";
+            this.tsmRegistrarCliente.Click += new System.EventHandler(this.tsmRegistrarCliente_Click);
             // 
-            // buscarClienteToolStripMenuItem
+            // tsmBuscarCliente
             // 
-            this.buscarClienteToolStripMenuItem.Name = "buscarClienteToolStripMenuItem";
-            this.buscarClienteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.buscarClienteToolStripMenuItem.Text = "Buscar Cliente";
-            this.buscarClienteToolStripMenuItem.Click += new System.EventHandler(this.buscarClienteToolStripMenuItem_Click);
+            this.tsmBuscarCliente.Name = "tsmBuscarCliente";
+            this.tsmBuscarCliente.Size = new System.Drawing.Size(201, 26);
+            this.tsmBuscarCliente.Text = "Buscar Cliente";
+            this.tsmBuscarCliente.Click += new System.EventHandler(this.tsmBuscarCliente_Click);
             // 
-            // listadoToolStripMenuItem
+            // tsmListado
             // 
-            this.listadoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.todosLosClientesToolStripMenuItem,
-            this.clientesDeudoresToolStripMenuItem1,
-            this.clientesPorBarrioToolStripMenuItem});
-            this.listadoToolStripMenuItem.Name = "listadoToolStripMenuItem";
-            this.listadoToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
-            this.listadoToolStripMenuItem.Text = "Listado";
+            this.tsmListado.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmClientes,
+            this.tsmClientesDeudores});
+            this.tsmListado.Name = "tsmListado";
+            this.tsmListado.Size = new System.Drawing.Size(71, 26);
+            this.tsmListado.Text = "Listado";
             // 
-            // todosLosClientesToolStripMenuItem
+            // tsmClientes
             // 
-            this.todosLosClientesToolStripMenuItem.Name = "todosLosClientesToolStripMenuItem";
-            this.todosLosClientesToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
-            this.todosLosClientesToolStripMenuItem.Text = "Todos los Clientes";
-            this.todosLosClientesToolStripMenuItem.Click += new System.EventHandler(this.todosLosClientesToolStripMenuItem_Click);
+            this.tsmClientes.Name = "tsmClientes";
+            this.tsmClientes.Size = new System.Drawing.Size(212, 26);
+            this.tsmClientes.Text = "Clientes";
+            this.tsmClientes.Click += new System.EventHandler(this.tsmClientes_Click);
             // 
-            // clientesDeudoresToolStripMenuItem1
+            // tsmClientesDeudores
             // 
-            this.clientesDeudoresToolStripMenuItem1.Name = "clientesDeudoresToolStripMenuItem1";
-            this.clientesDeudoresToolStripMenuItem1.Size = new System.Drawing.Size(215, 26);
-            this.clientesDeudoresToolStripMenuItem1.Text = "Clientes Deudores";
-            this.clientesDeudoresToolStripMenuItem1.Click += new System.EventHandler(this.clientesDeudoresToolStripMenuItem1_Click);
-            // 
-            // clientesPorBarrioToolStripMenuItem
-            // 
-            this.clientesPorBarrioToolStripMenuItem.Name = "clientesPorBarrioToolStripMenuItem";
-            this.clientesPorBarrioToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
-            this.clientesPorBarrioToolStripMenuItem.Text = "Clientes por Barrio";
-            this.clientesPorBarrioToolStripMenuItem.Click += new System.EventHandler(this.clientesPorBarrioToolStripMenuItem_Click);
-            // 
-            // StatusConexion
-            // 
-            this.StatusConexion.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.StatusConexion.Location = new System.Drawing.Point(0, 571);
-            this.StatusConexion.Name = "StatusConexion";
-            this.StatusConexion.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.StatusConexion.Size = new System.Drawing.Size(796, 22);
-            this.StatusConexion.TabIndex = 1;
-            this.StatusConexion.Text = "statusStrip1";
+            this.tsmClientesDeudores.Name = "tsmClientesDeudores";
+            this.tsmClientesDeudores.Size = new System.Drawing.Size(212, 26);
+            this.tsmClientesDeudores.Text = "Clientes Deudores";
+            this.tsmClientesDeudores.Click += new System.EventHandler(this.tsmClientesDeudores_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::pryVelezFunesIEFI.Properties.Resources.Logo_2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 30);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(796, 543);
+            this.pictureBox1.Size = new System.Drawing.Size(799, 597);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -160,18 +142,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(796, 593);
+            this.ClientSize = new System.Drawing.Size(799, 627);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.StatusConexion);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.msMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.msMenu;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pagina Principal";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.msMenu.ResumeLayout(false);
+            this.msMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -180,18 +161,16 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem sistemasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registrarClienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem buscarClienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem informacionCreadorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.StatusStrip StatusConexion;
-        private System.Windows.Forms.ToolStripMenuItem listadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem todosLosClientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientesDeudoresToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem clientesPorBarrioToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip msMenu;
+        private System.Windows.Forms.ToolStripMenuItem tmsSistemas;
+        private System.Windows.Forms.ToolStripMenuItem tsmCliente;
+        private System.Windows.Forms.ToolStripMenuItem tsmRegistrarCliente;
+        private System.Windows.Forms.ToolStripMenuItem tsmBuscarCliente;
+        private System.Windows.Forms.ToolStripMenuItem tsmInformacion;
+        private System.Windows.Forms.ToolStripMenuItem tsmSalir;
+        private System.Windows.Forms.ToolStripMenuItem tsmListado;
+        private System.Windows.Forms.ToolStripMenuItem tsmClientes;
+        private System.Windows.Forms.ToolStripMenuItem tsmClientesDeudores;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -50,6 +50,30 @@ namespace pryVelezFunesIEFI
             lstBarrio.ValueMember = "Codigo";
             Conexion.Close();
         }
-    
+        public void Buscar(Int32 BarrioNombre)
+        {
+            //Creo variable bandera para verificar que no exista el barrio
+            Boolean VarBandera = false;
+            Conexion.ConnectionString = Ruta;
+            Conexion.Open();
+            Comando.Connection = Conexion;
+            Comando.CommandType = CommandType.TableDirect;
+            Comando.CommandText = Tabla;
+            //Recibe el contenido de la tabla
+            OleDbDataReader Lector = Comando.ExecuteReader();
+            //Si hay filas que leer entra en el "si"
+            if (Lector.HasRows)
+            {
+                while (Lector.Read())
+                {
+                    if (Lector.GetInt32(1) == BarrioNombre)
+                    {
+                            MessageBox.Show("El barrio ya existe en el sistema.");
+
+                    }
+                }
+            }
+            Conexion.Close();
+        }
     }
 }

@@ -54,7 +54,8 @@
             this.tsmListado});
             this.msMenu.Location = new System.Drawing.Point(0, 0);
             this.msMenu.Name = "msMenu";
-            this.msMenu.Size = new System.Drawing.Size(799, 30);
+            this.msMenu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.msMenu.Size = new System.Drawing.Size(793, 24);
             this.msMenu.TabIndex = 0;
             this.msMenu.Text = "menuStrip1";
             // 
@@ -64,20 +65,20 @@
             this.tsmInformacion,
             this.tsmSalir});
             this.tmsSistemas.Name = "tmsSistemas";
-            this.tmsSistemas.Size = new System.Drawing.Size(81, 26);
+            this.tmsSistemas.Size = new System.Drawing.Size(65, 20);
             this.tmsSistemas.Text = "Sistemas";
             // 
             // tsmInformacion
             // 
             this.tsmInformacion.Name = "tsmInformacion";
-            this.tsmInformacion.Size = new System.Drawing.Size(229, 26);
+            this.tsmInformacion.Size = new System.Drawing.Size(184, 22);
             this.tsmInformacion.Text = "Información Creador";
             this.tsmInformacion.Click += new System.EventHandler(this.tsmInformacion_Click);
             // 
             // tsmSalir
             // 
             this.tsmSalir.Name = "tsmSalir";
-            this.tsmSalir.Size = new System.Drawing.Size(229, 26);
+            this.tsmSalir.Size = new System.Drawing.Size(184, 22);
             this.tsmSalir.Text = "Salir";
             this.tsmSalir.Click += new System.EventHandler(this.tsmSalir_Click);
             // 
@@ -87,20 +88,20 @@
             this.tsmRegistrarCliente,
             this.tsmBuscarCliente});
             this.tsmCliente.Name = "tsmCliente";
-            this.tsmCliente.Size = new System.Drawing.Size(75, 26);
+            this.tsmCliente.Size = new System.Drawing.Size(61, 20);
             this.tsmCliente.Text = "Clientes";
             // 
             // tsmRegistrarCliente
             // 
             this.tsmRegistrarCliente.Name = "tsmRegistrarCliente";
-            this.tsmRegistrarCliente.Size = new System.Drawing.Size(201, 26);
+            this.tsmRegistrarCliente.Size = new System.Drawing.Size(180, 22);
             this.tsmRegistrarCliente.Text = "Registrar Cliente";
             this.tsmRegistrarCliente.Click += new System.EventHandler(this.tsmRegistrarCliente_Click);
             // 
             // tsmBuscarCliente
             // 
             this.tsmBuscarCliente.Name = "tsmBuscarCliente";
-            this.tsmBuscarCliente.Size = new System.Drawing.Size(201, 26);
+            this.tsmBuscarCliente.Size = new System.Drawing.Size(180, 22);
             this.tsmBuscarCliente.Text = "Buscar Cliente";
             this.tsmBuscarCliente.Click += new System.EventHandler(this.tsmBuscarCliente_Click);
             // 
@@ -110,20 +111,20 @@
             this.tsmClientes,
             this.tsmClientesDeudores});
             this.tsmListado.Name = "tsmListado";
-            this.tsmListado.Size = new System.Drawing.Size(71, 26);
+            this.tsmListado.Size = new System.Drawing.Size(57, 20);
             this.tsmListado.Text = "Listado";
             // 
             // tsmClientes
             // 
             this.tsmClientes.Name = "tsmClientes";
-            this.tsmClientes.Size = new System.Drawing.Size(212, 26);
+            this.tsmClientes.Size = new System.Drawing.Size(169, 22);
             this.tsmClientes.Text = "Clientes";
             this.tsmClientes.Click += new System.EventHandler(this.tsmClientes_Click);
             // 
             // tsmClientesDeudores
             // 
             this.tsmClientesDeudores.Name = "tsmClientesDeudores";
-            this.tsmClientesDeudores.Size = new System.Drawing.Size(212, 26);
+            this.tsmClientesDeudores.Size = new System.Drawing.Size(169, 22);
             this.tsmClientesDeudores.Text = "Clientes Deudores";
             this.tsmClientesDeudores.Click += new System.EventHandler(this.tsmClientesDeudores_Click);
             // 
@@ -131,23 +132,23 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::pryVelezFunesIEFI.Properties.Resources.Logo_2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 24);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(799, 597);
+            this.pictureBox1.Size = new System.Drawing.Size(793, 485);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // frmInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 627);
+            this.ClientSize = new System.Drawing.Size(793, 509);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.msMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pagina Principal";

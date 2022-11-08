@@ -45,6 +45,8 @@ namespace pryVelezFunesIEFI
             CompletarLstAct.LlenarLst(lstActividad);
             //Cancelo el cmdRegistrar
             cmdRegistrar.Enabled = false;
+            lstActividad.SelectedIndex = -1;
+            lstBarrio.SelectedIndex = -1;
             try
             {
                 OleDbConnection Conexion = new OleDbConnection();
@@ -56,13 +58,13 @@ namespace pryVelezFunesIEFI
             }
             catch (Exception)
             {
-                MessageBox.Show("No se ha podido conectar a la base de datos");
+                MessageBox.Show("No se ha podido conectar a la base de datos.");
             }
-            cmdRegistrar.Enabled = false;
         }
         private void cmdRegistrar_Click(object sender, EventArgs e)
         {
             clsGimnasio RegistroCliente = new clsGimnasio();
+            RegistroCliente.SocioID = Convert.ToInt32(mskIDSocio.Text);
             RegistroCliente.Nom_Apellido = txtNombreApellido.Text;
             RegistroCliente.DireccionSocio = txtDireccion.Text;
             RegistroCliente.TelefonoSocio = Convert.ToInt32(mskTelefono.Text);
@@ -71,11 +73,13 @@ namespace pryVelezFunesIEFI
             RegistroCliente.Agregar();
             //Llamo la clase inscripcion para agregar los datos
             clsInscripcion AgregadoInformacion = new clsInscripcion();
+            AgregadoInformacion.Id_Socio = Convert.ToInt32(mskIDSocio.Text);
             AgregadoInformacion.Fecha_Inscripcion = Convert.ToDateTime(mskFecha.Text);
             AgregadoInformacion.Forma_Pago = Convert.ToString(lstFormaPago.SelectedItem);
-            AgregadoInformacion.SaldoSocio = Convert.ToInt32(mskImporte.Text);
+            AgregadoInformacion.SaldoSocio = Convert.ToDecimal(mskImporte.Text);
             AgregadoInformacion.Agregar();
             Limpieza();
+            MessageBox.Show("Se han registrado los datos correctamente.");
         }
         private void cmdAgregarBarrio_Click(object sender, EventArgs e)
         {

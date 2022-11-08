@@ -16,13 +16,148 @@ namespace pryVelezFunesIEFI
         {
             InitializeComponent();
         }
-        private void mrcInformacion_Enter(object sender, EventArgs e)
-        {
-
-        }
         private void cmdSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void cmdBuscar_Click(object sender, EventArgs e)
+        {
+            Int32 IDSOCIO = Convert.ToInt32(txtIDSocio.Text);
+            //Llamo las clases para poder llenar los txt,msk y lst con la informacion correspondiente
+            clsGimnasio BuscarCliente = new clsGimnasio();
+            BuscarCliente.Buscar(IDSOCIO);
+            clsInscripcion InformacionInscripcion = new clsInscripcion();
+            InformacionInscripcion.Buscar(IDSOCIO);
+            clsBarrio BarrioConsulta = new clsBarrio();
+            BarrioConsulta.BuscarBarrio(BuscarCliente.CodBarrio);
+            clsActividad ActConsulta = new clsActividad();
+            ActConsulta.BuscarActividad(BuscarCliente.CodActividad);
+            if (BuscarCliente.SocioID != IDSOCIO)
+            {
+                MessageBox.Show("El ID de Socio ingresado no se encuentra en la base de datos.");
+            }
+            else
+            {
+                txtNombreApellido.Text = BuscarCliente.Nom_Apellido;
+                txtDireccion.Text = BuscarCliente.DireccionSocio;
+                lstActividad.Text = Convert.ToString(ActConsulta.NomActividad);
+                lstBarrio.Text = Convert.ToString(BarrioConsulta.NomBarrio);
+                mskTelefono.Text = Convert.ToString(BuscarCliente.TelefonoSocio);
+                lstFormaPago.Text = InformacionInscripcion.Forma_Pago;
+                mskImporte.Text = Convert.ToString(InformacionInscripcion.SaldoSocio);
+                mskFecha.Text = Convert.ToString(InformacionInscripcion.Fecha_Inscripcion);
+                //habilito los botones
+                cmdEliminar.Enabled = true;
+                cmdGuardar.Enabled = true;
+                cmdModificar.Enabled = true;
+                NoEditarTXT();
+            }
+        }
+        private void NoEditarTXT()
+        {
+            txtNombreApellido.ReadOnly = true;
+            txtDireccion.ReadOnly = true;
+            lstBarrio.Enabled = false;
+            lstActividad.Enabled = false;
+            mskTelefono.ReadOnly = true;
+            lstFormaPago.Enabled = false;
+            mskImporte.ReadOnly = true;
+            mskFecha.ReadOnly = true;
+        }
+        private void Limpiar()
+        {
+            //Limpio los txt y lst
+            txtIDSocio.Text = "";
+            txtNombreApellido.Text = "";
+            txtDireccion.Text = "";
+            lstBarrio.SelectedIndex = -1;
+            lstActividad.SelectedIndex = -1;
+            mskTelefono.Text = "";
+            lstFormaPago.SelectedIndex = -1;
+            mskImporte.Text = "";
+            mskFecha.Text = "";
+            //Deshabilito los botones
+            cmdEliminar.Enabled = false;
+            cmdModificar.Enabled = false;
+            cmdGuardar.Enabled = false;
+            NoEditarTXT();
+            txtIDSocio.Focus();
+        }
+        private void frmBuscarCliente_Load(object sender, EventArgs e)
+        {
+            //Deshabilito los botones
+            cmdEliminar.Enabled = false;
+            cmdModificar.Enabled = false;
+            cmdGuardar.Enabled = false;
+            cmdBuscar.Enabled = false;
+            cmdCancelar.Visible = false;
+            NoEditarTXT();
+            txtIDSocio.Focus();
+            //Lleno las lst con la info que hay en los add
+            clsBarrio CompletarLstBarrio = new clsBarrio();
+            CompletarLstBarrio.LlenarLst(lstBarrio);
+            clsActividad CompletarLstAct = new clsActividad();
+            CompletarLstAct.LlenarLst(lstActividad);
+            lstBarrio.SelectedIndex = -1;
+            lstActividad.SelectedIndex = -1;
+        }
+        private void txtIDSocio_TextChanged(object sender, EventArgs e)
+        {
+            if (txtIDSocio.Text != "")
+            {
+                cmdBuscar.Enabled = true;
+            }
+            else
+            {
+                cmdBuscar.Enabled = false;
+            }
+        }
+        private void cmdModificar_Click(object sender, EventArgs e)
+        {
+            //Deshabilito los botones que no uso
+            cmdEliminar.Enabled = false;
+            cmdModificar.Enabled = false;
+            cmdBuscar.Enabled = false;
+            cmdGuardar.Enabled = true;
+            cmdCancelar.Visible = true;
+            //Habilito los txt, msk y lst
+            txtNombreApellido.ReadOnly = false;
+            txtDireccion.ReadOnly = false;
+            lstBarrio.Enabled = true;
+            lstActividad.Enabled = true;
+            mskTelefono.ReadOnly = false;
+            lstFormaPago.Enabled = true;
+            mskImporte.ReadOnly = false;
+            mskFecha.ReadOnly = false;
+        }
+        private void cmdCancelar_Click(object sender, EventArgs e)
+        {
+            NoEditarTXT();
+            //habilito  o no los botones
+            cmdEliminar.Enabled = true;
+            cmdModificar.Enabled = true;
+            cmdBuscar.Enabled = true;
+            cmdGuardar.Enabled = false;
+            cmdCancelar.Visible = false;
+        }
+
+        private void cmdGuardar_Click(object sender, EventArgs e)
+        {
+            int SocioID = Convert.ToInt32(txtIDSocio.Text);
+            clsGimnasio ModificarCliente = new clsGimnasio();
+            ModificarCliente.Nom_Apellido = txtNombreApellido.Text;
+            ModificarCliente.DireccionSocio = txtDireccion.Text;
+            ModificarCliente.CodBarrio = Convert.ToInt32(lstBarrio.SelectedValue);
+            ModificarCliente.CodActividad = Convert.ToInt32(lstActividad.SelectedValue);
+            ModificarCliente.TelefonoSocio = Convert.ToInt32(mskTelefono.Text);
+            ModificarCliente.Modificar(SocioID);
+            clsInscripcion ModificarInscripcion = new clsInscripcion();
+            ModificarInscripcion.Fecha_Inscripcion =Convert.ToDateTime(mskFecha.Text);
+            ModificarInscripcion.Forma_Pago = lstFormaPago.Text;
+            ModificarInscripcion.SaldoSocio = Convert.ToDecimal(mskImporte.Text);
+            ModificarInscripcion.Modificar(SocioID);
+            MessageBox.Show("La informacion ha sido modificada exitosamente.");
+            Limpiar();
         }
     }
 }

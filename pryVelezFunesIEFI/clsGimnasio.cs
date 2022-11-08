@@ -60,8 +60,8 @@ namespace pryVelezFunesIEFI
             try
             {
                 //Instruccion sql, creo variable con la intruccion concatenada y utilizo la variable luego
-                string Sql = "INSERT INTO Gimnasio ([Nombre y Apellido], [Direccion], [Codigo Barrio], [Codigo Actividad], [Telefono])" +
-                    "VALUES ('" + Nom_Apellido + "','" + DireccionSocio + "','" + CodBarrio + "','" + CodActividad + "','" + TelefonoSocio + "')";
+                string Sql = "INSERT INTO Gimnasio ([ID Socio],[Nombre y Apellido], [Direccion], [Codigo Barrio], [Codigo Actividad], [Telefono])" +
+                    "VALUES ('" + SocioID + "','" + Nom_Apellido + "','" + DireccionSocio + "','" + CodBarrio + "','" + CodActividad + "','" + TelefonoSocio + "')";
                 Conexion.ConnectionString = Ruta;
                 Conexion.Open();
                 Comando.Connection = Conexion;
@@ -75,7 +75,7 @@ namespace pryVelezFunesIEFI
                 MessageBox.Show("No se han podido registrar los datos.");
             }
         }
-        public void Buscar(string IDSocio)
+        public void Buscar(Int32 IDSocio)
         {
             try
             {
@@ -91,13 +91,13 @@ namespace pryVelezFunesIEFI
                 {
                     while (Lector.Read())
                     {
-                        if (Lector.GetString(0) == IDSocio)
+                        if (Lector.GetInt32(0) == IDSocio)
                         {
                             varIDSocio = Lector.GetInt32(0);
                             varNombreApellido = Lector.GetString(1);
                             varDireccion = Lector.GetString(2);
                             varCodigoBarrio = Lector.GetInt32(3);
-                            varCodigoActividad = int.Parse(Lector.GetString(4));
+                            varCodigoActividad = Lector.GetInt32(4);
                             varTelefono = Lector.GetInt32(5);
                         }
                     }
@@ -106,10 +106,21 @@ namespace pryVelezFunesIEFI
             }
             catch (Exception)
             {
-                MessageBox.Show("No se ha encontrado el codigo del deportista");
+                MessageBox.Show("No se ha encontrado el ID del socio");
             }
         }
-
+        public void Modificar(Int32 IDSOCIO)
+        {
+            string Sql = "UPDATE Gimnasio SET Nombre y Apellido= '" + Nom_Apellido + "', Direccion= '" + DireccionSocio + "', Codigo Barrio= '" +
+                CodBarrio + "', Codigo Actividad= '" + CodActividad + "', Telefono= '" + TelefonoSocio + "' WHERE [ID Socio] = '" + IDSOCIO + "'";
+            Conexion.ConnectionString = Ruta;
+            Conexion.Open();
+            Comando.Connection = Conexion;
+            Comando.CommandType = CommandType.Text;
+            Comando.CommandText = Sql;
+            Comando.ExecuteNonQuery();
+            Conexion.Close();
+        }
     }
 
 }

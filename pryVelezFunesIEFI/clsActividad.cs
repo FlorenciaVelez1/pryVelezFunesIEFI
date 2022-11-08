@@ -50,5 +50,27 @@ namespace pryVelezFunesIEFI
             lstActividad.ValueMember = "Codigo";
             Conexion.Close();
         }
+        public void BuscarActividad(Int32 ActCodigo)
+        {
+            Conexion.ConnectionString = Ruta;
+            Conexion.Open();
+            Comando.Connection = Conexion;
+            Comando.CommandType = CommandType.TableDirect;
+            Comando.CommandText = Tabla;
+            //Recibe el contenido de la tabla
+            OleDbDataReader Lector = Comando.ExecuteReader();
+            //Si hay filas que leer entra en el "si"
+            if (Lector.HasRows)
+            {
+                while (Lector.Read())
+                {
+                    if (Lector.GetInt32(0) == ActCodigo)
+                    {
+                        NomActividad = Lector.GetString(1);
+                    }
+                }
+            }
+            Conexion.Close();
+        }
     }
 }

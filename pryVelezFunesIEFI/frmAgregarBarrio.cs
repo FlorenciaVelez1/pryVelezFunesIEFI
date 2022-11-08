@@ -22,7 +22,29 @@ namespace pryVelezFunesIEFI
         }
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
-            
+            clsBarrio AgregarBarrio = new clsBarrio();
+            AgregarBarrio.Buscar(txtAgregarBarrio.Text);
+            if (AgregarBarrio.NomBarrio == txtAgregarBarrio.Text)
+            {
+                MessageBox.Show("El Barrio ya se encuentra registrado.");
+                txtAgregarBarrio.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Se ha cargado correctamente el nuevo Barrio.");
+                txtAgregarBarrio.Text = "";
+            }
+        }
+        private void txtAgregarBarrio_TextChanged(object sender, EventArgs e)
+        {
+            if (txtAgregarBarrio.Text != "")
+            {
+                cmdAgregar.Enabled = true;
+            }
+            else
+            {
+                cmdAgregar.Enabled = false;
+            }
         }
     }
 }

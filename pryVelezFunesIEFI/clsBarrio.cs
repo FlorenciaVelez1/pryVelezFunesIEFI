@@ -50,10 +50,10 @@ namespace pryVelezFunesIEFI
             lstBarrio.ValueMember = "Codigo";
             Conexion.Close();
         }
-        public void Buscar(Int32 BarrioNombre)
+        public void Buscar(string BarrioNombre)
         {
             //Creo variable bandera para verificar que no exista el barrio
-            Boolean VarBandera = false;
+            Boolean VarBanderaBarrio = false;
             Conexion.ConnectionString = Ruta;
             Conexion.Open();
             Comando.Connection = Conexion;
@@ -66,10 +66,51 @@ namespace pryVelezFunesIEFI
             {
                 while (Lector.Read())
                 {
-                    if (Lector.GetInt32(1) == BarrioNombre)
+                    if (Lector.GetString(1) == BarrioNombre)
                     {
-                            MessageBox.Show("El barrio ya existe en el sistema.");
-
+                        VarBanderaBarrio = true;
+                        NomBarrio = Lector.GetString(1);
+                    }
+                }
+            }
+            Conexion.Close();
+            if (VarBanderaBarrio == false)
+            {
+                try
+                {
+                    //Instruccion sql, creo variable con la intruccion concatenada y utilizo la variable luego
+                    string Sql = "INSERT INTO Barrio ([Barrio])" + "VALUES ('" + BarrioNombre + "')";
+                    Conexion.ConnectionString = Ruta;
+                    Conexion.Open();
+                    Comando.Connection = Conexion;
+                    Comando.CommandType = CommandType.Text;
+                    Comando.CommandText = Sql;
+                    Comando.ExecuteNonQuery();
+                    Conexion.Close();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("No se han podido registrar los datos.");
+                }
+            }
+        }
+        public void BuscarBarrio(Int32 BarrioCodigo)
+        {
+            Conexion.ConnectionString = Ruta;
+            Conexion.Open();
+            Comando.Connection = Conexion;
+            Comando.CommandType = CommandType.TableDirect;
+            Comando.CommandText = Tabla;
+            //Recibe el contenido de la tabla
+            OleDbDataReader Lector = Comando.ExecuteReader();
+            //Si hay filas que leer entra en el "si"
+            if (Lector.HasRows)
+            {
+                while (Lector.Read())
+                {
+                    if (Lector.GetInt32(0) == BarrioCodigo)
+                    {
+                        NomBarrio = Lector.GetString(1);
                     }
                 }
             }

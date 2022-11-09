@@ -19,11 +19,11 @@ namespace pryVelezFunesIEFI
         private string Ruta = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:VelezBaseDatosIEFI.accdb";
         private string Tabla = "Inscripcion";
         //Declaro de manera local las variables ( los campos el Add Socio)
-        private DateTime varFechaInscripcion;
+        private string varFechaInscripcion;
         private Int32 varIDSocio;
         private string varFormaPago;
         private decimal varSaldo;
-        public DateTime Fecha_Inscripcion
+        public string Fecha_Inscripcion
         {
             get { return varFechaInscripcion; }
             set { varFechaInscripcion = value; }
@@ -82,7 +82,7 @@ namespace pryVelezFunesIEFI
                     {
                         if (Lector.GetInt32(1) == IDSocio)
                         {
-                            Fecha_Inscripcion = Lector.GetDateTime(0);
+                            Fecha_Inscripcion =Lector.GetDateTime(0).ToString("dd/MM/yyyy");
                             Id_Socio = Lector.GetInt32(1);
                             Forma_Pago = Lector.GetString(2);
                             SaldoSocio = Lector.GetDecimal (3);
@@ -98,14 +98,40 @@ namespace pryVelezFunesIEFI
         }
         public void Modificar(Int32 IDSOCIO)
         {
-            string Sql = "UPDATE Inscripcion SET Fecha Inscripcion= " + Fecha_Inscripcion + ", Forma de Pago= '" + Forma_Pago + "', Saldo=" + SaldoSocio + "' WHERE [ID Socio] = '" + IDSOCIO + "'";
-            Conexion.ConnectionString = Ruta;
-            Conexion.Open();
-            Comando.Connection = Conexion;
-            Comando.CommandType = CommandType.Text;
-            Comando.CommandText = Sql;
-            Comando.ExecuteNonQuery();
-            Conexion.Close();
+            try
+            {
+                string Sql = "UPDATE Inscripcion SET [Fecha Inscripcion]= " + Fecha_Inscripcion + ", [Forma de Pago]= '" + Forma_Pago + "', [Saldo]=" + SaldoSocio + " WHERE [ID Socio] = " + IDSOCIO + "";
+                Conexion.ConnectionString = Ruta;
+                Conexion.Open();
+                Comando.Connection = Conexion;
+                Comando.CommandType = CommandType.Text;
+                Comando.CommandText = Sql;
+                Comando.ExecuteNonQuery();
+                Conexion.Close();
+
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("No se ha podido modificar la informacion.");
+            }
+        }
+        public void Eliminar(Int32 IDSOCIO)
+        {
+            try
+            {
+                string Sql = "DELETE FROM Gimnasio WHERE (" + IDSOCIO + "= [ID Socio])";
+                Conexion.ConnectionString = Ruta;
+                Conexion.Open();
+                Comando.Connection = Conexion;
+                Comando.CommandType = CommandType.Text;
+                Comando.CommandText = Sql;
+                Comando.ExecuteNonQuery();
+                Conexion.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se ha podido eliminar el cliente completamente");
+            }
         }
     }
 }

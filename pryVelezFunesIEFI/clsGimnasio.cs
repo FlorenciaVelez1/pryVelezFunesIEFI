@@ -106,20 +106,46 @@ namespace pryVelezFunesIEFI
             }
             catch (Exception)
             {
-                MessageBox.Show("No se ha encontrado el ID del socio");
+                MessageBox.Show("No se ha encontrado el ID del socio.");
             }
         }
         public void Modificar(Int32 IDSOCIO)
         {
-            string Sql = "UPDATE Gimnasio SET Nombre y Apellido= '" + Nom_Apellido + "', Direccion= '" + DireccionSocio + "', Codigo Barrio= '" +
-                CodBarrio + "', Codigo Actividad= '" + CodActividad + "', Telefono= '" + TelefonoSocio + "' WHERE [ID Socio] = '" + IDSOCIO + "'";
-            Conexion.ConnectionString = Ruta;
-            Conexion.Open();
-            Comando.Connection = Conexion;
-            Comando.CommandType = CommandType.Text;
-            Comando.CommandText = Sql;
-            Comando.ExecuteNonQuery();
-            Conexion.Close();
+            try
+            { 
+                string Sql = "UPDATE Gimnasio SET [Nombre y Apellido]= '" + Nom_Apellido + "', [Direccion]= '" + DireccionSocio + "', [Codigo Barrio]= " +
+                CodBarrio + ", [Codigo Actividad]= " + CodActividad + ", [Telefono]= " + TelefonoSocio + " WHERE [ID Socio] = " + IDSOCIO + "";
+                Conexion.ConnectionString = Ruta;
+                Conexion.Open();
+                Comando.Connection = Conexion;
+                Comando.CommandType = CommandType.Text;
+                Comando.CommandText = Sql;
+                Comando.ExecuteNonQuery();
+                Conexion.Close();
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("No se ha podido modificar la informacion.");
+            }
+        }
+        public void Eliminar(Int32 IDSOCIO)
+        {
+            try
+            {
+                string Sql = "DELETE FROM Gimnasio WHERE (" + IDSOCIO + "= [ID Socio])";
+                Conexion.ConnectionString = Ruta;
+                Conexion.Open();
+                Comando.Connection = Conexion;
+                Comando.CommandType = CommandType.Text;
+                Comando.CommandText = Sql;
+                Comando.ExecuteNonQuery();
+                Conexion.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se ha podido eliminar el cliente completamente");
+            }
+
         }
     }
 

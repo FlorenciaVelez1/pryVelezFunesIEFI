@@ -31,12 +31,6 @@ namespace pryVelezFunesIEFI
             frmListadoClientes ListadoClientes = new frmListadoClientes();
             ListadoClientes.ShowDialog();
         }
-        private void tsmClientesDeudores_Click(object sender, EventArgs e)
-        {
-
-            frmListadoDeudores ListadosDeudores = new frmListadoDeudores();
-            ListadosDeudores.ShowDialog();
-        }
         private void tsmInformacion_Click(object sender, EventArgs e)
         {
             frmInformacionCreador InfoCreador = new frmInformacionCreador();

@@ -85,12 +85,6 @@
     <Compile Include="frmListadoClientes.Designer.cs">
       <DependentUpon>frmListadoClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListadoDeudores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmListadoDeudores.Designer.cs">
-      <DependentUpon>frmListadoDeudores.cs</DependentUpon>
-    </Compile>
     <Compile Include="clsInscripcion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,9 +105,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmListadoClientes.resx">
       <DependentUpon>frmListadoClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmListadoDeudores.resx">
-      <DependentUpon>frmListadoDeudores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

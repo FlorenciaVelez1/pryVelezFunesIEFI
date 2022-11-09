@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistrarCliente));
             this.cmdSalir = new System.Windows.Forms.Button();
             this.mrcInformacion = new System.Windows.Forms.GroupBox();
+            this.mskIDSocio = new System.Windows.Forms.MaskedTextBox();
+            this.lblIDSocio = new System.Windows.Forms.Label();
             this.lstBarrio = new System.Windows.Forms.ComboBox();
             this.cmdAgregarBarrio = new System.Windows.Forms.Button();
             this.mskImporte = new System.Windows.Forms.MaskedTextBox();
@@ -50,8 +52,6 @@
             this.lblDireccion = new System.Windows.Forms.Label();
             this.cmdLimpiar = new System.Windows.Forms.Button();
             this.cmdRegistrar = new System.Windows.Forms.Button();
-            this.lblIDSocio = new System.Windows.Forms.Label();
-            this.mskIDSocio = new System.Windows.Forms.MaskedTextBox();
             this.mrcInformacion.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,6 +95,27 @@
             this.mrcInformacion.TabStop = false;
             this.mrcInformacion.Text = "Informacion Cliente";
             // 
+            // mskIDSocio
+            // 
+            this.mskIDSocio.Location = new System.Drawing.Point(186, 31);
+            this.mskIDSocio.Margin = new System.Windows.Forms.Padding(4);
+            this.mskIDSocio.Mask = "000000000";
+            this.mskIDSocio.Name = "mskIDSocio";
+            this.mskIDSocio.Size = new System.Drawing.Size(174, 27);
+            this.mskIDSocio.TabIndex = 73;
+            this.mskIDSocio.ValidatingType = typeof(int);
+            // 
+            // lblIDSocio
+            // 
+            this.lblIDSocio.AutoSize = true;
+            this.lblIDSocio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDSocio.Location = new System.Drawing.Point(12, 38);
+            this.lblIDSocio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIDSocio.Name = "lblIDSocio";
+            this.lblIDSocio.Size = new System.Drawing.Size(73, 20);
+            this.lblIDSocio.TabIndex = 72;
+            this.lblIDSocio.Text = "ID Socio";
+            // 
             // lstBarrio
             // 
             this.lstBarrio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -130,8 +151,8 @@
             this.lstFormaPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lstFormaPago.FormattingEnabled = true;
             this.lstFormaPago.Items.AddRange(new object[] {
-            "Efectivo",
-            "Tarjeta"});
+            "EFECTIVO",
+            "TARJETA"});
             this.lstFormaPago.Location = new System.Drawing.Point(186, 332);
             this.lstFormaPago.Name = "lstFormaPago";
             this.lstFormaPago.Size = new System.Drawing.Size(132, 28);
@@ -309,27 +330,6 @@
             this.cmdRegistrar.Text = "Registrar";
             this.cmdRegistrar.UseVisualStyleBackColor = true;
             this.cmdRegistrar.Click += new System.EventHandler(this.cmdRegistrar_Click);
-            // 
-            // lblIDSocio
-            // 
-            this.lblIDSocio.AutoSize = true;
-            this.lblIDSocio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDSocio.Location = new System.Drawing.Point(12, 38);
-            this.lblIDSocio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblIDSocio.Name = "lblIDSocio";
-            this.lblIDSocio.Size = new System.Drawing.Size(73, 20);
-            this.lblIDSocio.TabIndex = 72;
-            this.lblIDSocio.Text = "ID Socio";
-            // 
-            // mskIDSocio
-            // 
-            this.mskIDSocio.Location = new System.Drawing.Point(186, 31);
-            this.mskIDSocio.Margin = new System.Windows.Forms.Padding(4);
-            this.mskIDSocio.Mask = "000000000";
-            this.mskIDSocio.Name = "mskIDSocio";
-            this.mskIDSocio.Size = new System.Drawing.Size(174, 27);
-            this.mskIDSocio.TabIndex = 73;
-            this.mskIDSocio.ValidatingType = typeof(int);
             // 
             // frmRegistrarCliente
             // 

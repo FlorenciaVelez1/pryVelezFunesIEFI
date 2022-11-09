@@ -74,7 +74,7 @@ namespace pryVelezFunesIEFI
             //Llamo la clase inscripcion para agregar los datos
             clsInscripcion AgregadoInformacion = new clsInscripcion();
             AgregadoInformacion.Id_Socio = Convert.ToInt32(mskIDSocio.Text);
-            AgregadoInformacion.Fecha_Inscripcion = Convert.ToDateTime(mskFecha.Text);
+            AgregadoInformacion.Fecha_Inscripcion = Convert.ToString(mskFecha.Text);
             AgregadoInformacion.Forma_Pago = Convert.ToString(lstFormaPago.SelectedItem);
             AgregadoInformacion.SaldoSocio = Convert.ToDecimal(mskImporte.Text);
             AgregadoInformacion.Agregar();

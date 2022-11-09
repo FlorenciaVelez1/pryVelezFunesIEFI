@@ -34,44 +34,50 @@
             this.cmdConsultar = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabClientes = new System.Windows.Forms.TabPage();
+            this.lblCantClienteCli = new System.Windows.Forms.Label();
+            this.lblPromIngreCli = new System.Windows.Forms.Label();
+            this.lbIngreClientT = new System.Windows.Forms.Label();
+            this.lblPromIngresoNom = new System.Windows.Forms.Label();
+            this.lblCantClienteNom = new System.Windows.Forms.Label();
+            this.lblTotalIngresoNom = new System.Windows.Forms.Label();
+            this.lblPromDeudaClient = new System.Windows.Forms.Label();
+            this.lblTotalDeudaClien = new System.Windows.Forms.Label();
+            this.lblPromedioDeudNom = new System.Windows.Forms.Label();
+            this.lblTotalDeudaNom = new System.Windows.Forms.Label();
             this.tabBarrio = new System.Windows.Forms.TabPage();
+            this.lblCantClienBar = new System.Windows.Forms.Label();
+            this.lblPromIngreBar = new System.Windows.Forms.Label();
+            this.lblTotalIngreBar = new System.Windows.Forms.Label();
+            this.lblPromIngreNom2 = new System.Windows.Forms.Label();
+            this.lblCantClienNom2 = new System.Windows.Forms.Label();
+            this.lblTotalIngresoNom2 = new System.Windows.Forms.Label();
+            this.lblPromDeuBar = new System.Windows.Forms.Label();
+            this.lblTotalDeuBar = new System.Windows.Forms.Label();
+            this.lblPromDeudaNom2 = new System.Windows.Forms.Label();
+            this.lblTotalDeudaNom2 = new System.Windows.Forms.Label();
             this.GrillaBarrio = new System.Windows.Forms.DataGridView();
             this.cmdSalirBarrio = new System.Windows.Forms.Button();
             this.cmdConsultaBarrio = new System.Windows.Forms.Button();
             this.tabActividad = new System.Windows.Forms.TabPage();
+            this.lblCantCliAct = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.lblPromIngreNom3 = new System.Windows.Forms.Label();
+            this.lblCantClieNom3 = new System.Windows.Forms.Label();
+            this.lblTotalIngrNom3 = new System.Windows.Forms.Label();
+            this.lblPromDeuAct = new System.Windows.Forms.Label();
+            this.lblTotalDeuAct = new System.Windows.Forms.Label();
+            this.lblPromDeuNom3 = new System.Windows.Forms.Label();
+            this.lblTotalDeuNom3 = new System.Windows.Forms.Label();
             this.GrillaActividad = new System.Windows.Forms.DataGridView();
             this.cmdSalirActividad = new System.Windows.Forms.Button();
             this.cmdConsultarActividad = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
+            this.lblCantDeuAct = new System.Windows.Forms.Label();
+            this.lblCantDeuNom3 = new System.Windows.Forms.Label();
+            this.lblCantDeuBar = new System.Windows.Forms.Label();
+            this.lblCantDeuNom2 = new System.Windows.Forms.Label();
+            this.lblCantDeuCli = new System.Windows.Forms.Label();
+            this.lblCantDeuNom = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaClientes)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabClientes.SuspendLayout();
@@ -127,16 +133,18 @@
             // 
             // tabClientes
             // 
-            this.tabClientes.Controls.Add(this.label1);
-            this.tabClientes.Controls.Add(this.label2);
-            this.tabClientes.Controls.Add(this.label4);
-            this.tabClientes.Controls.Add(this.label5);
-            this.tabClientes.Controls.Add(this.label6);
-            this.tabClientes.Controls.Add(this.label7);
-            this.tabClientes.Controls.Add(this.label27);
-            this.tabClientes.Controls.Add(this.label28);
-            this.tabClientes.Controls.Add(this.label29);
-            this.tabClientes.Controls.Add(this.label30);
+            this.tabClientes.Controls.Add(this.lblCantDeuCli);
+            this.tabClientes.Controls.Add(this.lblCantDeuNom);
+            this.tabClientes.Controls.Add(this.lblCantClienteCli);
+            this.tabClientes.Controls.Add(this.lblPromIngreCli);
+            this.tabClientes.Controls.Add(this.lbIngreClientT);
+            this.tabClientes.Controls.Add(this.lblPromIngresoNom);
+            this.tabClientes.Controls.Add(this.lblCantClienteNom);
+            this.tabClientes.Controls.Add(this.lblTotalIngresoNom);
+            this.tabClientes.Controls.Add(this.lblPromDeudaClient);
+            this.tabClientes.Controls.Add(this.lblTotalDeudaClien);
+            this.tabClientes.Controls.Add(this.lblPromedioDeudNom);
+            this.tabClientes.Controls.Add(this.lblTotalDeudaNom);
             this.tabClientes.Controls.Add(this.GrillaClientes);
             this.tabClientes.Controls.Add(this.cmdSalir);
             this.tabClientes.Controls.Add(this.cmdConsultar);
@@ -149,18 +157,135 @@
             this.tabClientes.Text = "Clientes";
             this.tabClientes.UseVisualStyleBackColor = true;
             // 
+            // lblCantClienteCli
+            // 
+            this.lblCantClienteCli.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblCantClienteCli.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCantClienteCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantClienteCli.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblCantClienteCli.Location = new System.Drawing.Point(494, 439);
+            this.lblCantClienteCli.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantClienteCli.Name = "lblCantClienteCli";
+            this.lblCantClienteCli.Size = new System.Drawing.Size(113, 25);
+            this.lblCantClienteCli.TabIndex = 32;
+            // 
+            // lblPromIngreCli
+            // 
+            this.lblPromIngreCli.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblPromIngreCli.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPromIngreCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPromIngreCli.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblPromIngreCli.Location = new System.Drawing.Point(494, 406);
+            this.lblPromIngreCli.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPromIngreCli.Name = "lblPromIngreCli";
+            this.lblPromIngreCli.Size = new System.Drawing.Size(113, 25);
+            this.lblPromIngreCli.TabIndex = 31;
+            // 
+            // lbIngreClientT
+            // 
+            this.lbIngreClientT.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbIngreClientT.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbIngreClientT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIngreClientT.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbIngreClientT.Location = new System.Drawing.Point(494, 367);
+            this.lbIngreClientT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbIngreClientT.Name = "lbIngreClientT";
+            this.lbIngreClientT.Size = new System.Drawing.Size(113, 25);
+            this.lbIngreClientT.TabIndex = 30;
+            // 
+            // lblPromIngresoNom
+            // 
+            this.lblPromIngresoNom.AutoSize = true;
+            this.lblPromIngresoNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPromIngresoNom.Location = new System.Drawing.Point(312, 411);
+            this.lblPromIngresoNom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPromIngresoNom.Name = "lblPromIngresoNom";
+            this.lblPromIngresoNom.Size = new System.Drawing.Size(168, 20);
+            this.lblPromIngresoNom.TabIndex = 29;
+            this.lblPromIngresoNom.Text = "Promedio de Ingreso:";
+            // 
+            // lblCantClienteNom
+            // 
+            this.lblCantClienteNom.AutoSize = true;
+            this.lblCantClienteNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantClienteNom.Location = new System.Drawing.Point(312, 444);
+            this.lblCantClienteNom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantClienteNom.Name = "lblCantClienteNom";
+            this.lblCantClienteNom.Size = new System.Drawing.Size(169, 20);
+            this.lblCantClienteNom.TabIndex = 28;
+            this.lblCantClienteNom.Text = "Cantidad de Clientes:";
+            // 
+            // lblTotalIngresoNom
+            // 
+            this.lblTotalIngresoNom.AutoSize = true;
+            this.lblTotalIngresoNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalIngresoNom.Location = new System.Drawing.Point(312, 372);
+            this.lblTotalIngresoNom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalIngresoNom.Name = "lblTotalIngresoNom";
+            this.lblTotalIngresoNom.Size = new System.Drawing.Size(143, 20);
+            this.lblTotalIngresoNom.TabIndex = 27;
+            this.lblTotalIngresoNom.Text = "Total de Ingresos:";
+            // 
+            // lblPromDeudaClient
+            // 
+            this.lblPromDeudaClient.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblPromDeudaClient.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPromDeudaClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPromDeudaClient.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblPromDeudaClient.Location = new System.Drawing.Point(183, 406);
+            this.lblPromDeudaClient.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPromDeudaClient.Name = "lblPromDeudaClient";
+            this.lblPromDeudaClient.Size = new System.Drawing.Size(113, 25);
+            this.lblPromDeudaClient.TabIndex = 26;
+            // 
+            // lblTotalDeudaClien
+            // 
+            this.lblTotalDeudaClien.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblTotalDeudaClien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTotalDeudaClien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDeudaClien.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblTotalDeudaClien.Location = new System.Drawing.Point(183, 367);
+            this.lblTotalDeudaClien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalDeudaClien.Name = "lblTotalDeudaClien";
+            this.lblTotalDeudaClien.Size = new System.Drawing.Size(113, 25);
+            this.lblTotalDeudaClien.TabIndex = 25;
+            // 
+            // lblPromedioDeudNom
+            // 
+            this.lblPromedioDeudNom.AutoSize = true;
+            this.lblPromedioDeudNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPromedioDeudNom.Location = new System.Drawing.Point(1, 406);
+            this.lblPromedioDeudNom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPromedioDeudNom.Name = "lblPromedioDeudNom";
+            this.lblPromedioDeudNom.Size = new System.Drawing.Size(162, 20);
+            this.lblPromedioDeudNom.TabIndex = 24;
+            this.lblPromedioDeudNom.Text = "Promedio de Deuda:";
+            // 
+            // lblTotalDeudaNom
+            // 
+            this.lblTotalDeudaNom.AutoSize = true;
+            this.lblTotalDeudaNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDeudaNom.Location = new System.Drawing.Point(1, 372);
+            this.lblTotalDeudaNom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalDeudaNom.Name = "lblTotalDeudaNom";
+            this.lblTotalDeudaNom.Size = new System.Drawing.Size(128, 20);
+            this.lblTotalDeudaNom.TabIndex = 23;
+            this.lblTotalDeudaNom.Text = "Total de Deuda:";
+            // 
             // tabBarrio
             // 
-            this.tabBarrio.Controls.Add(this.label3);
-            this.tabBarrio.Controls.Add(this.label8);
-            this.tabBarrio.Controls.Add(this.label9);
-            this.tabBarrio.Controls.Add(this.label10);
-            this.tabBarrio.Controls.Add(this.label11);
-            this.tabBarrio.Controls.Add(this.label12);
-            this.tabBarrio.Controls.Add(this.label13);
-            this.tabBarrio.Controls.Add(this.label15);
-            this.tabBarrio.Controls.Add(this.label18);
-            this.tabBarrio.Controls.Add(this.label26);
+            this.tabBarrio.Controls.Add(this.lblCantDeuBar);
+            this.tabBarrio.Controls.Add(this.lblCantDeuNom2);
+            this.tabBarrio.Controls.Add(this.lblCantClienBar);
+            this.tabBarrio.Controls.Add(this.lblPromIngreBar);
+            this.tabBarrio.Controls.Add(this.lblTotalIngreBar);
+            this.tabBarrio.Controls.Add(this.lblPromIngreNom2);
+            this.tabBarrio.Controls.Add(this.lblCantClienNom2);
+            this.tabBarrio.Controls.Add(this.lblTotalIngresoNom2);
+            this.tabBarrio.Controls.Add(this.lblPromDeuBar);
+            this.tabBarrio.Controls.Add(this.lblTotalDeuBar);
+            this.tabBarrio.Controls.Add(this.lblPromDeudaNom2);
+            this.tabBarrio.Controls.Add(this.lblTotalDeudaNom2);
             this.tabBarrio.Controls.Add(this.GrillaBarrio);
             this.tabBarrio.Controls.Add(this.cmdSalirBarrio);
             this.tabBarrio.Controls.Add(this.cmdConsultaBarrio);
@@ -172,6 +297,121 @@
             this.tabBarrio.TabIndex = 1;
             this.tabBarrio.Text = "Barrio";
             this.tabBarrio.UseVisualStyleBackColor = true;
+            // 
+            // lblCantClienBar
+            // 
+            this.lblCantClienBar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblCantClienBar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCantClienBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantClienBar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblCantClienBar.Location = new System.Drawing.Point(494, 439);
+            this.lblCantClienBar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantClienBar.Name = "lblCantClienBar";
+            this.lblCantClienBar.Size = new System.Drawing.Size(113, 25);
+            this.lblCantClienBar.TabIndex = 32;
+            // 
+            // lblPromIngreBar
+            // 
+            this.lblPromIngreBar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblPromIngreBar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPromIngreBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPromIngreBar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblPromIngreBar.Location = new System.Drawing.Point(494, 406);
+            this.lblPromIngreBar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPromIngreBar.Name = "lblPromIngreBar";
+            this.lblPromIngreBar.Size = new System.Drawing.Size(113, 25);
+            this.lblPromIngreBar.TabIndex = 31;
+            // 
+            // lblTotalIngreBar
+            // 
+            this.lblTotalIngreBar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblTotalIngreBar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTotalIngreBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalIngreBar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblTotalIngreBar.Location = new System.Drawing.Point(494, 367);
+            this.lblTotalIngreBar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalIngreBar.Name = "lblTotalIngreBar";
+            this.lblTotalIngreBar.Size = new System.Drawing.Size(113, 25);
+            this.lblTotalIngreBar.TabIndex = 30;
+            // 
+            // lblPromIngreNom2
+            // 
+            this.lblPromIngreNom2.AutoSize = true;
+            this.lblPromIngreNom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPromIngreNom2.Location = new System.Drawing.Point(312, 411);
+            this.lblPromIngreNom2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPromIngreNom2.Name = "lblPromIngreNom2";
+            this.lblPromIngreNom2.Size = new System.Drawing.Size(177, 20);
+            this.lblPromIngreNom2.TabIndex = 29;
+            this.lblPromIngreNom2.Text = "Promedio de Ingresos:";
+            // 
+            // lblCantClienNom2
+            // 
+            this.lblCantClienNom2.AutoSize = true;
+            this.lblCantClienNom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantClienNom2.Location = new System.Drawing.Point(312, 444);
+            this.lblCantClienNom2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantClienNom2.Name = "lblCantClienNom2";
+            this.lblCantClienNom2.Size = new System.Drawing.Size(169, 20);
+            this.lblCantClienNom2.TabIndex = 28;
+            this.lblCantClienNom2.Text = "Cantidad de Clientes:";
+            // 
+            // lblTotalIngresoNom2
+            // 
+            this.lblTotalIngresoNom2.AutoSize = true;
+            this.lblTotalIngresoNom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalIngresoNom2.Location = new System.Drawing.Point(312, 372);
+            this.lblTotalIngresoNom2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalIngresoNom2.Name = "lblTotalIngresoNom2";
+            this.lblTotalIngresoNom2.Size = new System.Drawing.Size(143, 20);
+            this.lblTotalIngresoNom2.TabIndex = 27;
+            this.lblTotalIngresoNom2.Text = "Total de Ingresos:";
+            // 
+            // lblPromDeuBar
+            // 
+            this.lblPromDeuBar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblPromDeuBar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPromDeuBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPromDeuBar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblPromDeuBar.Location = new System.Drawing.Point(183, 406);
+            this.lblPromDeuBar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPromDeuBar.Name = "lblPromDeuBar";
+            this.lblPromDeuBar.Size = new System.Drawing.Size(113, 25);
+            this.lblPromDeuBar.TabIndex = 26;
+            // 
+            // lblTotalDeuBar
+            // 
+            this.lblTotalDeuBar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblTotalDeuBar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTotalDeuBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDeuBar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblTotalDeuBar.Location = new System.Drawing.Point(183, 367);
+            this.lblTotalDeuBar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalDeuBar.Name = "lblTotalDeuBar";
+            this.lblTotalDeuBar.Size = new System.Drawing.Size(113, 25);
+            this.lblTotalDeuBar.TabIndex = 25;
+            // 
+            // lblPromDeudaNom2
+            // 
+            this.lblPromDeudaNom2.AutoSize = true;
+            this.lblPromDeudaNom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPromDeudaNom2.Location = new System.Drawing.Point(1, 406);
+            this.lblPromDeudaNom2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPromDeudaNom2.Name = "lblPromDeudaNom2";
+            this.lblPromDeudaNom2.Size = new System.Drawing.Size(162, 20);
+            this.lblPromDeudaNom2.TabIndex = 24;
+            this.lblPromDeudaNom2.Text = "Promedio de Deuda:";
+            // 
+            // lblTotalDeudaNom2
+            // 
+            this.lblTotalDeudaNom2.AutoSize = true;
+            this.lblTotalDeudaNom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDeudaNom2.Location = new System.Drawing.Point(1, 372);
+            this.lblTotalDeudaNom2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalDeudaNom2.Name = "lblTotalDeudaNom2";
+            this.lblTotalDeudaNom2.Size = new System.Drawing.Size(128, 20);
+            this.lblTotalDeudaNom2.TabIndex = 23;
+            this.lblTotalDeudaNom2.Text = "Total de Deuda:";
             // 
             // GrillaBarrio
             // 
@@ -207,16 +447,18 @@
             // 
             // tabActividad
             // 
-            this.tabActividad.Controls.Add(this.label20);
+            this.tabActividad.Controls.Add(this.lblCantDeuAct);
+            this.tabActividad.Controls.Add(this.lblCantDeuNom3);
+            this.tabActividad.Controls.Add(this.lblCantCliAct);
             this.tabActividad.Controls.Add(this.label21);
             this.tabActividad.Controls.Add(this.label22);
-            this.tabActividad.Controls.Add(this.label23);
-            this.tabActividad.Controls.Add(this.label24);
-            this.tabActividad.Controls.Add(this.label25);
-            this.tabActividad.Controls.Add(this.label14);
-            this.tabActividad.Controls.Add(this.label16);
-            this.tabActividad.Controls.Add(this.label17);
-            this.tabActividad.Controls.Add(this.label19);
+            this.tabActividad.Controls.Add(this.lblPromIngreNom3);
+            this.tabActividad.Controls.Add(this.lblCantClieNom3);
+            this.tabActividad.Controls.Add(this.lblTotalIngrNom3);
+            this.tabActividad.Controls.Add(this.lblPromDeuAct);
+            this.tabActividad.Controls.Add(this.lblTotalDeuAct);
+            this.tabActividad.Controls.Add(this.lblPromDeuNom3);
+            this.tabActividad.Controls.Add(this.lblTotalDeuNom3);
             this.tabActividad.Controls.Add(this.GrillaActividad);
             this.tabActividad.Controls.Add(this.cmdSalirActividad);
             this.tabActividad.Controls.Add(this.cmdConsultarActividad);
@@ -228,6 +470,121 @@
             this.tabActividad.TabIndex = 2;
             this.tabActividad.Text = "Actividad";
             this.tabActividad.UseVisualStyleBackColor = true;
+            // 
+            // lblCantCliAct
+            // 
+            this.lblCantCliAct.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblCantCliAct.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCantCliAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantCliAct.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblCantCliAct.Location = new System.Drawing.Point(495, 442);
+            this.lblCantCliAct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantCliAct.Name = "lblCantCliAct";
+            this.lblCantCliAct.Size = new System.Drawing.Size(113, 25);
+            this.lblCantCliAct.TabIndex = 22;
+            // 
+            // label21
+            // 
+            this.label21.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label21.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label21.Location = new System.Drawing.Point(495, 409);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(113, 25);
+            this.label21.TabIndex = 21;
+            // 
+            // label22
+            // 
+            this.label22.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label22.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label22.Location = new System.Drawing.Point(495, 370);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(113, 25);
+            this.label22.TabIndex = 20;
+            // 
+            // lblPromIngreNom3
+            // 
+            this.lblPromIngreNom3.AutoSize = true;
+            this.lblPromIngreNom3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPromIngreNom3.Location = new System.Drawing.Point(313, 414);
+            this.lblPromIngreNom3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPromIngreNom3.Name = "lblPromIngreNom3";
+            this.lblPromIngreNom3.Size = new System.Drawing.Size(177, 20);
+            this.lblPromIngreNom3.TabIndex = 19;
+            this.lblPromIngreNom3.Text = "Promedio de Ingresos:";
+            // 
+            // lblCantClieNom3
+            // 
+            this.lblCantClieNom3.AutoSize = true;
+            this.lblCantClieNom3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantClieNom3.Location = new System.Drawing.Point(313, 447);
+            this.lblCantClieNom3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantClieNom3.Name = "lblCantClieNom3";
+            this.lblCantClieNom3.Size = new System.Drawing.Size(169, 20);
+            this.lblCantClieNom3.TabIndex = 18;
+            this.lblCantClieNom3.Text = "Cantidad de Clientes:";
+            // 
+            // lblTotalIngrNom3
+            // 
+            this.lblTotalIngrNom3.AutoSize = true;
+            this.lblTotalIngrNom3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalIngrNom3.Location = new System.Drawing.Point(313, 375);
+            this.lblTotalIngrNom3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalIngrNom3.Name = "lblTotalIngrNom3";
+            this.lblTotalIngrNom3.Size = new System.Drawing.Size(143, 20);
+            this.lblTotalIngrNom3.TabIndex = 17;
+            this.lblTotalIngrNom3.Text = "Total de Ingresos:";
+            // 
+            // lblPromDeuAct
+            // 
+            this.lblPromDeuAct.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblPromDeuAct.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPromDeuAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPromDeuAct.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblPromDeuAct.Location = new System.Drawing.Point(184, 409);
+            this.lblPromDeuAct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPromDeuAct.Name = "lblPromDeuAct";
+            this.lblPromDeuAct.Size = new System.Drawing.Size(113, 25);
+            this.lblPromDeuAct.TabIndex = 16;
+            // 
+            // lblTotalDeuAct
+            // 
+            this.lblTotalDeuAct.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblTotalDeuAct.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTotalDeuAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDeuAct.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblTotalDeuAct.Location = new System.Drawing.Point(184, 370);
+            this.lblTotalDeuAct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalDeuAct.Name = "lblTotalDeuAct";
+            this.lblTotalDeuAct.Size = new System.Drawing.Size(113, 25);
+            this.lblTotalDeuAct.TabIndex = 14;
+            // 
+            // lblPromDeuNom3
+            // 
+            this.lblPromDeuNom3.AutoSize = true;
+            this.lblPromDeuNom3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPromDeuNom3.Location = new System.Drawing.Point(2, 409);
+            this.lblPromDeuNom3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPromDeuNom3.Name = "lblPromDeuNom3";
+            this.lblPromDeuNom3.Size = new System.Drawing.Size(162, 20);
+            this.lblPromDeuNom3.TabIndex = 13;
+            this.lblPromDeuNom3.Text = "Promedio de Deuda:";
+            // 
+            // lblTotalDeuNom3
+            // 
+            this.lblTotalDeuNom3.AutoSize = true;
+            this.lblTotalDeuNom3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDeuNom3.Location = new System.Drawing.Point(2, 375);
+            this.lblTotalDeuNom3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalDeuNom3.Name = "lblTotalDeuNom3";
+            this.lblTotalDeuNom3.Size = new System.Drawing.Size(128, 20);
+            this.lblTotalDeuNom3.TabIndex = 11;
+            this.lblTotalDeuNom3.Text = "Total de Deuda:";
             // 
             // GrillaActividad
             // 
@@ -242,7 +599,7 @@
             // cmdSalirActividad
             // 
             this.cmdSalirActividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdSalirActividad.Location = new System.Drawing.Point(3, 486);
+            this.cmdSalirActividad.Location = new System.Drawing.Point(9, 483);
             this.cmdSalirActividad.Margin = new System.Windows.Forms.Padding(4);
             this.cmdSalirActividad.Name = "cmdSalirActividad";
             this.cmdSalirActividad.Size = new System.Drawing.Size(115, 33);
@@ -253,7 +610,7 @@
             // cmdConsultarActividad
             // 
             this.cmdConsultarActividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdConsultarActividad.Location = new System.Drawing.Point(487, 486);
+            this.cmdConsultarActividad.Location = new System.Drawing.Point(493, 483);
             this.cmdConsultarActividad.Margin = new System.Windows.Forms.Padding(4);
             this.cmdConsultarActividad.Name = "cmdConsultarActividad";
             this.cmdConsultarActividad.Size = new System.Drawing.Size(115, 33);
@@ -261,350 +618,74 @@
             this.cmdConsultarActividad.Text = "Consultar";
             this.cmdConsultarActividad.UseVisualStyleBackColor = true;
             // 
-            // label14
+            // lblCantDeuAct
             // 
-            this.label14.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label14.Location = new System.Drawing.Point(178, 412);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(113, 25);
-            this.label14.TabIndex = 16;
+            this.lblCantDeuAct.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblCantDeuAct.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCantDeuAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantDeuAct.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblCantDeuAct.Location = new System.Drawing.Point(184, 442);
+            this.lblCantDeuAct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantDeuAct.Name = "lblCantDeuAct";
+            this.lblCantDeuAct.Size = new System.Drawing.Size(113, 25);
+            this.lblCantDeuAct.TabIndex = 24;
             // 
-            // label16
+            // lblCantDeuNom3
             // 
-            this.label16.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label16.Location = new System.Drawing.Point(178, 373);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(113, 25);
-            this.label16.TabIndex = 14;
+            this.lblCantDeuNom3.AutoSize = true;
+            this.lblCantDeuNom3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantDeuNom3.Location = new System.Drawing.Point(2, 442);
+            this.lblCantDeuNom3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantDeuNom3.Name = "lblCantDeuNom3";
+            this.lblCantDeuNom3.Size = new System.Drawing.Size(158, 20);
+            this.lblCantDeuNom3.TabIndex = 23;
+            this.lblCantDeuNom3.Text = "Cantidad Deudores:";
             // 
-            // label17
+            // lblCantDeuBar
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(-4, 412);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(162, 20);
-            this.label17.TabIndex = 13;
-            this.label17.Text = "Promedio de Deuda:";
+            this.lblCantDeuBar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblCantDeuBar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCantDeuBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantDeuBar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblCantDeuBar.Location = new System.Drawing.Point(183, 440);
+            this.lblCantDeuBar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantDeuBar.Name = "lblCantDeuBar";
+            this.lblCantDeuBar.Size = new System.Drawing.Size(113, 25);
+            this.lblCantDeuBar.TabIndex = 34;
             // 
-            // label19
+            // lblCantDeuNom2
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(-4, 378);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(128, 20);
-            this.label19.TabIndex = 11;
-            this.label19.Text = "Total de Deuda:";
+            this.lblCantDeuNom2.AutoSize = true;
+            this.lblCantDeuNom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantDeuNom2.Location = new System.Drawing.Point(4, 440);
+            this.lblCantDeuNom2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantDeuNom2.Name = "lblCantDeuNom2";
+            this.lblCantDeuNom2.Size = new System.Drawing.Size(158, 20);
+            this.lblCantDeuNom2.TabIndex = 33;
+            this.lblCantDeuNom2.Text = "Cantidad Deudores:";
             // 
-            // label20
+            // lblCantDeuCli
             // 
-            this.label20.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label20.Location = new System.Drawing.Point(489, 445);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(113, 25);
-            this.label20.TabIndex = 22;
+            this.lblCantDeuCli.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblCantDeuCli.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCantDeuCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantDeuCli.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblCantDeuCli.Location = new System.Drawing.Point(182, 440);
+            this.lblCantDeuCli.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantDeuCli.Name = "lblCantDeuCli";
+            this.lblCantDeuCli.Size = new System.Drawing.Size(113, 25);
+            this.lblCantDeuCli.TabIndex = 34;
             // 
-            // label21
+            // lblCantDeuNom
             // 
-            this.label21.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label21.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label21.Location = new System.Drawing.Point(489, 412);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(113, 25);
-            this.label21.TabIndex = 21;
-            // 
-            // label22
-            // 
-            this.label22.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label22.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label22.Location = new System.Drawing.Point(489, 373);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(113, 25);
-            this.label22.TabIndex = 20;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(307, 417);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(162, 20);
-            this.label23.TabIndex = 19;
-            this.label23.Text = "Promedio de Deuda:";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(307, 450);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(169, 20);
-            this.label24.TabIndex = 18;
-            this.label24.Text = "Cantidad de Clientes:";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(307, 378);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(128, 20);
-            this.label25.TabIndex = 17;
-            this.label25.Text = "Total de Deuda:";
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(494, 439);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 25);
-            this.label3.TabIndex = 32;
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(494, 406);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(113, 25);
-            this.label8.TabIndex = 31;
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(494, 367);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 25);
-            this.label9.TabIndex = 30;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(312, 411);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(162, 20);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "Promedio de Deuda:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(312, 444);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(169, 20);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "Cantidad de Clientes:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(312, 372);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(128, 20);
-            this.label12.TabIndex = 27;
-            this.label12.Text = "Total de Deuda:";
-            // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Location = new System.Drawing.Point(183, 406);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(113, 25);
-            this.label13.TabIndex = 26;
-            // 
-            // label15
-            // 
-            this.label15.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label15.Location = new System.Drawing.Point(183, 367);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(113, 25);
-            this.label15.TabIndex = 25;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(1, 406);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(162, 20);
-            this.label18.TabIndex = 24;
-            this.label18.Text = "Promedio de Deuda:";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(1, 372);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(128, 20);
-            this.label26.TabIndex = 23;
-            this.label26.Text = "Total de Deuda:";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(494, 439);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 25);
-            this.label1.TabIndex = 32;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(494, 406);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 25);
-            this.label2.TabIndex = 31;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(494, 367);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 25);
-            this.label4.TabIndex = 30;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(312, 411);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(162, 20);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Promedio de Deuda:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(312, 444);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(169, 20);
-            this.label6.TabIndex = 28;
-            this.label6.Text = "Cantidad de Clientes:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(312, 372);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(128, 20);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Total de Deuda:";
-            // 
-            // label27
-            // 
-            this.label27.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label27.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label27.Location = new System.Drawing.Point(183, 406);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(113, 25);
-            this.label27.TabIndex = 26;
-            // 
-            // label28
-            // 
-            this.label28.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label28.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label28.Location = new System.Drawing.Point(183, 367);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(113, 25);
-            this.label28.TabIndex = 25;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(1, 406);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(162, 20);
-            this.label29.TabIndex = 24;
-            this.label29.Text = "Promedio de Deuda:";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(1, 372);
-            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(128, 20);
-            this.label30.TabIndex = 23;
-            this.label30.Text = "Total de Deuda:";
+            this.lblCantDeuNom.AutoSize = true;
+            this.lblCantDeuNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantDeuNom.Location = new System.Drawing.Point(0, 440);
+            this.lblCantDeuNom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantDeuNom.Name = "lblCantDeuNom";
+            this.lblCantDeuNom.Size = new System.Drawing.Size(158, 20);
+            this.lblCantDeuNom.TabIndex = 33;
+            this.lblCantDeuNom.Text = "Cantidad Deudores:";
             // 
             // frmListadoClientes
             // 
@@ -645,35 +726,41 @@
         private System.Windows.Forms.DataGridView GrillaActividad;
         private System.Windows.Forms.Button cmdSalirActividad;
         private System.Windows.Forms.Button cmdConsultarActividad;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblCantClienteCli;
+        private System.Windows.Forms.Label lblPromIngreCli;
+        private System.Windows.Forms.Label lbIngreClientT;
+        private System.Windows.Forms.Label lblPromIngresoNom;
+        private System.Windows.Forms.Label lblCantClienteNom;
+        private System.Windows.Forms.Label lblTotalIngresoNom;
+        private System.Windows.Forms.Label lblPromDeudaClient;
+        private System.Windows.Forms.Label lblTotalDeudaClien;
+        private System.Windows.Forms.Label lblPromedioDeudNom;
+        private System.Windows.Forms.Label lblTotalDeudaNom;
+        private System.Windows.Forms.Label lblCantClienBar;
+        private System.Windows.Forms.Label lblPromIngreBar;
+        private System.Windows.Forms.Label lblTotalIngreBar;
+        private System.Windows.Forms.Label lblPromIngreNom2;
+        private System.Windows.Forms.Label lblCantClienNom2;
+        private System.Windows.Forms.Label lblTotalIngresoNom2;
+        private System.Windows.Forms.Label lblPromDeuBar;
+        private System.Windows.Forms.Label lblTotalDeuBar;
+        private System.Windows.Forms.Label lblPromDeudaNom2;
+        private System.Windows.Forms.Label lblTotalDeudaNom2;
+        private System.Windows.Forms.Label lblCantCliAct;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lblPromIngreNom3;
+        private System.Windows.Forms.Label lblCantClieNom3;
+        private System.Windows.Forms.Label lblTotalIngrNom3;
+        private System.Windows.Forms.Label lblPromDeuAct;
+        private System.Windows.Forms.Label lblTotalDeuAct;
+        private System.Windows.Forms.Label lblPromDeuNom3;
+        private System.Windows.Forms.Label lblTotalDeuNom3;
+        private System.Windows.Forms.Label lblCantDeuCli;
+        private System.Windows.Forms.Label lblCantDeuNom;
+        private System.Windows.Forms.Label lblCantDeuBar;
+        private System.Windows.Forms.Label lblCantDeuNom2;
+        private System.Windows.Forms.Label lblCantDeuAct;
+        private System.Windows.Forms.Label lblCantDeuNom3;
     }
 }

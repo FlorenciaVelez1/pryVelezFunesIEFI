@@ -112,7 +112,7 @@ namespace pryVelezFunesIEFI
         public void Modificar(Int32 IDSOCIO)
         {
             try
-            { 
+            {
                 string Sql = "UPDATE Gimnasio SET [Nombre y Apellido]= '" + Nom_Apellido + "', [Direccion]= '" + DireccionSocio + "', [Codigo Barrio]= " +
                 CodBarrio + ", [Codigo Actividad]= " + CodActividad + ", [Telefono]= " + TelefonoSocio + " WHERE [ID Socio] = " + IDSOCIO + "";
                 Conexion.ConnectionString = Ruta;
@@ -123,7 +123,7 @@ namespace pryVelezFunesIEFI
                 Comando.ExecuteNonQuery();
                 Conexion.Close();
             }
-            catch(Exception)
+            catch (Exception)
             {
                 MessageBox.Show("No se ha podido modificar la informacion.");
             }
@@ -145,8 +145,40 @@ namespace pryVelezFunesIEFI
             {
                 MessageBox.Show("No se ha podido eliminar el cliente completamente");
             }
-
+        }
+        public void ListarGrilla(DataGridView GrillaActividad, Int32 CodActividad)
+        {
+            try
+            {
+                Conexion.ConnectionString = Ruta;
+                Conexion.Open();
+                Comando.Connection = Conexion;
+                Comando.CommandType = CommandType.TableDirect;
+                Comando.CommandText = Tabla;
+                GrillaActividad.Rows.Clear();
+                OleDbDataReader Lector = Comando.ExecuteReader();
+                if (Lector.HasRows)
+                {
+                    while (Lector.Read())
+                    {
+                        if (Lector.GetInt32(4) == CodActividad)
+                        {
+                            Int32 codBarrio = Lector.GetInt32(3);
+                            Int32 codAct = Lector.GetInt32(4);
+                            clsBarrio BarrioConsulta = new clsBarrio();
+                            BarrioConsulta.BuscarBarrio(codBarrio);
+                            clsActividad ActConsulta = new clsActividad();
+                            ActConsulta.BuscarActividad(codAct);
+                            GrillaActividad.Rows.Add(Lector.GetInt32(0), Lector.GetString(1), Lector.GetString(2), BarrioConsulta.NomBarrio, ActConsulta.NomActividad, Lector.GetInt32(5));
+                        }
+                    }
+                }
+                Conexion.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se ha podido cargar la informacion.");
+            }
         }
     }
-
 }

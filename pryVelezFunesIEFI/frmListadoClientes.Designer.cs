@@ -30,10 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListadoClientes));
             this.GrillaClientes = new System.Windows.Forms.DataGridView();
-            this.cmdSalir = new System.Windows.Forms.Button();
-            this.cmdConsultar = new System.Windows.Forms.Button();
+            this.cmdSalirCliente = new System.Windows.Forms.Button();
+            this.cmdConsultarCliente = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabClientes = new System.Windows.Forms.TabPage();
+            this.lblCantDeuCli = new System.Windows.Forms.Label();
+            this.lblCantDeuNom = new System.Windows.Forms.Label();
             this.lblCantClienteCli = new System.Windows.Forms.Label();
             this.lblPromIngreCli = new System.Windows.Forms.Label();
             this.lbIngreClientT = new System.Windows.Forms.Label();
@@ -45,6 +47,8 @@
             this.lblPromedioDeudNom = new System.Windows.Forms.Label();
             this.lblTotalDeudaNom = new System.Windows.Forms.Label();
             this.tabBarrio = new System.Windows.Forms.TabPage();
+            this.lblCantDeuBar = new System.Windows.Forms.Label();
+            this.lblCantDeuNom2 = new System.Windows.Forms.Label();
             this.lblCantClienBar = new System.Windows.Forms.Label();
             this.lblPromIngreBar = new System.Windows.Forms.Label();
             this.lblTotalIngreBar = new System.Windows.Forms.Label();
@@ -59,6 +63,8 @@
             this.cmdSalirBarrio = new System.Windows.Forms.Button();
             this.cmdConsultaBarrio = new System.Windows.Forms.Button();
             this.tabActividad = new System.Windows.Forms.TabPage();
+            this.lblCantDeuAct = new System.Windows.Forms.Label();
+            this.lblCantDeuNom3 = new System.Windows.Forms.Label();
             this.lblCantCliAct = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -72,12 +78,16 @@
             this.GrillaActividad = new System.Windows.Forms.DataGridView();
             this.cmdSalirActividad = new System.Windows.Forms.Button();
             this.cmdConsultarActividad = new System.Windows.Forms.Button();
-            this.lblCantDeuAct = new System.Windows.Forms.Label();
-            this.lblCantDeuNom3 = new System.Windows.Forms.Label();
-            this.lblCantDeuBar = new System.Windows.Forms.Label();
-            this.lblCantDeuNom2 = new System.Windows.Forms.Label();
-            this.lblCantDeuCli = new System.Windows.Forms.Label();
-            this.lblCantDeuNom = new System.Windows.Forms.Label();
+            this.lstBarrio = new System.Windows.Forms.ComboBox();
+            this.lblBarrio = new System.Windows.Forms.Label();
+            this.lblActividad = new System.Windows.Forms.Label();
+            this.lstActividad = new System.Windows.Forms.ComboBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaClientes)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabClientes.SuspendLayout();
@@ -97,27 +107,27 @@
             this.GrillaClientes.Size = new System.Drawing.Size(608, 351);
             this.GrillaClientes.TabIndex = 3;
             // 
-            // cmdSalir
+            // cmdSalirCliente
             // 
-            this.cmdSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdSalir.Location = new System.Drawing.Point(4, 479);
-            this.cmdSalir.Margin = new System.Windows.Forms.Padding(4);
-            this.cmdSalir.Name = "cmdSalir";
-            this.cmdSalir.Size = new System.Drawing.Size(115, 33);
-            this.cmdSalir.TabIndex = 5;
-            this.cmdSalir.Text = "Salir";
-            this.cmdSalir.UseVisualStyleBackColor = true;
+            this.cmdSalirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdSalirCliente.Location = new System.Drawing.Point(4, 479);
+            this.cmdSalirCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdSalirCliente.Name = "cmdSalirCliente";
+            this.cmdSalirCliente.Size = new System.Drawing.Size(115, 33);
+            this.cmdSalirCliente.TabIndex = 5;
+            this.cmdSalirCliente.Text = "Salir";
+            this.cmdSalirCliente.UseVisualStyleBackColor = true;
             // 
-            // cmdConsultar
+            // cmdConsultarCliente
             // 
-            this.cmdConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdConsultar.Location = new System.Drawing.Point(494, 479);
-            this.cmdConsultar.Margin = new System.Windows.Forms.Padding(4);
-            this.cmdConsultar.Name = "cmdConsultar";
-            this.cmdConsultar.Size = new System.Drawing.Size(115, 33);
-            this.cmdConsultar.TabIndex = 4;
-            this.cmdConsultar.Text = "Consultar";
-            this.cmdConsultar.UseVisualStyleBackColor = true;
+            this.cmdConsultarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdConsultarCliente.Location = new System.Drawing.Point(494, 479);
+            this.cmdConsultarCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdConsultarCliente.Name = "cmdConsultarCliente";
+            this.cmdConsultarCliente.Size = new System.Drawing.Size(115, 33);
+            this.cmdConsultarCliente.TabIndex = 4;
+            this.cmdConsultarCliente.Text = "Consultar";
+            this.cmdConsultarCliente.UseVisualStyleBackColor = true;
             // 
             // tabControl1
             // 
@@ -146,8 +156,8 @@
             this.tabClientes.Controls.Add(this.lblPromedioDeudNom);
             this.tabClientes.Controls.Add(this.lblTotalDeudaNom);
             this.tabClientes.Controls.Add(this.GrillaClientes);
-            this.tabClientes.Controls.Add(this.cmdSalir);
-            this.tabClientes.Controls.Add(this.cmdConsultar);
+            this.tabClientes.Controls.Add(this.cmdSalirCliente);
+            this.tabClientes.Controls.Add(this.cmdConsultarCliente);
             this.tabClientes.Location = new System.Drawing.Point(4, 25);
             this.tabClientes.Margin = new System.Windows.Forms.Padding(4);
             this.tabClientes.Name = "tabClientes";
@@ -156,6 +166,29 @@
             this.tabClientes.TabIndex = 0;
             this.tabClientes.Text = "Clientes";
             this.tabClientes.UseVisualStyleBackColor = true;
+            // 
+            // lblCantDeuCli
+            // 
+            this.lblCantDeuCli.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblCantDeuCli.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCantDeuCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantDeuCli.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblCantDeuCli.Location = new System.Drawing.Point(182, 440);
+            this.lblCantDeuCli.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantDeuCli.Name = "lblCantDeuCli";
+            this.lblCantDeuCli.Size = new System.Drawing.Size(113, 25);
+            this.lblCantDeuCli.TabIndex = 34;
+            // 
+            // lblCantDeuNom
+            // 
+            this.lblCantDeuNom.AutoSize = true;
+            this.lblCantDeuNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantDeuNom.Location = new System.Drawing.Point(0, 440);
+            this.lblCantDeuNom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantDeuNom.Name = "lblCantDeuNom";
+            this.lblCantDeuNom.Size = new System.Drawing.Size(158, 20);
+            this.lblCantDeuNom.TabIndex = 33;
+            this.lblCantDeuNom.Text = "Cantidad Deudores:";
             // 
             // lblCantClienteCli
             // 
@@ -274,6 +307,8 @@
             // 
             // tabBarrio
             // 
+            this.tabBarrio.Controls.Add(this.lblBarrio);
+            this.tabBarrio.Controls.Add(this.lstBarrio);
             this.tabBarrio.Controls.Add(this.lblCantDeuBar);
             this.tabBarrio.Controls.Add(this.lblCantDeuNom2);
             this.tabBarrio.Controls.Add(this.lblCantClienBar);
@@ -297,6 +332,29 @@
             this.tabBarrio.TabIndex = 1;
             this.tabBarrio.Text = "Barrio";
             this.tabBarrio.UseVisualStyleBackColor = true;
+            // 
+            // lblCantDeuBar
+            // 
+            this.lblCantDeuBar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblCantDeuBar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCantDeuBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantDeuBar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblCantDeuBar.Location = new System.Drawing.Point(183, 440);
+            this.lblCantDeuBar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantDeuBar.Name = "lblCantDeuBar";
+            this.lblCantDeuBar.Size = new System.Drawing.Size(113, 25);
+            this.lblCantDeuBar.TabIndex = 34;
+            // 
+            // lblCantDeuNom2
+            // 
+            this.lblCantDeuNom2.AutoSize = true;
+            this.lblCantDeuNom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantDeuNom2.Location = new System.Drawing.Point(4, 440);
+            this.lblCantDeuNom2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantDeuNom2.Name = "lblCantDeuNom2";
+            this.lblCantDeuNom2.Size = new System.Drawing.Size(158, 20);
+            this.lblCantDeuNom2.TabIndex = 33;
+            this.lblCantDeuNom2.Text = "Cantidad Deudores:";
             // 
             // lblCantClienBar
             // 
@@ -416,6 +474,7 @@
             // GrillaBarrio
             // 
             this.GrillaBarrio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GrillaBarrio.Enabled = false;
             this.GrillaBarrio.Location = new System.Drawing.Point(4, 53);
             this.GrillaBarrio.Margin = new System.Windows.Forms.Padding(4);
             this.GrillaBarrio.Name = "GrillaBarrio";
@@ -447,6 +506,8 @@
             // 
             // tabActividad
             // 
+            this.tabActividad.Controls.Add(this.lblActividad);
+            this.tabActividad.Controls.Add(this.lstActividad);
             this.tabActividad.Controls.Add(this.lblCantDeuAct);
             this.tabActividad.Controls.Add(this.lblCantDeuNom3);
             this.tabActividad.Controls.Add(this.lblCantCliAct);
@@ -470,6 +531,29 @@
             this.tabActividad.TabIndex = 2;
             this.tabActividad.Text = "Actividad";
             this.tabActividad.UseVisualStyleBackColor = true;
+            // 
+            // lblCantDeuAct
+            // 
+            this.lblCantDeuAct.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblCantDeuAct.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCantDeuAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantDeuAct.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblCantDeuAct.Location = new System.Drawing.Point(184, 442);
+            this.lblCantDeuAct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantDeuAct.Name = "lblCantDeuAct";
+            this.lblCantDeuAct.Size = new System.Drawing.Size(113, 25);
+            this.lblCantDeuAct.TabIndex = 24;
+            // 
+            // lblCantDeuNom3
+            // 
+            this.lblCantDeuNom3.AutoSize = true;
+            this.lblCantDeuNom3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantDeuNom3.Location = new System.Drawing.Point(2, 442);
+            this.lblCantDeuNom3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantDeuNom3.Name = "lblCantDeuNom3";
+            this.lblCantDeuNom3.Size = new System.Drawing.Size(158, 20);
+            this.lblCantDeuNom3.TabIndex = 23;
+            this.lblCantDeuNom3.Text = "Cantidad Deudores:";
             // 
             // lblCantCliAct
             // 
@@ -511,7 +595,7 @@
             // 
             this.lblPromIngreNom3.AutoSize = true;
             this.lblPromIngreNom3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPromIngreNom3.Location = new System.Drawing.Point(313, 414);
+            this.lblPromIngreNom3.Location = new System.Drawing.Point(313, 409);
             this.lblPromIngreNom3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPromIngreNom3.Name = "lblPromIngreNom3";
             this.lblPromIngreNom3.Size = new System.Drawing.Size(177, 20);
@@ -589,9 +673,18 @@
             // GrillaActividad
             // 
             this.GrillaActividad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GrillaActividad.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.GrillaActividad.Enabled = false;
             this.GrillaActividad.Location = new System.Drawing.Point(3, 57);
             this.GrillaActividad.Margin = new System.Windows.Forms.Padding(4);
             this.GrillaActividad.Name = "GrillaActividad";
+            this.GrillaActividad.RowHeadersVisible = false;
             this.GrillaActividad.RowHeadersWidth = 51;
             this.GrillaActividad.Size = new System.Drawing.Size(608, 306);
             this.GrillaActividad.TabIndex = 6;
@@ -617,87 +710,100 @@
             this.cmdConsultarActividad.TabIndex = 7;
             this.cmdConsultarActividad.Text = "Consultar";
             this.cmdConsultarActividad.UseVisualStyleBackColor = true;
+            this.cmdConsultarActividad.Click += new System.EventHandler(this.cmdConsultarActividad_Click);
             // 
-            // lblCantDeuAct
+            // lstBarrio
             // 
-            this.lblCantDeuAct.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblCantDeuAct.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCantDeuAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantDeuAct.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblCantDeuAct.Location = new System.Drawing.Point(184, 442);
-            this.lblCantDeuAct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCantDeuAct.Name = "lblCantDeuAct";
-            this.lblCantDeuAct.Size = new System.Drawing.Size(113, 25);
-            this.lblCantDeuAct.TabIndex = 24;
+            this.lstBarrio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.lstBarrio.FormattingEnabled = true;
+            this.lstBarrio.Location = new System.Drawing.Point(84, 14);
+            this.lstBarrio.Name = "lstBarrio";
+            this.lstBarrio.Size = new System.Drawing.Size(121, 24);
+            this.lstBarrio.TabIndex = 35;
             // 
-            // lblCantDeuNom3
+            // lblBarrio
             // 
-            this.lblCantDeuNom3.AutoSize = true;
-            this.lblCantDeuNom3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantDeuNom3.Location = new System.Drawing.Point(2, 442);
-            this.lblCantDeuNom3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCantDeuNom3.Name = "lblCantDeuNom3";
-            this.lblCantDeuNom3.Size = new System.Drawing.Size(158, 20);
-            this.lblCantDeuNom3.TabIndex = 23;
-            this.lblCantDeuNom3.Text = "Cantidad Deudores:";
+            this.lblBarrio.AutoSize = true;
+            this.lblBarrio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBarrio.Location = new System.Drawing.Point(8, 14);
+            this.lblBarrio.Name = "lblBarrio";
+            this.lblBarrio.Size = new System.Drawing.Size(55, 20);
+            this.lblBarrio.TabIndex = 36;
+            this.lblBarrio.Text = "Barrio";
             // 
-            // lblCantDeuBar
+            // lblActividad
             // 
-            this.lblCantDeuBar.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblCantDeuBar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCantDeuBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantDeuBar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblCantDeuBar.Location = new System.Drawing.Point(183, 440);
-            this.lblCantDeuBar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCantDeuBar.Name = "lblCantDeuBar";
-            this.lblCantDeuBar.Size = new System.Drawing.Size(113, 25);
-            this.lblCantDeuBar.TabIndex = 34;
+            this.lblActividad.AutoSize = true;
+            this.lblActividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActividad.Location = new System.Drawing.Point(3, 16);
+            this.lblActividad.Name = "lblActividad";
+            this.lblActividad.Size = new System.Drawing.Size(77, 20);
+            this.lblActividad.TabIndex = 38;
+            this.lblActividad.Text = "Actividad";
             // 
-            // lblCantDeuNom2
+            // lstActividad
             // 
-            this.lblCantDeuNom2.AutoSize = true;
-            this.lblCantDeuNom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantDeuNom2.Location = new System.Drawing.Point(4, 440);
-            this.lblCantDeuNom2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCantDeuNom2.Name = "lblCantDeuNom2";
-            this.lblCantDeuNom2.Size = new System.Drawing.Size(158, 20);
-            this.lblCantDeuNom2.TabIndex = 33;
-            this.lblCantDeuNom2.Text = "Cantidad Deudores:";
+            this.lstActividad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.lstActividad.FormattingEnabled = true;
+            this.lstActividad.Location = new System.Drawing.Point(97, 14);
+            this.lstActividad.Name = "lstActividad";
+            this.lstActividad.Size = new System.Drawing.Size(121, 24);
+            this.lstActividad.TabIndex = 37;
             // 
-            // lblCantDeuCli
+            // Column1
             // 
-            this.lblCantDeuCli.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblCantDeuCli.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCantDeuCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantDeuCli.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblCantDeuCli.Location = new System.Drawing.Point(182, 440);
-            this.lblCantDeuCli.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCantDeuCli.Name = "lblCantDeuCli";
-            this.lblCantDeuCli.Size = new System.Drawing.Size(113, 25);
-            this.lblCantDeuCli.TabIndex = 34;
+            this.Column1.HeaderText = "ID Socio";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
             // 
-            // lblCantDeuNom
+            // Column2
             // 
-            this.lblCantDeuNom.AutoSize = true;
-            this.lblCantDeuNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantDeuNom.Location = new System.Drawing.Point(0, 440);
-            this.lblCantDeuNom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCantDeuNom.Name = "lblCantDeuNom";
-            this.lblCantDeuNom.Size = new System.Drawing.Size(158, 20);
-            this.lblCantDeuNom.TabIndex = 33;
-            this.lblCantDeuNom.Text = "Cantidad Deudores:";
+            this.Column2.HeaderText = "Nombre y Apellido";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Direccion";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Barrio";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Actividad";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Telefono";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
             // 
             // frmListadoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 544);
+            this.ClientSize = new System.Drawing.Size(635, 573);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmListadoClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Clientes";
+            this.Load += new System.EventHandler(this.frmListadoClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GrillaClientes)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabClientes.ResumeLayout(false);
@@ -714,8 +820,8 @@
 
         #endregion
         private System.Windows.Forms.DataGridView GrillaClientes;
-        private System.Windows.Forms.Button cmdSalir;
-        private System.Windows.Forms.Button cmdConsultar;
+        private System.Windows.Forms.Button cmdSalirCliente;
+        private System.Windows.Forms.Button cmdConsultarCliente;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabClientes;
         private System.Windows.Forms.TabPage tabBarrio;
@@ -762,5 +868,15 @@
         private System.Windows.Forms.Label lblCantDeuNom2;
         private System.Windows.Forms.Label lblCantDeuAct;
         private System.Windows.Forms.Label lblCantDeuNom3;
+        private System.Windows.Forms.Label lblBarrio;
+        private System.Windows.Forms.ComboBox lstBarrio;
+        private System.Windows.Forms.Label lblActividad;
+        private System.Windows.Forms.ComboBox lstActividad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

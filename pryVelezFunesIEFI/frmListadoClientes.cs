@@ -16,10 +16,20 @@ namespace pryVelezFunesIEFI
         {
             InitializeComponent();
         }
-
-        private void cmdSalir_Click(object sender, EventArgs e)
+        private void frmListadoClientes_Load(object sender, EventArgs e)
         {
-            this.Close();
+            clsActividad LlenarLSTAct = new clsActividad();
+            LlenarLSTAct.LlenarLst(lstActividad);
+            clsBarrio LlenarLSTBar = new clsBarrio();
+            LlenarLSTBar.LlenarLst(lstBarrio);
+            lstActividad.SelectedIndex = -1;
+            lstBarrio.SelectedIndex = -1;
+        }
+        private void cmdConsultarActividad_Click(object sender, EventArgs e)
+        {
+            Int32 codActividad = Convert.ToInt32(lstActividad.SelectedValue);
+            clsGimnasio GrillaLlenar = new clsGimnasio();
+            GrillaLlenar.ListarGrilla(GrillaActividad, codActividad);
         }
     }
 }

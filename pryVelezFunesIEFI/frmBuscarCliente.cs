@@ -148,7 +148,6 @@ namespace pryVelezFunesIEFI
             ModificarInscripcion.Forma_Pago = lstFormaPago.Text;
             ModificarInscripcion.SaldoSocio = Convert.ToDecimal(mskImporte.Text);
             ModificarInscripcion.Modificar(SocioID);
-            MessageBox.Show("La informacion ha sido modificada exitosamente.");
             Limpiar();
         }
         private void cmdEliminar_Click(object sender, EventArgs e)
@@ -158,7 +157,6 @@ namespace pryVelezFunesIEFI
             EliminarCliente.Eliminar(IDSOCIO);
             clsInscripcion EliminarInscripcion = new clsInscripcion();
             EliminarInscripcion.Eliminar(IDSOCIO);
-            MessageBox.Show("Datos borrados con exito");
             Limpiar();
         }
         private void mskIDSocio_TextChanged(object sender, EventArgs e)

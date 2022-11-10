@@ -80,7 +80,6 @@ namespace pryVelezFunesIEFI
             AgregadoInformacion.SaldoSocio = Convert.ToDecimal(mskImporte.Text);
             AgregadoInformacion.Agregar();
             Limpieza();
-            MessageBox.Show("Se han registrado los datos correctamente.");
         }
         private void cmdAgregarBarrio_Click(object sender, EventArgs e)
         {

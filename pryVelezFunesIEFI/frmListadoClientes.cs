@@ -32,17 +32,21 @@ namespace pryVelezFunesIEFI
             ConsultaAct.ListarGrillaAct(GrillaActividad, codActividad);
             lblCantCliAct.Text = Convert.ToString(ConsultaAct.VarCantCliente);
             lblTotalIngresosAct.Text = Convert.ToString(ConsultaAct.VarTotalIngreso);
-            lblPromedioAct.Text = Convert.ToString(ConsultaAct.VarPromedio);
+            lblPromedioAct.Text = Convert.ToString(((short)ConsultaAct.VarPromedio));
         }
         private void lstActividad_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstActividad.SelectedIndex == -1)
             {
                 cmdConsultarActividad.Enabled = false;
+                cmdExportarAct.Enabled = false;
+                cmdImprimirAct.Enabled = false;
             }
             else
             {
-                cmdConsultarActividad.Enabled=true;
+                cmdConsultarActividad.Enabled = true;
+                cmdExportarAct.Enabled = true;
+                cmdImprimirAct.Enabled = true;
             }
         }
         private void cmdImprimirAct_Click(object sender, EventArgs e)
@@ -53,7 +57,7 @@ namespace pryVelezFunesIEFI
         {
             Int32 CodAct = Convert.ToInt32(lstActividad.SelectedValue);
             clsGimnasio ExportarAct = new clsGimnasio();
-            ExportarAct.ExportarClientes(CodAct);
+            ExportarAct.ExportarClientesAct(CodAct);
         }
         private void cmdConsultaBarrio_Click(object sender, EventArgs e)
         {
@@ -62,17 +66,21 @@ namespace pryVelezFunesIEFI
             ConsultaAct.ListarGrillaBar(GrillaBar, codBarrio);
             lblCantClienBar.Text = Convert.ToString(ConsultaAct.VarCantCliente);
             lblTotalIngresosBar.Text = Convert.ToString(ConsultaAct.VarTotalIngreso);
-            lblPromedioBar.Text = Convert.ToString(ConsultaAct.VarPromedio);
+            lblPromedioBar.Text = Convert.ToString(((short)ConsultaAct.VarPromedio));
         }
         private void lstBarrio_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstBarrio.SelectedIndex == -1)
             {
                 cmdConsultaBarrio.Enabled = false;
+                cmdImprimirBar.Enabled = false;
+                cmdExportarBar.Enabled = false;
             }
             else
             {
                 cmdConsultaBarrio.Enabled = true;
+                cmdImprimirBar.Enabled = true;
+                cmdExportarBar.Enabled = true;
             }
         }
         private void cmdConsultarCliente_Click(object sender, EventArgs e)
@@ -81,7 +89,7 @@ namespace pryVelezFunesIEFI
             ConsultaCli.ListarGrillaClie(GrillaClientes);
             lblCantClienteCli.Text = Convert.ToString(ConsultaCli.VarCantCliente);
             lblTotalIngresosCli.Text = Convert.ToString(ConsultaCli.VarTotalIngreso);
-            lblPromedioCli.Text = Convert.ToString(ConsultaCli.VarPromedio);
+            lblPromedioCli.Text = Convert.ToString(((short)ConsultaCli.VarPromedio));
         }
 
         private void cmdSalirActividad_Click(object sender, EventArgs e)
@@ -95,6 +103,17 @@ namespace pryVelezFunesIEFI
         private void cmdSalirCliente_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void cmdExportarBar_Click(object sender, EventArgs e)
+        {
+            Int32 CodBarrio = Convert.ToInt32(lstBarrio.SelectedValue);
+            clsGimnasio ExportarCliBarrio = new clsGimnasio();
+            ExportarCliBarrio.ExportarClientesBar(CodBarrio);
+        }
+        private void cmdExportarCli_Click(object sender, EventArgs e)
+        {
+            clsGimnasio ExportarClientes = new clsGimnasio();
+            ExportarClientes.ExportarClientes();
         }
     }
 }

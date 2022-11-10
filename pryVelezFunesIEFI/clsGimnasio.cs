@@ -38,8 +38,6 @@ namespace pryVelezFunesIEFI
         public decimal CostoYoga = 9000;
         public decimal CostoCardio = 13000;
         public decimal CostoFuncional = 10000;
-        
-
         public Int32 SocioID
         {
             get { return varIDSocio; }
@@ -84,6 +82,7 @@ namespace pryVelezFunesIEFI
                 Comando.CommandText = Sql;
                 Comando.ExecuteNonQuery();
                 Conexion.Close();
+                MessageBox.Show("Se han registrado los datos correctamente.");
             }
             catch (Exception)
             {
@@ -137,6 +136,8 @@ namespace pryVelezFunesIEFI
                 Comando.CommandText = Sql;
                 Comando.ExecuteNonQuery();
                 Conexion.Close();
+                MessageBox.Show("La informacion ha sido modificada exitosamente.");
+
             }
             catch (Exception)
             {
@@ -155,6 +156,8 @@ namespace pryVelezFunesIEFI
                 Comando.CommandText = Sql;
                 Comando.ExecuteNonQuery();
                 Conexion.Close();
+                MessageBox.Show("Datos borrados con exito");
+
             }
             catch (Exception)
             {
@@ -205,9 +208,8 @@ namespace pryVelezFunesIEFI
                 MessageBox.Show("No se ha podido cargar la informacion.");
             }
         }
-        public void ExportarClientes(Int32 idACtividad)
+        public void ExportarClientesAct(Int32 idACtividad)
         {
-
             try
             {
                 Conexion.ConnectionString = Ruta;
@@ -216,9 +218,10 @@ namespace pryVelezFunesIEFI
                 Comando.CommandType = CommandType.TableDirect;
                 Comando.CommandText = Tabla;
                 OleDbDataReader Lector = Comando.ExecuteReader();
-                StreamWriter ExportarDatos = new StreamWriter("ExportarClientes.csv", false);
-                ExportarDatos.WriteLine("Listado de Socios\n");
-                ExportarDatos.WriteLine("Dni_Socio;Nombre_Apellido;Direccion;Saldo\n");
+                //Creo el archivo para exportar los datos
+                StreamWriter ExportarDatos = new StreamWriter("ExportarClientesPorActividad.csv", false, Encoding.UTF8);
+                ExportarDatos.WriteLine("Listado de Socios");
+                ExportarDatos.WriteLine("ID Socio;Nombre y Apellido;Direccion;Barrio; Actividad; Telefono; Fecha de Inscripcion;Saldo");
                 VarCantCliente = 0;
                 VarTotalIngreso = 0;
                 VarPromedio = 0;
@@ -359,6 +362,143 @@ namespace pryVelezFunesIEFI
             catch (Exception)
             {
                 MessageBox.Show("No se ha podido cargar la informacion.");
+            }
+        }
+        public void ExportarClientesBar(Int32 idBarrio)
+        {
+            try
+            {
+                Conexion.ConnectionString = Ruta;
+                Conexion.Open();
+                Comando.Connection = Conexion;
+                Comando.CommandType = CommandType.TableDirect;
+                Comando.CommandText = Tabla;
+                OleDbDataReader Lector = Comando.ExecuteReader();
+                //Creo el archivo para exportar los datos
+                StreamWriter ExportarDatos = new StreamWriter("ExportarClientesPorBarrio.csv", false, Encoding.UTF8);
+                ExportarDatos.WriteLine("Listado de Socios");
+                ExportarDatos.WriteLine("ID Socio;Nombre y Apellido;Direccion;Barrio; Actividad; Telefono; Fecha de Inscripcion;Saldo");
+                VarCantCliente = 0;
+                VarTotalIngreso = 0;
+                VarPromedio = 0;
+                if (Lector.HasRows)
+                {
+                    while (Lector.Read())
+                    {
+                        if (idBarrio == Lector.GetInt32(3))
+                        {
+                            //llamo las cls para cambiar los numeros por los nombres correspondientes
+                            Int32 codBarrio = Lector.GetInt32(3);
+                            Int32 codAct = Lector.GetInt32(4);
+                            Int32 IDSOCIO = Lector.GetInt32(0);
+                            clsBarrio BarrioConsulta = new clsBarrio();
+                            BarrioConsulta.BuscarBarrio(codBarrio);
+                            clsActividad ActConsulta = new clsActividad();
+                            ActConsulta.BuscarActividad(codAct);
+                            clsInscripcion InfoClienteIns = new clsInscripcion();
+                            InfoClienteIns.Buscar(IDSOCIO);
+                            ExportarDatos.Write(Lector.GetInt32(0));
+                            ExportarDatos.Write(";");
+                            ExportarDatos.Write(Lector.GetString(1));
+                            ExportarDatos.Write(";");
+                            ExportarDatos.Write(Lector.GetString(2));
+                            ExportarDatos.Write(";");
+                            ExportarDatos.Write(BarrioConsulta.NomBarrio);
+                            ExportarDatos.Write(";");
+                            ExportarDatos.Write(ActConsulta.NomActividad);
+                            ExportarDatos.Write(";");
+                            ExportarDatos.Write(Lector.GetInt32(5));
+                            ExportarDatos.Write(";");
+                            ExportarDatos.Write(InfoClienteIns.Fecha_Inscripcion);
+                            ExportarDatos.Write(";");
+                            ExportarDatos.Write(InfoClienteIns.SaldoSocio);
+                            VarCantCliente++;
+                            VarTotalIngreso = VarTotalIngreso + InfoClienteIns.SaldoSocio;
+                            VarPromedio = VarTotalIngreso / VarCantCliente;
+                            ExportarDatos.Write("\n");
+                        }
+                    }
+                    ExportarDatos.Write("Cantidad de socios:");
+                    ExportarDatos.WriteLine(VarCantCliente);
+                    ExportarDatos.Write("Total de saldo:");
+                    ExportarDatos.WriteLine(VarTotalIngreso);
+                    ExportarDatos.Write("Promedio:");
+                    ExportarDatos.WriteLine(((short)VarPromedio));
+                }
+                Conexion.Close();
+                ExportarDatos.Close();
+                MessageBox.Show("Tus datos han sido exportados con exitosamente.");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Tus datos no han podido ser exportados.");
+            }
+        }
+        public void ExportarClientes()
+        {
+            try
+            {
+                Conexion.ConnectionString = Ruta;
+                Conexion.Open();
+                Comando.Connection = Conexion;
+                Comando.CommandType = CommandType.TableDirect;
+                Comando.CommandText = Tabla;
+                OleDbDataReader Lector = Comando.ExecuteReader();
+                //Creo el archivo para exportar los datos
+                StreamWriter ExportarDatos = new StreamWriter("ExportarClientes.csv", false, Encoding.UTF8);
+                ExportarDatos.WriteLine("Listado de Socios");
+                ExportarDatos.WriteLine("ID Socio;Nombre y Apellido;Direccion;Barrio; Actividad; Telefono; Fecha de Inscripcion;Saldo");
+                VarCantCliente = 0;
+                VarTotalIngreso = 0;
+                VarPromedio = 0;
+                if (Lector.HasRows)
+                {
+                    while (Lector.Read())
+                    {
+                            //llamo las cls para cambiar los numeros por los nombres correspondientes
+                            Int32 codBarrio = Lector.GetInt32(3);
+                            Int32 codAct = Lector.GetInt32(4);
+                            Int32 IDSOCIO = Lector.GetInt32(0);
+                            clsBarrio BarrioConsulta = new clsBarrio();
+                            BarrioConsulta.BuscarBarrio(codBarrio);
+                            clsActividad ActConsulta = new clsActividad();
+                            ActConsulta.BuscarActividad(codAct);
+                            clsInscripcion InfoClienteIns = new clsInscripcion();
+                            InfoClienteIns.Buscar(IDSOCIO);
+                            ExportarDatos.Write(Lector.GetInt32(0));
+                            ExportarDatos.Write(";");
+                            ExportarDatos.Write(Lector.GetString(1));
+                            ExportarDatos.Write(";");
+                            ExportarDatos.Write(Lector.GetString(2));
+                            ExportarDatos.Write(";");
+                            ExportarDatos.Write(BarrioConsulta.NomBarrio);
+                            ExportarDatos.Write(";");
+                            ExportarDatos.Write(ActConsulta.NomActividad);
+                            ExportarDatos.Write(";");
+                            ExportarDatos.Write(Lector.GetInt32(5));
+                            ExportarDatos.Write(";");
+                            ExportarDatos.Write(InfoClienteIns.Fecha_Inscripcion);
+                            ExportarDatos.Write(";");
+                            ExportarDatos.Write(InfoClienteIns.SaldoSocio);
+                            VarCantCliente++;
+                            VarTotalIngreso = VarTotalIngreso + InfoClienteIns.SaldoSocio;
+                            VarPromedio = VarTotalIngreso / VarCantCliente;
+                            ExportarDatos.Write("\n");
+                    }
+                    ExportarDatos.Write("Cantidad de socios:");
+                    ExportarDatos.WriteLine(VarCantCliente);
+                    ExportarDatos.Write("Total de saldo:");
+                    ExportarDatos.WriteLine(VarTotalIngreso);
+                    ExportarDatos.Write("Promedio:");
+                    ExportarDatos.WriteLine(((short)VarPromedio));
+                }
+                Conexion.Close();
+                ExportarDatos.Close();
+                MessageBox.Show("Tus datos han sido exportados con exitosamente.");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Tus datos no han podido ser exportados.");
             }
         }
     }

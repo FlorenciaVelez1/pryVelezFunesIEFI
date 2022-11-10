@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.OleDb;
 using System.Windows.Forms;
+//Agrego system para usar el streamwriter
+using System.IO;
 namespace pryVelezFunesIEFI
 {
     internal class clsGimnasio
@@ -25,6 +27,19 @@ namespace pryVelezFunesIEFI
         private Int32 varCodigoBarrio;
         private Int32 varCodigoActividad;
         private Int32 varTelefono;
+        //Declaro variables que voy a usar para para contar los clientes, promedio y saldo total.
+        public decimal VarTotalIngreso;
+        public Int32 VarCantCliente;
+        public decimal VarPromedio;
+        //Declaro variables con el costo de cada actividad
+        public decimal CostoMusculacion = 9500;
+        public decimal CostoCrossfit = 8500;
+        public decimal CostoPilates = 12000;
+        public decimal CostoYoga = 9000;
+        public decimal CostoCardio = 13000;
+        public decimal CostoFuncional = 10000;
+        
+
         public Int32 SocioID
         {
             get { return varIDSocio; }
@@ -157,19 +172,29 @@ namespace pryVelezFunesIEFI
                 Comando.CommandText = Tabla;
                 GrillaActividad.Rows.Clear();
                 OleDbDataReader Lector = Comando.ExecuteReader();
+                VarCantCliente = 0;
+                VarPromedio = 0;
+                VarTotalIngreso = 0;
                 if (Lector.HasRows)
                 {
                     while (Lector.Read())
                     {
                         if (Lector.GetInt32(4) == CodActividad)
                         {
+                            //llamo las cls para cambiar los numeros por los nombres correspondientes
                             Int32 codBarrio = Lector.GetInt32(3);
                             Int32 codAct = Lector.GetInt32(4);
+                            Int32 IDSOCIO = Lector.GetInt32(0);
                             clsBarrio BarrioConsulta = new clsBarrio();
                             BarrioConsulta.BuscarBarrio(codBarrio);
                             clsActividad ActConsulta = new clsActividad();
                             ActConsulta.BuscarActividad(codAct);
-                            GrillaActividad.Rows.Add(Lector.GetInt32(0), Lector.GetString(1), Lector.GetString(2), BarrioConsulta.NomBarrio, ActConsulta.NomActividad, Lector.GetInt32(5));
+                            clsInscripcion InfoClienteIns = new clsInscripcion();
+                            InfoClienteIns.Buscar(IDSOCIO);
+                            GrillaActividad.Rows.Add(Lector.GetInt32(0), Lector.GetString(1), Lector.GetString(2), BarrioConsulta.NomBarrio, ActConsulta.NomActividad, Lector.GetInt32(5), InfoClienteIns.Fecha_Inscripcion, InfoClienteIns.SaldoSocio);
+                            VarCantCliente++;
+                            VarTotalIngreso = VarTotalIngreso + InfoClienteIns.SaldoSocio;
+                            VarPromedio = VarTotalIngreso/VarCantCliente;
                         }
                     }
                 }
@@ -178,6 +203,77 @@ namespace pryVelezFunesIEFI
             catch (Exception)
             {
                 MessageBox.Show("No se ha podido cargar la informacion.");
+            }
+        }
+        public void ExportarClientes(Int32 idACtividad)
+        {
+
+            try
+            {
+                Conexion.ConnectionString = Ruta;
+                Conexion.Open();
+                Comando.Connection = Conexion; 
+                Comando.CommandType = CommandType.TableDirect;
+                Comando.CommandText = Tabla;
+                OleDbDataReader Lector = Comando.ExecuteReader();
+                StreamWriter ExportarDatos = new StreamWriter("ExportarClientes.csv", false);
+                ExportarDatos.WriteLine("Listado de Socios\n");
+                ExportarDatos.WriteLine("Dni_Socio;Nombre_Apellido;Direccion;Saldo\n");
+                VarCantCliente = 0;
+                VarTotalIngreso = 0;
+                VarPromedio = 0;
+                if (Lector.HasRows)
+                {
+                    while (Lector.Read())
+                    {
+                        if (idACtividad == Lector.GetInt32(4))
+                        {
+                            //llamo las cls para cambiar los numeros por los nombres correspondientes
+                            Int32 codBarrio = Lector.GetInt32(3);
+                            Int32 codAct = Lector.GetInt32(4);
+                            Int32 IDSOCIO = Lector.GetInt32(0);
+                            clsBarrio BarrioConsulta = new clsBarrio();
+                            BarrioConsulta.BuscarBarrio(codBarrio);
+                            clsActividad ActConsulta = new clsActividad();
+                            ActConsulta.BuscarActividad(codAct);
+                            clsInscripcion InfoClienteIns = new clsInscripcion();
+                            InfoClienteIns.Buscar(IDSOCIO);
+                            ExportarDatos.Write(Lector.GetInt32(0));
+                            ExportarDatos.Write(";");
+                            ExportarDatos.Write(Lector.GetString(1));
+                            ExportarDatos.Write(";");
+                            ExportarDatos.Write(Lector.GetString(2));
+                            ExportarDatos.Write(";");
+                            ExportarDatos.Write(BarrioConsulta.NomBarrio);
+                            ExportarDatos.Write(";");
+                            ExportarDatos.Write(ActConsulta.NomActividad);
+                            ExportarDatos.Write(";");
+                            ExportarDatos.Write(Lector.GetInt32(5));
+                            ExportarDatos.Write(";");
+                            ExportarDatos.Write(InfoClienteIns.Fecha_Inscripcion);
+                            ExportarDatos.Write(";");
+                            ExportarDatos.Write(InfoClienteIns.SaldoSocio);
+                            VarCantCliente++;
+                            VarTotalIngreso = VarTotalIngreso + InfoClienteIns.SaldoSocio;
+                            VarPromedio = VarTotalIngreso / VarCantCliente;
+                            ExportarDatos.Write("\n");
+                        }
+                    }
+                    ExportarDatos.Write("Cantidad de socios:");
+                    ExportarDatos.WriteLine(VarCantCliente);
+                    ExportarDatos.Write("Total de saldo:");
+                    ExportarDatos.WriteLine(VarTotalIngreso);
+                    ExportarDatos.Write("Promedio:");
+                    ExportarDatos.WriteLine(VarPromedio);
+                }
+                Conexion.Close();
+                ExportarDatos.Close();
+                MessageBox.Show("Tus datos han sido exportados con exitosamente.");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Tus datos no han podido ser exportados.");
+
             }
         }
     }

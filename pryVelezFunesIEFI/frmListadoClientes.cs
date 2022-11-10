@@ -28,8 +28,32 @@ namespace pryVelezFunesIEFI
         private void cmdConsultarActividad_Click(object sender, EventArgs e)
         {
             Int32 codActividad = Convert.ToInt32(lstActividad.SelectedValue);
-            clsGimnasio GrillaLlenar = new clsGimnasio();
-            GrillaLlenar.ListarGrilla(GrillaActividad, codActividad);
+            clsGimnasio ConsultaAct = new clsGimnasio();
+            ConsultaAct.ListarGrilla(GrillaActividad, codActividad);
+            lblCantCliAct.Text = Convert.ToString(ConsultaAct.VarCantCliente);
+            lblTotalIngresosAct.Text = Convert.ToString(ConsultaAct.VarTotalIngreso);
+            lblPromedioAct.Text = Convert.ToString(ConsultaAct.VarPromedio);
+        }
+        private void lstActividad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstActividad.SelectedIndex == -1)
+            {
+                cmdConsultarActividad.Enabled = false;
+            }
+            else
+            {
+                cmdConsultarActividad.Enabled=true;
+            }
+        }
+        private void cmdImprimirAct_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void cmdExportarAct_Click(object sender, EventArgs e)
+        {
+            Int32 CodAct = Convert.ToInt32(lstActividad.SelectedValue);
+            clsGimnasio ExportarAct = new clsGimnasio();
+            ExportarAct.ExportarClientes(CodAct);
         }
     }
 }

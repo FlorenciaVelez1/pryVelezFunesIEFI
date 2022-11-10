@@ -39,7 +39,6 @@
             this.tsmListado = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmClientes = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tsmClientesDeudores = new System.Windows.Forms.ToolStripMenuItem();
             this.msMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -94,22 +93,21 @@
             // tsmRegistrarCliente
             // 
             this.tsmRegistrarCliente.Name = "tsmRegistrarCliente";
-            this.tsmRegistrarCliente.Size = new System.Drawing.Size(224, 26);
+            this.tsmRegistrarCliente.Size = new System.Drawing.Size(201, 26);
             this.tsmRegistrarCliente.Text = "Registrar Cliente";
             this.tsmRegistrarCliente.Click += new System.EventHandler(this.tsmRegistrarCliente_Click);
             // 
             // tsmBuscarCliente
             // 
             this.tsmBuscarCliente.Name = "tsmBuscarCliente";
-            this.tsmBuscarCliente.Size = new System.Drawing.Size(224, 26);
+            this.tsmBuscarCliente.Size = new System.Drawing.Size(201, 26);
             this.tsmBuscarCliente.Text = "Buscar Cliente";
             this.tsmBuscarCliente.Click += new System.EventHandler(this.tsmBuscarCliente_Click);
             // 
             // tsmListado
             // 
             this.tsmListado.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmClientes,
-            this.tsmClientesDeudores});
+            this.tsmClientes});
             this.tsmListado.Name = "tsmListado";
             this.tsmListado.Size = new System.Drawing.Size(71, 24);
             this.tsmListado.Text = "Listado";
@@ -132,12 +130,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // tsmClientesDeudores
-            // 
-            this.tsmClientesDeudores.Name = "tsmClientesDeudores";
-            this.tsmClientesDeudores.Size = new System.Drawing.Size(224, 26);
-            this.tsmClientesDeudores.Text = "Clientes Deudores";
             // 
             // frmInicio
             // 
@@ -172,7 +164,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmListado;
         private System.Windows.Forms.ToolStripMenuItem tsmClientes;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ToolStripMenuItem tsmClientesDeudores;
     }
 }
 

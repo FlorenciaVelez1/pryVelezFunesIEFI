@@ -213,7 +213,7 @@
             this.txtDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDireccion.Location = new System.Drawing.Point(182, 85);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDireccion.MaxLength = 20;
+            this.txtDireccion.MaxLength = 60;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.ShortcutsEnabled = false;
             this.txtDireccion.Size = new System.Drawing.Size(265, 27);
@@ -245,7 +245,7 @@
             this.txtNombreApellido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombreApellido.Location = new System.Drawing.Point(182, 42);
             this.txtNombreApellido.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNombreApellido.MaxLength = 10;
+            this.txtNombreApellido.MaxLength = 60;
             this.txtNombreApellido.Name = "txtNombreApellido";
             this.txtNombreApellido.ShortcutsEnabled = false;
             this.txtNombreApellido.Size = new System.Drawing.Size(265, 27);

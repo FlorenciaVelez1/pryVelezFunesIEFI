@@ -61,7 +61,7 @@
             this.cmdSalir.Location = new System.Drawing.Point(12, 430);
             this.cmdSalir.Name = "cmdSalir";
             this.cmdSalir.Size = new System.Drawing.Size(110, 38);
-            this.cmdSalir.TabIndex = 9;
+            this.cmdSalir.TabIndex = 10;
             this.cmdSalir.Text = "Salir";
             this.cmdSalir.UseVisualStyleBackColor = true;
             this.cmdSalir.Click += new System.EventHandler(this.cmdSalir_Click);
@@ -102,7 +102,7 @@
             this.mskIDSocio.Mask = "000000000";
             this.mskIDSocio.Name = "mskIDSocio";
             this.mskIDSocio.Size = new System.Drawing.Size(174, 27);
-            this.mskIDSocio.TabIndex = 73;
+            this.mskIDSocio.TabIndex = 1;
             this.mskIDSocio.ValidatingType = typeof(int);
             // 
             // lblIDSocio
@@ -123,7 +123,7 @@
             this.lstBarrio.Location = new System.Drawing.Point(186, 164);
             this.lstBarrio.Name = "lstBarrio";
             this.lstBarrio.Size = new System.Drawing.Size(174, 28);
-            this.lstBarrio.TabIndex = 3;
+            this.lstBarrio.TabIndex = 4;
             this.lstBarrio.SelectedIndexChanged += new System.EventHandler(this.lstBarrio_SelectedIndexChanged);
             // 
             // cmdAgregarBarrio
@@ -142,7 +142,7 @@
             this.mskImporte.Mask = "99999";
             this.mskImporte.Name = "mskImporte";
             this.mskImporte.Size = new System.Drawing.Size(132, 27);
-            this.mskImporte.TabIndex = 8;
+            this.mskImporte.TabIndex = 9;
             this.mskImporte.ValidatingType = typeof(int);
             this.mskImporte.TextChanged += new System.EventHandler(this.mskImporte_TextChanged);
             // 
@@ -156,7 +156,7 @@
             this.lstFormaPago.Location = new System.Drawing.Point(186, 332);
             this.lstFormaPago.Name = "lstFormaPago";
             this.lstFormaPago.Size = new System.Drawing.Size(132, 28);
-            this.lstFormaPago.TabIndex = 7;
+            this.lstFormaPago.TabIndex = 8;
             this.lstFormaPago.SelectedIndexChanged += new System.EventHandler(this.lstFormaPago_SelectedIndexChanged);
             // 
             // lblImporte
@@ -185,7 +185,7 @@
             this.mskFecha.Mask = "00/00/0000";
             this.mskFecha.Name = "mskFecha";
             this.mskFecha.Size = new System.Drawing.Size(132, 27);
-            this.mskFecha.TabIndex = 6;
+            this.mskFecha.TabIndex = 7;
             this.mskFecha.ValidatingType = typeof(System.DateTime);
             this.mskFecha.TextChanged += new System.EventHandler(this.mskFecha_TextChanged);
             // 
@@ -208,7 +208,7 @@
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.ShortcutsEnabled = false;
             this.txtDireccion.Size = new System.Drawing.Size(216, 27);
-            this.txtDireccion.TabIndex = 2;
+            this.txtDireccion.TabIndex = 3;
             this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             // 
             // lblActividad
@@ -231,7 +231,7 @@
             this.txtNombreApellido.Name = "txtNombreApellido";
             this.txtNombreApellido.ShortcutsEnabled = false;
             this.txtNombreApellido.Size = new System.Drawing.Size(216, 27);
-            this.txtNombreApellido.TabIndex = 1;
+            this.txtNombreApellido.TabIndex = 2;
             this.txtNombreApellido.TextChanged += new System.EventHandler(this.txtNombreApellido_TextChanged);
             this.txtNombreApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreApellido_KeyPress);
             // 
@@ -251,7 +251,7 @@
             this.lstActividad.Margin = new System.Windows.Forms.Padding(4);
             this.lstActividad.Name = "lstActividad";
             this.lstActividad.Size = new System.Drawing.Size(174, 28);
-            this.lstActividad.TabIndex = 4;
+            this.lstActividad.TabIndex = 5;
             this.lstActividad.SelectedIndexChanged += new System.EventHandler(this.lstActividad_SelectedIndexChanged);
             // 
             // lblBarrio
@@ -283,7 +283,7 @@
             this.mskTelefono.Mask = "000000000";
             this.mskTelefono.Name = "mskTelefono";
             this.mskTelefono.Size = new System.Drawing.Size(132, 27);
-            this.mskTelefono.TabIndex = 5;
+            this.mskTelefono.TabIndex = 6;
             this.mskTelefono.ValidatingType = typeof(int);
             this.mskTelefono.TextChanged += new System.EventHandler(this.mskTelefono_TextChanged);
             // 
@@ -315,7 +315,7 @@
             this.cmdLimpiar.Location = new System.Drawing.Point(165, 430);
             this.cmdLimpiar.Name = "cmdLimpiar";
             this.cmdLimpiar.Size = new System.Drawing.Size(110, 38);
-            this.cmdLimpiar.TabIndex = 10;
+            this.cmdLimpiar.TabIndex = 11;
             this.cmdLimpiar.Text = "Limpiar";
             this.cmdLimpiar.UseVisualStyleBackColor = true;
             this.cmdLimpiar.Click += new System.EventHandler(this.cmdLimpiar_Click);
@@ -326,7 +326,7 @@
             this.cmdRegistrar.Location = new System.Drawing.Point(318, 430);
             this.cmdRegistrar.Name = "cmdRegistrar";
             this.cmdRegistrar.Size = new System.Drawing.Size(110, 38);
-            this.cmdRegistrar.TabIndex = 11;
+            this.cmdRegistrar.TabIndex = 12;
             this.cmdRegistrar.Text = "Registrar";
             this.cmdRegistrar.UseVisualStyleBackColor = true;
             this.cmdRegistrar.Click += new System.EventHandler(this.cmdRegistrar_Click);

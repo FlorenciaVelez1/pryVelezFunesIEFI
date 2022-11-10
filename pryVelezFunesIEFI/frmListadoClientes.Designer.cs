@@ -35,7 +35,7 @@
             this.tabClientes = new System.Windows.Forms.TabPage();
             this.lblCantClienteCli = new System.Windows.Forms.Label();
             this.lblPromedioCli = new System.Windows.Forms.Label();
-            this.lblIngresosCli = new System.Windows.Forms.Label();
+            this.lblTotalIngresosCli = new System.Windows.Forms.Label();
             this.lblPromIngresoNom = new System.Windows.Forms.Label();
             this.lblCantClienteNom = new System.Windows.Forms.Label();
             this.lblTotalIngresoNom = new System.Windows.Forms.Label();
@@ -86,6 +86,14 @@
             this.cmdImprimirAct = new System.Windows.Forms.Button();
             this.cmdExportarAct = new System.Windows.Forms.Button();
             this.GrillaClientes = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabClientes.SuspendLayout();
             this.tabBarrio.SuspendLayout();
@@ -98,24 +106,26 @@
             // cmdSalirCliente
             // 
             this.cmdSalirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdSalirCliente.Location = new System.Drawing.Point(452, 477);
+            this.cmdSalirCliente.Location = new System.Drawing.Point(452, 475);
             this.cmdSalirCliente.Margin = new System.Windows.Forms.Padding(4);
             this.cmdSalirCliente.Name = "cmdSalirCliente";
             this.cmdSalirCliente.Size = new System.Drawing.Size(115, 33);
             this.cmdSalirCliente.TabIndex = 5;
             this.cmdSalirCliente.Text = "Salir";
             this.cmdSalirCliente.UseVisualStyleBackColor = true;
+            this.cmdSalirCliente.Click += new System.EventHandler(this.cmdSalirCliente_Click);
             // 
             // cmdConsultarCliente
             // 
             this.cmdConsultarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdConsultarCliente.Location = new System.Drawing.Point(640, 477);
+            this.cmdConsultarCliente.Location = new System.Drawing.Point(640, 475);
             this.cmdConsultarCliente.Margin = new System.Windows.Forms.Padding(4);
             this.cmdConsultarCliente.Name = "cmdConsultarCliente";
             this.cmdConsultarCliente.Size = new System.Drawing.Size(115, 33);
             this.cmdConsultarCliente.TabIndex = 4;
             this.cmdConsultarCliente.Text = "Consultar";
             this.cmdConsultarCliente.UseVisualStyleBackColor = true;
+            this.cmdConsultarCliente.Click += new System.EventHandler(this.cmdConsultarCliente_Click);
             // 
             // tabControl1
             // 
@@ -136,7 +146,7 @@
             this.tabClientes.Controls.Add(this.cmdExportarCli);
             this.tabClientes.Controls.Add(this.lblCantClienteCli);
             this.tabClientes.Controls.Add(this.lblPromedioCli);
-            this.tabClientes.Controls.Add(this.lblIngresosCli);
+            this.tabClientes.Controls.Add(this.lblTotalIngresosCli);
             this.tabClientes.Controls.Add(this.lblPromIngresoNom);
             this.tabClientes.Controls.Add(this.lblCantClienteNom);
             this.tabClientes.Controls.Add(this.lblTotalIngresoNom);
@@ -157,7 +167,7 @@
             this.lblCantClienteCli.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblCantClienteCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantClienteCli.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblCantClienteCli.Location = new System.Drawing.Point(639, 442);
+            this.lblCantClienteCli.Location = new System.Drawing.Point(639, 440);
             this.lblCantClienteCli.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantClienteCli.Name = "lblCantClienteCli";
             this.lblCantClienteCli.Size = new System.Drawing.Size(113, 25);
@@ -169,29 +179,29 @@
             this.lblPromedioCli.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblPromedioCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPromedioCli.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblPromedioCli.Location = new System.Drawing.Point(639, 411);
+            this.lblPromedioCli.Location = new System.Drawing.Point(639, 409);
             this.lblPromedioCli.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPromedioCli.Name = "lblPromedioCli";
             this.lblPromedioCli.Size = new System.Drawing.Size(113, 25);
             this.lblPromedioCli.TabIndex = 31;
             // 
-            // lblIngresosCli
+            // lblTotalIngresosCli
             // 
-            this.lblIngresosCli.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblIngresosCli.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblIngresosCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIngresosCli.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblIngresosCli.Location = new System.Drawing.Point(639, 374);
-            this.lblIngresosCli.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblIngresosCli.Name = "lblIngresosCli";
-            this.lblIngresosCli.Size = new System.Drawing.Size(113, 25);
-            this.lblIngresosCli.TabIndex = 30;
+            this.lblTotalIngresosCli.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblTotalIngresosCli.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTotalIngresosCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalIngresosCli.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblTotalIngresosCli.Location = new System.Drawing.Point(639, 372);
+            this.lblTotalIngresosCli.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalIngresosCli.Name = "lblTotalIngresosCli";
+            this.lblTotalIngresosCli.Size = new System.Drawing.Size(113, 25);
+            this.lblTotalIngresosCli.TabIndex = 30;
             // 
             // lblPromIngresoNom
             // 
             this.lblPromIngresoNom.AutoSize = true;
             this.lblPromIngresoNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPromIngresoNom.Location = new System.Drawing.Point(448, 411);
+            this.lblPromIngresoNom.Location = new System.Drawing.Point(448, 409);
             this.lblPromIngresoNom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPromIngresoNom.Name = "lblPromIngresoNom";
             this.lblPromIngresoNom.Size = new System.Drawing.Size(177, 20);
@@ -202,7 +212,7 @@
             // 
             this.lblCantClienteNom.AutoSize = true;
             this.lblCantClienteNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantClienteNom.Location = new System.Drawing.Point(448, 447);
+            this.lblCantClienteNom.Location = new System.Drawing.Point(448, 445);
             this.lblCantClienteNom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantClienteNom.Name = "lblCantClienteNom";
             this.lblCantClienteNom.Size = new System.Drawing.Size(169, 20);
@@ -213,7 +223,7 @@
             // 
             this.lblTotalIngresoNom.AutoSize = true;
             this.lblTotalIngresoNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalIngresoNom.Location = new System.Drawing.Point(448, 375);
+            this.lblTotalIngresoNom.Location = new System.Drawing.Point(448, 372);
             this.lblTotalIngresoNom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalIngresoNom.Name = "lblTotalIngresoNom";
             this.lblTotalIngresoNom.Size = new System.Drawing.Size(143, 20);
@@ -262,6 +272,7 @@
             this.lstBarrio.Name = "lstBarrio";
             this.lstBarrio.Size = new System.Drawing.Size(121, 24);
             this.lstBarrio.TabIndex = 35;
+            this.lstBarrio.SelectedIndexChanged += new System.EventHandler(this.lstBarrio_SelectedIndexChanged);
             // 
             // lblCantClienBar
             // 
@@ -342,6 +353,7 @@
             this.cmdSalirBarrio.TabIndex = 8;
             this.cmdSalirBarrio.Text = "Salir";
             this.cmdSalirBarrio.UseVisualStyleBackColor = true;
+            this.cmdSalirBarrio.Click += new System.EventHandler(this.cmdSalirBarrio_Click);
             // 
             // cmdConsultaBarrio
             // 
@@ -353,6 +365,7 @@
             this.cmdConsultaBarrio.TabIndex = 7;
             this.cmdConsultaBarrio.Text = "Consultar";
             this.cmdConsultaBarrio.UseVisualStyleBackColor = true;
+            this.cmdConsultaBarrio.Click += new System.EventHandler(this.cmdConsultaBarrio_Click);
             // 
             // tabActividad
             // 
@@ -482,6 +495,7 @@
             this.GrillaActividad.Location = new System.Drawing.Point(0, 57);
             this.GrillaActividad.Margin = new System.Windows.Forms.Padding(4);
             this.GrillaActividad.Name = "GrillaActividad";
+            this.GrillaActividad.ReadOnly = true;
             this.GrillaActividad.RowHeadersVisible = false;
             this.GrillaActividad.RowHeadersWidth = 51;
             this.GrillaActividad.Size = new System.Drawing.Size(755, 306);
@@ -497,6 +511,7 @@
             this.cmdSalirActividad.TabIndex = 8;
             this.cmdSalirActividad.Text = "Salir";
             this.cmdSalirActividad.UseVisualStyleBackColor = true;
+            this.cmdSalirActividad.Click += new System.EventHandler(this.cmdSalirActividad_Click);
             // 
             // cmdConsultarActividad
             // 
@@ -515,6 +530,7 @@
             this.Column1.HeaderText = "ID Socio";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 125;
             // 
             // Column2
@@ -522,6 +538,7 @@
             this.Column2.HeaderText = "Nombre y Apellido";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             this.Column2.Width = 125;
             // 
             // Column3
@@ -529,6 +546,7 @@
             this.Column3.HeaderText = "Direccion";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             this.Column3.Width = 125;
             // 
             // Column4
@@ -536,6 +554,7 @@
             this.Column4.HeaderText = "Barrio";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             this.Column4.Width = 125;
             // 
             // Column5
@@ -543,6 +562,7 @@
             this.Column5.HeaderText = "Actividad";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             this.Column5.Width = 125;
             // 
             // Column6
@@ -550,6 +570,7 @@
             this.Column6.HeaderText = "Telefono";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             this.Column6.Width = 125;
             // 
             // Column7
@@ -557,6 +578,7 @@
             this.Column7.HeaderText = "Fecha de Inscripcion";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             this.Column7.Width = 125;
             // 
             // Column8
@@ -564,6 +586,7 @@
             this.Column8.HeaderText = "Saldo";
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
             this.Column8.Width = 125;
             // 
             // GrillaBar
@@ -578,10 +601,10 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
-            this.GrillaBar.Enabled = false;
             this.GrillaBar.Location = new System.Drawing.Point(0, 57);
             this.GrillaBar.Margin = new System.Windows.Forms.Padding(4);
             this.GrillaBar.Name = "GrillaBar";
+            this.GrillaBar.ReadOnly = true;
             this.GrillaBar.RowHeadersVisible = false;
             this.GrillaBar.RowHeadersWidth = 51;
             this.GrillaBar.Size = new System.Drawing.Size(755, 306);
@@ -592,6 +615,7 @@
             this.dataGridViewTextBoxColumn1.HeaderText = "ID Socio";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
@@ -599,6 +623,7 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Nombre y Apellido";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Width = 125;
             // 
             // dataGridViewTextBoxColumn3
@@ -606,6 +631,7 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "Direccion";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Width = 125;
             // 
             // dataGridViewTextBoxColumn4
@@ -613,6 +639,7 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Barrio";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Width = 125;
             // 
             // dataGridViewTextBoxColumn5
@@ -620,6 +647,7 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Actividad";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Width = 125;
             // 
             // dataGridViewTextBoxColumn6
@@ -627,6 +655,7 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "Telefono";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Width = 125;
             // 
             // dataGridViewTextBoxColumn7
@@ -634,6 +663,7 @@
             this.dataGridViewTextBoxColumn7.HeaderText = "Fecha de Inscripcion";
             this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             this.dataGridViewTextBoxColumn7.Width = 125;
             // 
             // dataGridViewTextBoxColumn8
@@ -641,6 +671,7 @@
             this.dataGridViewTextBoxColumn8.HeaderText = "Saldo";
             this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             this.dataGridViewTextBoxColumn8.Width = 125;
             // 
             // cmdExportarCli
@@ -708,14 +739,87 @@
             // GrillaClientes
             // 
             this.GrillaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GrillaClientes.Enabled = false;
-            this.GrillaClientes.Location = new System.Drawing.Point(0, 4);
+            this.GrillaClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16});
+            this.GrillaClientes.Location = new System.Drawing.Point(0, 0);
             this.GrillaClientes.Margin = new System.Windows.Forms.Padding(4);
             this.GrillaClientes.Name = "GrillaClientes";
+            this.GrillaClientes.ReadOnly = true;
             this.GrillaClientes.RowHeadersVisible = false;
             this.GrillaClientes.RowHeadersWidth = 51;
-            this.GrillaClientes.Size = new System.Drawing.Size(755, 359);
+            this.GrillaClientes.Size = new System.Drawing.Size(755, 363);
             this.GrillaClientes.TabIndex = 38;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "ID Socio";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.HeaderText = "Nombre y Apellido";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.HeaderText = "Direccion";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.HeaderText = "Barrio";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.HeaderText = "Actividad";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.HeaderText = "Telefono";
+            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.dataGridViewTextBoxColumn14.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.HeaderText = "Fecha de Inscripcion";
+            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            this.dataGridViewTextBoxColumn15.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.HeaderText = "Saldo";
+            this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            this.dataGridViewTextBoxColumn16.Width = 125;
             // 
             // frmListadoClientes
             // 
@@ -757,7 +861,7 @@
         private System.Windows.Forms.Button cmdConsultarActividad;
         private System.Windows.Forms.Label lblCantClienteCli;
         private System.Windows.Forms.Label lblPromedioCli;
-        private System.Windows.Forms.Label lblIngresosCli;
+        private System.Windows.Forms.Label lblTotalIngresosCli;
         private System.Windows.Forms.Label lblPromIngresoNom;
         private System.Windows.Forms.Label lblCantClienteNom;
         private System.Windows.Forms.Label lblTotalIngresoNom;
@@ -796,10 +900,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.Button cmdImprimirCli;
         private System.Windows.Forms.Button cmdExportarCli;
-        private System.Windows.Forms.DataGridView GrillaClientes;
         private System.Windows.Forms.Button cmdImprimirBar;
         private System.Windows.Forms.Button cmdExportarBar;
         private System.Windows.Forms.Button cmdImprimirAct;
         private System.Windows.Forms.Button cmdExportarAct;
+        private System.Windows.Forms.DataGridView GrillaClientes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
     }
 }

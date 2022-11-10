@@ -22,6 +22,7 @@ namespace pryVelezFunesIEFI
         }
         private void Limpieza()
         {
+            mskIDSocio.Text = "";
             txtNombreApellido.Text = "";
             txtDireccion.Text = "";
             lstBarrio.SelectedIndex = -1;
@@ -30,7 +31,7 @@ namespace pryVelezFunesIEFI
             mskFecha.Text = "";
             lstFormaPago.SelectedIndex = -1;
             mskImporte.Text = "";
-            txtNombreApellido.Focus();
+            mskIDSocio.Focus();
         }
         private void cmdLimpiar_Click(object sender, EventArgs e)
         {

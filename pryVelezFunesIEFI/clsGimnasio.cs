@@ -161,7 +161,7 @@ namespace pryVelezFunesIEFI
                 MessageBox.Show("No se ha podido eliminar el cliente completamente");
             }
         }
-        public void ListarGrilla(DataGridView GrillaActividad, Int32 CodActividad)
+        public void ListarGrillaAct(DataGridView GrillaActividad, Int32 CodActividad)
         {
             try
             {
@@ -274,6 +274,91 @@ namespace pryVelezFunesIEFI
             {
                 MessageBox.Show("Tus datos no han podido ser exportados.");
 
+            }
+        }
+        public void ListarGrillaBar(DataGridView GrillaBarrio, Int32 CodBarrio)
+        {
+            try
+            {
+                Conexion.ConnectionString = Ruta;
+                Conexion.Open();
+                Comando.Connection = Conexion;
+                Comando.CommandType = CommandType.TableDirect;
+                Comando.CommandText = Tabla;
+                GrillaBarrio.Rows.Clear();
+                OleDbDataReader Lector = Comando.ExecuteReader();
+                VarCantCliente = 0;
+                VarPromedio = 0;
+                VarTotalIngreso = 0;
+                if (Lector.HasRows)
+                {
+                    while (Lector.Read())
+                    {
+                        if (Lector.GetInt32(3) == CodBarrio)
+                        {
+                            //llamo las cls para cambiar los numeros por los nombres correspondientes
+                            Int32 codBarrio = Lector.GetInt32(3);
+                            Int32 codAct = Lector.GetInt32(4);
+                            Int32 IDSOCIO = Lector.GetInt32(0);
+                            clsBarrio BarrioConsulta = new clsBarrio();
+                            BarrioConsulta.BuscarBarrio(codBarrio);
+                            clsActividad ActConsulta = new clsActividad();
+                            ActConsulta.BuscarActividad(codAct);
+                            clsInscripcion InfoClienteIns = new clsInscripcion();
+                            InfoClienteIns.Buscar(IDSOCIO);
+                            GrillaBarrio.Rows.Add(Lector.GetInt32(0), Lector.GetString(1), Lector.GetString(2), BarrioConsulta.NomBarrio, ActConsulta.NomActividad, Lector.GetInt32(5), InfoClienteIns.Fecha_Inscripcion, InfoClienteIns.SaldoSocio);
+                            VarCantCliente++;
+                            VarTotalIngreso = VarTotalIngreso + InfoClienteIns.SaldoSocio;
+                            VarPromedio = VarTotalIngreso / VarCantCliente;
+                        }
+                    }
+                }
+                Conexion.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se ha podido cargar la informacion.");
+            }
+        }
+        public void ListarGrillaClie(DataGridView GrillaBarrio)
+        {
+            try
+            {
+                Conexion.ConnectionString = Ruta;
+                Conexion.Open();
+                Comando.Connection = Conexion;
+                Comando.CommandType = CommandType.TableDirect;
+                Comando.CommandText = Tabla;
+                GrillaBarrio.Rows.Clear();
+                OleDbDataReader Lector = Comando.ExecuteReader();
+                VarCantCliente = 0;
+                VarPromedio = 0;
+                VarTotalIngreso = 0;
+                if (Lector.HasRows)
+                {
+                    while (Lector.Read())
+                    {
+                        //llamo las cls para cambiar los numeros por los nombres correspondientes
+                        Int32 codBarrio = Lector.GetInt32(3);
+                        Int32 codAct = Lector.GetInt32(4);
+                        Int32 IDSOCIO = Lector.GetInt32(0);
+                        clsBarrio BarrioConsulta = new clsBarrio();
+                        BarrioConsulta.BuscarBarrio(codBarrio);
+                        clsActividad ActConsulta = new clsActividad();
+                        ActConsulta.BuscarActividad(codAct);
+                        clsInscripcion InfoClienteIns = new clsInscripcion();
+                        InfoClienteIns.Buscar(IDSOCIO);
+                        GrillaBarrio.Rows.Add(Lector.GetInt32(0), Lector.GetString(1), Lector.GetString(2), BarrioConsulta.NomBarrio, ActConsulta.NomActividad, Lector.GetInt32(5), InfoClienteIns.Fecha_Inscripcion, InfoClienteIns.SaldoSocio);
+                        VarCantCliente++;
+                        VarTotalIngreso = VarTotalIngreso + InfoClienteIns.SaldoSocio;
+                        VarPromedio = VarTotalIngreso / VarCantCliente;
+                    }
+                }
+                Conexion.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se ha podido cargar la informacion.");
             }
         }
     }

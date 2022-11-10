@@ -175,6 +175,7 @@
             this.mskImporte.Name = "mskImporte";
             this.mskImporte.Size = new System.Drawing.Size(171, 27);
             this.mskImporte.TabIndex = 8;
+            this.mskImporte.TextChanged += new System.EventHandler(this.mskImporte_TextChanged);
             // 
             // lstFormaPago
             // 
@@ -218,6 +219,7 @@
             this.txtDireccion.ShortcutsEnabled = false;
             this.txtDireccion.Size = new System.Drawing.Size(265, 27);
             this.txtDireccion.TabIndex = 3;
+            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             // 
             // lblActividad
             // 
@@ -250,6 +252,7 @@
             this.txtNombreApellido.ShortcutsEnabled = false;
             this.txtNombreApellido.Size = new System.Drawing.Size(265, 27);
             this.txtNombreApellido.TabIndex = 2;
+            this.txtNombreApellido.TextChanged += new System.EventHandler(this.txtNombreApellido_TextChanged);
             // 
             // lstActividad
             // 
@@ -300,6 +303,7 @@
             this.mskTelefono.Size = new System.Drawing.Size(171, 27);
             this.mskTelefono.TabIndex = 6;
             this.mskTelefono.ValidatingType = typeof(int);
+            this.mskTelefono.TextChanged += new System.EventHandler(this.mskTelefono_TextChanged);
             // 
             // lblTelefono
             // 

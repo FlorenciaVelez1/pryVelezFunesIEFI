@@ -109,6 +109,8 @@ namespace pryVelezFunesIEFI
             cmdBuscar.Enabled = false;
             cmdGuardar.Enabled = true;
             cmdCancelar.Visible = true;
+            //Desabilito mskIdSocio
+            mskIDSocio.ReadOnly = true;
             //Habilito los txt, msk y lst
             txtNombreApellido.ReadOnly = false;
             txtDireccion.ReadOnly = false;
@@ -128,6 +130,7 @@ namespace pryVelezFunesIEFI
             cmdBuscar.Enabled = true;
             cmdGuardar.Enabled = false;
             cmdCancelar.Visible = false;
+            mskIDSocio.ReadOnly=false;
         }
 
         private void cmdGuardar_Click(object sender, EventArgs e)
@@ -158,7 +161,6 @@ namespace pryVelezFunesIEFI
             MessageBox.Show("Datos borrados con exito");
             Limpiar();
         }
-
         private void mskIDSocio_TextChanged(object sender, EventArgs e)
         {
             if (mskIDSocio.Text != "")
@@ -169,6 +171,33 @@ namespace pryVelezFunesIEFI
             {
                 cmdBuscar.Enabled = false;
             }
+        }
+        private void Chequeo()
+        {
+            if (txtNombreApellido.Text != "" & txtDireccion.Text != "" & mskTelefono.Text != "" & mskImporte.Text != ""  )
+            {
+                cmdGuardar.Enabled = true ;
+            }
+            else
+            {
+                cmdGuardar.Enabled= false;
+            }
+        }
+        private void txtNombreApellido_TextChanged(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
+        private void mskImporte_TextChanged(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
+        private void mskTelefono_TextChanged(object sender, EventArgs e)
+        {
+            Chequeo();
         }
     }
 }

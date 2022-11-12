@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
             this.msMenu = new System.Windows.Forms.MenuStrip();
-            this.tmsSistemas = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmSistemas = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmInformacion = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmCliente = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,9 +38,9 @@
             this.tsmBuscarCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmListado = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmClientes = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picFotoLogo = new System.Windows.Forms.PictureBox();
             this.msMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFotoLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // msMenu
@@ -48,24 +48,24 @@
             this.msMenu.BackColor = System.Drawing.SystemColors.Control;
             this.msMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.msMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tmsSistemas,
+            this.tsmSistemas,
             this.tsmCliente,
             this.tsmListado});
             this.msMenu.Location = new System.Drawing.Point(0, 0);
             this.msMenu.Name = "msMenu";
             this.msMenu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.msMenu.Size = new System.Drawing.Size(1057, 28);
+            this.msMenu.Size = new System.Drawing.Size(1057, 30);
             this.msMenu.TabIndex = 0;
             this.msMenu.Text = "menuStrip1";
             // 
-            // tmsSistemas
+            // tsmSistemas
             // 
-            this.tmsSistemas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmSistemas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmInformacion,
             this.tsmSalir});
-            this.tmsSistemas.Name = "tmsSistemas";
-            this.tmsSistemas.Size = new System.Drawing.Size(81, 24);
-            this.tmsSistemas.Text = "Sistemas";
+            this.tsmSistemas.Name = "tsmSistemas";
+            this.tsmSistemas.Size = new System.Drawing.Size(81, 26);
+            this.tsmSistemas.Text = "Sistemas";
             // 
             // tsmInformacion
             // 
@@ -87,7 +87,7 @@
             this.tsmRegistrarCliente,
             this.tsmBuscarCliente});
             this.tsmCliente.Name = "tsmCliente";
-            this.tsmCliente.Size = new System.Drawing.Size(75, 24);
+            this.tsmCliente.Size = new System.Drawing.Size(75, 26);
             this.tsmCliente.Text = "Clientes";
             // 
             // tsmRegistrarCliente
@@ -109,7 +109,7 @@
             this.tsmListado.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmClientes});
             this.tsmListado.Name = "tsmListado";
-            this.tsmListado.Size = new System.Drawing.Size(71, 24);
+            this.tsmListado.Size = new System.Drawing.Size(71, 26);
             this.tsmListado.Text = "Listado";
             // 
             // tsmClientes
@@ -119,22 +119,22 @@
             this.tsmClientes.Text = "Clientes";
             this.tsmClientes.Click += new System.EventHandler(this.tsmClientes_Click);
             // 
-            // pictureBox1
+            // picFotoLogo
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 31);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1057, 583);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.picFotoLogo.Image = ((System.Drawing.Image)(resources.GetObject("picFotoLogo.Image")));
+            this.picFotoLogo.Location = new System.Drawing.Point(0, 31);
+            this.picFotoLogo.Name = "picFotoLogo";
+            this.picFotoLogo.Size = new System.Drawing.Size(1057, 583);
+            this.picFotoLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFotoLogo.TabIndex = 1;
+            this.picFotoLogo.TabStop = false;
             // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 626);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picFotoLogo);
             this.Controls.Add(this.msMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
@@ -144,7 +144,7 @@
             this.Text = "Pagina Principal";
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFotoLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,7 +153,7 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip msMenu;
-        private System.Windows.Forms.ToolStripMenuItem tmsSistemas;
+        private System.Windows.Forms.ToolStripMenuItem tsmSistemas;
         private System.Windows.Forms.ToolStripMenuItem tsmCliente;
         private System.Windows.Forms.ToolStripMenuItem tsmRegistrarCliente;
         private System.Windows.Forms.ToolStripMenuItem tsmBuscarCliente;
@@ -161,7 +161,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmSalir;
         private System.Windows.Forms.ToolStripMenuItem tsmListado;
         private System.Windows.Forms.ToolStripMenuItem tsmClientes;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picFotoLogo;
     }
 }
 

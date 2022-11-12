@@ -34,14 +34,6 @@
             this.tabOpciones = new System.Windows.Forms.TabControl();
             this.tabClientes = new System.Windows.Forms.TabPage();
             this.GrillaClientes = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmdImprimirCli = new System.Windows.Forms.Button();
             this.cmdExportarCli = new System.Windows.Forms.Button();
             this.lblCantClienteCli = new System.Windows.Forms.Label();
@@ -54,14 +46,6 @@
             this.cmdImprimirBar = new System.Windows.Forms.Button();
             this.cmdExportarBar = new System.Windows.Forms.Button();
             this.GrillaBar = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblBarrio = new System.Windows.Forms.Label();
             this.lstBarrio = new System.Windows.Forms.ComboBox();
             this.lblCantClienBar = new System.Windows.Forms.Label();
@@ -84,16 +68,32 @@
             this.lblCantClieNom3 = new System.Windows.Forms.Label();
             this.lblTotalIngrNom3 = new System.Windows.Forms.Label();
             this.GrillaActividad = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmdSalirActividad = new System.Windows.Forms.Button();
             this.cmdConsultarActividad = new System.Windows.Forms.Button();
+            this.columIDSocioCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columNomApellCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columDireccCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columBarrioCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columActivCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columTelefonoCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columFechaInscripCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columSaldoCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columIDSocioBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columNomApellBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columDireccionBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columBarrioBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columActividadBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columTelefonoBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columFechaInscripBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columSaldoBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columIDSocioAct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columNomApellAct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columDireccionAct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columBarrioAct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columActividadAct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columTelefonoAct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columFechaInscipAct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columSaldoAct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabOpciones.SuspendLayout();
             this.tabClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaClientes)).BeginInit();
@@ -165,14 +165,14 @@
             // 
             this.GrillaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GrillaClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16});
+            this.columIDSocioCli,
+            this.columNomApellCli,
+            this.columDireccCli,
+            this.columBarrioCli,
+            this.columActivCli,
+            this.columTelefonoCli,
+            this.columFechaInscripCli,
+            this.columSaldoCli});
             this.GrillaClientes.Location = new System.Drawing.Point(0, 0);
             this.GrillaClientes.Margin = new System.Windows.Forms.Padding(4);
             this.GrillaClientes.Name = "GrillaClientes";
@@ -181,70 +181,6 @@
             this.GrillaClientes.RowHeadersWidth = 51;
             this.GrillaClientes.Size = new System.Drawing.Size(755, 363);
             this.GrillaClientes.TabIndex = 38;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "ID Socio";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "Nombre y Apellido";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "Direccion";
-            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.HeaderText = "Barrio";
-            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.HeaderText = "Actividad";
-            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.HeaderText = "Telefono";
-            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            this.dataGridViewTextBoxColumn14.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.HeaderText = "Fecha de Inscripcion";
-            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
-            this.dataGridViewTextBoxColumn15.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.HeaderText = "Saldo";
-            this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            this.dataGridViewTextBoxColumn16.Width = 125;
             // 
             // cmdImprimirCli
             // 
@@ -385,14 +321,14 @@
             // 
             this.GrillaBar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GrillaBar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
+            this.columIDSocioBar,
+            this.columNomApellBar,
+            this.columDireccionBar,
+            this.columBarrioBar,
+            this.columActividadBar,
+            this.columTelefonoBar,
+            this.columFechaInscripBar,
+            this.columSaldoBar});
             this.GrillaBar.Location = new System.Drawing.Point(0, 57);
             this.GrillaBar.Margin = new System.Windows.Forms.Padding(4);
             this.GrillaBar.Name = "GrillaBar";
@@ -401,70 +337,6 @@
             this.GrillaBar.RowHeadersWidth = 51;
             this.GrillaBar.Size = new System.Drawing.Size(755, 306);
             this.GrillaBar.TabIndex = 37;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID Socio";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre y Apellido";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Direccion";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Barrio";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Actividad";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Telefono";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Fecha de Inscripcion";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Saldo";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 125;
             // 
             // lblBarrio
             // 
@@ -718,14 +590,14 @@
             // 
             this.GrillaActividad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GrillaActividad.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8});
+            this.columIDSocioAct,
+            this.columNomApellAct,
+            this.columDireccionAct,
+            this.columBarrioAct,
+            this.columActividadAct,
+            this.columTelefonoAct,
+            this.columFechaInscipAct,
+            this.columSaldoAct});
             this.GrillaActividad.Location = new System.Drawing.Point(0, 57);
             this.GrillaActividad.Margin = new System.Windows.Forms.Padding(4);
             this.GrillaActividad.Name = "GrillaActividad";
@@ -734,70 +606,6 @@
             this.GrillaActividad.RowHeadersWidth = 51;
             this.GrillaActividad.Size = new System.Drawing.Size(755, 306);
             this.GrillaActividad.TabIndex = 6;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID Socio";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nombre y Apellido";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Direccion";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Barrio";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Actividad";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Telefono";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 125;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Fecha de Inscripcion";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 125;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Saldo";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 125;
             // 
             // cmdSalirActividad
             // 
@@ -822,6 +630,198 @@
             this.cmdConsultarActividad.Text = "Consultar";
             this.cmdConsultarActividad.UseVisualStyleBackColor = true;
             this.cmdConsultarActividad.Click += new System.EventHandler(this.cmdConsultarActividad_Click);
+            // 
+            // columIDSocioCli
+            // 
+            this.columIDSocioCli.HeaderText = "ID Socio";
+            this.columIDSocioCli.MinimumWidth = 6;
+            this.columIDSocioCli.Name = "columIDSocioCli";
+            this.columIDSocioCli.ReadOnly = true;
+            this.columIDSocioCli.Width = 125;
+            // 
+            // columNomApellCli
+            // 
+            this.columNomApellCli.HeaderText = "Nombre y Apellido";
+            this.columNomApellCli.MinimumWidth = 6;
+            this.columNomApellCli.Name = "columNomApellCli";
+            this.columNomApellCli.ReadOnly = true;
+            this.columNomApellCli.Width = 125;
+            // 
+            // columDireccCli
+            // 
+            this.columDireccCli.HeaderText = "Direccion";
+            this.columDireccCli.MinimumWidth = 6;
+            this.columDireccCli.Name = "columDireccCli";
+            this.columDireccCli.ReadOnly = true;
+            this.columDireccCli.Width = 125;
+            // 
+            // columBarrioCli
+            // 
+            this.columBarrioCli.HeaderText = "Barrio";
+            this.columBarrioCli.MinimumWidth = 6;
+            this.columBarrioCli.Name = "columBarrioCli";
+            this.columBarrioCli.ReadOnly = true;
+            this.columBarrioCli.Width = 125;
+            // 
+            // columActivCli
+            // 
+            this.columActivCli.HeaderText = "Actividad";
+            this.columActivCli.MinimumWidth = 6;
+            this.columActivCli.Name = "columActivCli";
+            this.columActivCli.ReadOnly = true;
+            this.columActivCli.Width = 125;
+            // 
+            // columTelefonoCli
+            // 
+            this.columTelefonoCli.HeaderText = "Telefono";
+            this.columTelefonoCli.MinimumWidth = 6;
+            this.columTelefonoCli.Name = "columTelefonoCli";
+            this.columTelefonoCli.ReadOnly = true;
+            this.columTelefonoCli.Width = 125;
+            // 
+            // columFechaInscripCli
+            // 
+            this.columFechaInscripCli.HeaderText = "Fecha de Inscripcion";
+            this.columFechaInscripCli.MinimumWidth = 6;
+            this.columFechaInscripCli.Name = "columFechaInscripCli";
+            this.columFechaInscripCli.ReadOnly = true;
+            this.columFechaInscripCli.Width = 125;
+            // 
+            // columSaldoCli
+            // 
+            this.columSaldoCli.HeaderText = "Saldo";
+            this.columSaldoCli.MinimumWidth = 6;
+            this.columSaldoCli.Name = "columSaldoCli";
+            this.columSaldoCli.ReadOnly = true;
+            this.columSaldoCli.Width = 125;
+            // 
+            // columIDSocioBar
+            // 
+            this.columIDSocioBar.HeaderText = "ID Socio";
+            this.columIDSocioBar.MinimumWidth = 6;
+            this.columIDSocioBar.Name = "columIDSocioBar";
+            this.columIDSocioBar.ReadOnly = true;
+            this.columIDSocioBar.Width = 125;
+            // 
+            // columNomApellBar
+            // 
+            this.columNomApellBar.HeaderText = "Nombre y Apellido";
+            this.columNomApellBar.MinimumWidth = 6;
+            this.columNomApellBar.Name = "columNomApellBar";
+            this.columNomApellBar.ReadOnly = true;
+            this.columNomApellBar.Width = 125;
+            // 
+            // columDireccionBar
+            // 
+            this.columDireccionBar.HeaderText = "Direccion";
+            this.columDireccionBar.MinimumWidth = 6;
+            this.columDireccionBar.Name = "columDireccionBar";
+            this.columDireccionBar.ReadOnly = true;
+            this.columDireccionBar.Width = 125;
+            // 
+            // columBarrioBar
+            // 
+            this.columBarrioBar.HeaderText = "Barrio";
+            this.columBarrioBar.MinimumWidth = 6;
+            this.columBarrioBar.Name = "columBarrioBar";
+            this.columBarrioBar.ReadOnly = true;
+            this.columBarrioBar.Width = 125;
+            // 
+            // columActividadBar
+            // 
+            this.columActividadBar.HeaderText = "Actividad";
+            this.columActividadBar.MinimumWidth = 6;
+            this.columActividadBar.Name = "columActividadBar";
+            this.columActividadBar.ReadOnly = true;
+            this.columActividadBar.Width = 125;
+            // 
+            // columTelefonoBar
+            // 
+            this.columTelefonoBar.HeaderText = "Telefono";
+            this.columTelefonoBar.MinimumWidth = 6;
+            this.columTelefonoBar.Name = "columTelefonoBar";
+            this.columTelefonoBar.ReadOnly = true;
+            this.columTelefonoBar.Width = 125;
+            // 
+            // columFechaInscripBar
+            // 
+            this.columFechaInscripBar.HeaderText = "Fecha de Inscripcion";
+            this.columFechaInscripBar.MinimumWidth = 6;
+            this.columFechaInscripBar.Name = "columFechaInscripBar";
+            this.columFechaInscripBar.ReadOnly = true;
+            this.columFechaInscripBar.Width = 125;
+            // 
+            // columSaldoBar
+            // 
+            this.columSaldoBar.HeaderText = "Saldo";
+            this.columSaldoBar.MinimumWidth = 6;
+            this.columSaldoBar.Name = "columSaldoBar";
+            this.columSaldoBar.ReadOnly = true;
+            this.columSaldoBar.Width = 125;
+            // 
+            // columIDSocioAct
+            // 
+            this.columIDSocioAct.HeaderText = "ID Socio";
+            this.columIDSocioAct.MinimumWidth = 6;
+            this.columIDSocioAct.Name = "columIDSocioAct";
+            this.columIDSocioAct.ReadOnly = true;
+            this.columIDSocioAct.Width = 125;
+            // 
+            // columNomApellAct
+            // 
+            this.columNomApellAct.HeaderText = "Nombre y Apellido";
+            this.columNomApellAct.MinimumWidth = 6;
+            this.columNomApellAct.Name = "columNomApellAct";
+            this.columNomApellAct.ReadOnly = true;
+            this.columNomApellAct.Width = 125;
+            // 
+            // columDireccionAct
+            // 
+            this.columDireccionAct.HeaderText = "Direccion";
+            this.columDireccionAct.MinimumWidth = 6;
+            this.columDireccionAct.Name = "columDireccionAct";
+            this.columDireccionAct.ReadOnly = true;
+            this.columDireccionAct.Width = 125;
+            // 
+            // columBarrioAct
+            // 
+            this.columBarrioAct.HeaderText = "Barrio";
+            this.columBarrioAct.MinimumWidth = 6;
+            this.columBarrioAct.Name = "columBarrioAct";
+            this.columBarrioAct.ReadOnly = true;
+            this.columBarrioAct.Width = 125;
+            // 
+            // columActividadAct
+            // 
+            this.columActividadAct.HeaderText = "Actividad";
+            this.columActividadAct.MinimumWidth = 6;
+            this.columActividadAct.Name = "columActividadAct";
+            this.columActividadAct.ReadOnly = true;
+            this.columActividadAct.Width = 125;
+            // 
+            // columTelefonoAct
+            // 
+            this.columTelefonoAct.HeaderText = "Telefono";
+            this.columTelefonoAct.MinimumWidth = 6;
+            this.columTelefonoAct.Name = "columTelefonoAct";
+            this.columTelefonoAct.ReadOnly = true;
+            this.columTelefonoAct.Width = 125;
+            // 
+            // columFechaInscipAct
+            // 
+            this.columFechaInscipAct.HeaderText = "Fecha de Inscripcion";
+            this.columFechaInscipAct.MinimumWidth = 6;
+            this.columFechaInscipAct.Name = "columFechaInscipAct";
+            this.columFechaInscipAct.ReadOnly = true;
+            this.columFechaInscipAct.Width = 125;
+            // 
+            // columSaldoAct
+            // 
+            this.columSaldoAct.HeaderText = "Saldo";
+            this.columSaldoAct.MinimumWidth = 6;
+            this.columSaldoAct.Name = "columSaldoAct";
+            this.columSaldoAct.ReadOnly = true;
+            this.columSaldoAct.Width = 125;
             // 
             // frmListadoClientes
             // 
@@ -884,22 +884,6 @@
         private System.Windows.Forms.Label lblActividad;
         private System.Windows.Forms.ComboBox lstActividad;
         private System.Windows.Forms.DataGridView GrillaBar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.Button cmdImprimirCli;
         private System.Windows.Forms.Button cmdExportarCli;
         private System.Windows.Forms.Button cmdImprimirBar;
@@ -907,13 +891,29 @@
         private System.Windows.Forms.Button cmdImprimirAct;
         private System.Windows.Forms.Button cmdExportarAct;
         private System.Windows.Forms.DataGridView GrillaClientes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columIDSocioCli;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columNomApellCli;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columDireccCli;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columBarrioCli;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columActivCli;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columTelefonoCli;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columFechaInscripCli;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columSaldoCli;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columIDSocioBar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columNomApellBar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columDireccionBar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columBarrioBar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columActividadBar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columTelefonoBar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columFechaInscripBar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columSaldoBar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columIDSocioAct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columNomApellAct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columDireccionAct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columBarrioAct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columActividadAct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columTelefonoAct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columFechaInscipAct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columSaldoAct;
     }
 }

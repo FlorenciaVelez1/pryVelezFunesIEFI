@@ -31,13 +31,8 @@ namespace pryVelezFunesIEFI
         public decimal VarTotalIngreso;
         public Int32 VarCantCliente;
         public decimal VarPromedio;
-        //Declaro variables con el costo de cada actividad
-        public decimal CostoMusculacion = 9500;
-        public decimal CostoCrossfit = 8500;
-        public decimal CostoPilates = 12000;
-        public decimal CostoYoga = 9000;
-        public decimal CostoCardio = 13000;
-        public decimal CostoFuncional = 10000;
+        //Creo vector para llenarlo con los datos de saldos
+        decimal [] VecSaldosClientes = new decimal [500];
         public Int32 SocioID
         {
             get { return varIDSocio; }
@@ -339,6 +334,8 @@ namespace pryVelezFunesIEFI
                 VarTotalIngreso = 0;
                 if (Lector.HasRows)
                 {
+                    int indiceVector;
+                    indiceVector = 0;
                     while (Lector.Read())
                     {
                         //llamo las cls para cambiar los numeros por los nombres correspondientes
@@ -355,6 +352,9 @@ namespace pryVelezFunesIEFI
                         VarCantCliente++;
                         VarTotalIngreso = VarTotalIngreso + InfoClienteIns.SaldoSocio;
                         VarPromedio = VarTotalIngreso / VarCantCliente;
+                        //Le agrego los datos al vector
+                        VecSaldosClientes[indiceVector] = InfoClienteIns.SaldoSocio;
+                        indiceVector++;
                     }
                 }
                 Conexion.Close();

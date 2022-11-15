@@ -48,7 +48,6 @@ namespace pryVelezFunesIEFI
                 dtpFecha.Text = Convert.ToString(InformacionInscripcion.Fecha_Inscripcion);
                 //habilito los botones
                 cmdEliminar.Enabled = true;
-                cmdGuardar.Enabled = true;
                 cmdModificar.Enabled = true;
                 NoEditarTXT();
             }

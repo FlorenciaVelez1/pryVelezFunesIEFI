@@ -40,7 +40,7 @@
             this.lblImporte = new System.Windows.Forms.Label();
             this.lblFormaDePago = new System.Windows.Forms.Label();
             this.mskFecha = new System.Windows.Forms.MaskedTextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblFechaInscripcion = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.lblActividad = new System.Windows.Forms.Label();
             this.txtNombreApellido = new System.Windows.Forms.TextBox();
@@ -77,7 +77,7 @@
             this.mrcInformacion.Controls.Add(this.lblImporte);
             this.mrcInformacion.Controls.Add(this.lblFormaDePago);
             this.mrcInformacion.Controls.Add(this.mskFecha);
-            this.mrcInformacion.Controls.Add(this.label1);
+            this.mrcInformacion.Controls.Add(this.lblFechaInscripcion);
             this.mrcInformacion.Controls.Add(this.txtDireccion);
             this.mrcInformacion.Controls.Add(this.lblActividad);
             this.mrcInformacion.Controls.Add(this.txtNombreApellido);
@@ -189,15 +189,15 @@
             this.mskFecha.ValidatingType = typeof(System.DateTime);
             this.mskFecha.TextChanged += new System.EventHandler(this.mskFecha_TextChanged);
             // 
-            // label1
+            // lblFechaInscripcion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 291);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 20);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Fecha Inscripcion:";
+            this.lblFechaInscripcion.AutoSize = true;
+            this.lblFechaInscripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaInscripcion.Location = new System.Drawing.Point(21, 291);
+            this.lblFechaInscripcion.Name = "lblFechaInscripcion";
+            this.lblFechaInscripcion.Size = new System.Drawing.Size(146, 20);
+            this.lblFechaInscripcion.TabIndex = 16;
+            this.lblFechaInscripcion.Text = "Fecha Inscripcion:";
             // 
             // txtDireccion
             // 
@@ -361,7 +361,7 @@
         private System.Windows.Forms.Label lblImporte;
         private System.Windows.Forms.Label lblFormaDePago;
         private System.Windows.Forms.MaskedTextBox mskFecha;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblFechaInscripcion;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label lblActividad;
         private System.Windows.Forms.TextBox txtNombreApellido;

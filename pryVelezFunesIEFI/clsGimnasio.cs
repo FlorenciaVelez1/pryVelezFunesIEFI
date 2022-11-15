@@ -31,6 +31,8 @@ namespace pryVelezFunesIEFI
         public decimal VarTotalIngreso;
         public Int32 VarCantCliente;
         public decimal VarPromedio;
+        //Creo VarBandera para verificar
+        public bool VarBandera;
         //Creo vector para llenarlo con los datos de saldos
         decimal [] VecSaldosClientes = new decimal [500];
         public Int32 SocioID
@@ -86,6 +88,7 @@ namespace pryVelezFunesIEFI
         }
         public void Buscar(Int32 IDSocio)
         {
+            VarBandera = true;
             try
             {
                 Conexion.ConnectionString = Ruta;
@@ -108,6 +111,7 @@ namespace pryVelezFunesIEFI
                             varCodigoBarrio = Lector.GetInt32(3);
                             varCodigoActividad = Lector.GetInt32(4);
                             varTelefono = Lector.GetInt32(5);
+                            VarBandera = false;
                         }
                     }
                 }
@@ -115,7 +119,7 @@ namespace pryVelezFunesIEFI
             }
             catch (Exception)
             {
-                MessageBox.Show("No se ha encontrado el ID del socio.");
+                MessageBox.Show("Hubo un error al buscar el ID Socio.");
             }
         }
         public void Modificar(Int32 IDSOCIO)

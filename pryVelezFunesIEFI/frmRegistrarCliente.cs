@@ -64,22 +64,30 @@ namespace pryVelezFunesIEFI
         }
         private void cmdRegistrar_Click(object sender, EventArgs e)
         {
-            clsGimnasio RegistroCliente = new clsGimnasio();
-            RegistroCliente.SocioID = Convert.ToInt32(mskIDSocio.Text);
-            RegistroCliente.Nom_Apellido = txtNombreApellido.Text;
-            RegistroCliente.DireccionSocio = txtDireccion.Text;
-            RegistroCliente.TelefonoSocio = Convert.ToInt32(mskTelefono.Text);
-            RegistroCliente.CodBarrio = Convert.ToInt32( lstBarrio.SelectedValue);
-            RegistroCliente.CodActividad = Convert.ToInt32(lstActividad.SelectedValue);
-            RegistroCliente.Agregar();
-            //Llamo la clase inscripcion para agregar los datos
             clsInscripcion AgregadoInformacion = new clsInscripcion();
-            AgregadoInformacion.Id_Socio = Convert.ToInt32(mskIDSocio.Text);
-            AgregadoInformacion.Fecha_Inscripcion = Convert.ToString(mskFecha.Text);
-            AgregadoInformacion.Forma_Pago = Convert.ToString(lstFormaPago.SelectedItem);
-            AgregadoInformacion.SaldoSocio = Convert.ToDecimal(mskImporte.Text);
-            AgregadoInformacion.Agregar();
-            Limpieza();
+            clsGimnasio RegistroCliente = new clsGimnasio();
+            RegistroCliente.Buscar(Convert.ToInt32(mskIDSocio.Text));
+            if (RegistroCliente.VarBandera == true)
+            {
+                RegistroCliente.SocioID = Convert.ToInt32(mskIDSocio.Text);
+                RegistroCliente.Nom_Apellido = txtNombreApellido.Text;
+                RegistroCliente.DireccionSocio = txtDireccion.Text;
+                RegistroCliente.TelefonoSocio = Convert.ToInt32(mskTelefono.Text);
+                RegistroCliente.CodBarrio = Convert.ToInt32(lstBarrio.SelectedValue);
+                RegistroCliente.CodActividad = Convert.ToInt32(lstActividad.SelectedValue);
+                RegistroCliente.Agregar();
+                //Llamo la clase inscripcion para agregar los datos
+                AgregadoInformacion.Id_Socio = Convert.ToInt32(mskIDSocio.Text);
+                AgregadoInformacion.Fecha_Inscripcion = Convert.ToString(mskFecha.Text);
+                AgregadoInformacion.Forma_Pago = Convert.ToString(lstFormaPago.SelectedItem);
+                AgregadoInformacion.SaldoSocio = Convert.ToDecimal(mskImporte.Text);
+                AgregadoInformacion.Agregar();
+                Limpieza();
+            }
+            else
+            {
+                MessageBox.Show("El ID Socio ya se encuentra registrado, verifique los datos.");
+            }
         }
         private void cmdAgregarBarrio_Click(object sender, EventArgs e)
         {

@@ -96,7 +96,7 @@ namespace pryVelezFunesIEFI
         }
         private void Chequeo()
         {
-            if (txtNombreApellido.Text != "" & txtDireccion.Text != "" & lstBarrio.SelectedIndex >= 0 & lstActividad.SelectedIndex >= 0 & mskTelefono.Text != "" & mskFecha.Text != "" & lstFormaPago.SelectedIndex >= 0 & mskImporte.Text != "")
+            if (txtNombreApellido.Text != "" & txtDireccion.Text != "" & lstBarrio.SelectedIndex >= 0 & lstActividad.SelectedIndex >= 0 & mskTelefono.Text != "" & mskFecha.Text != " " & lstFormaPago.SelectedIndex >= 0 & mskImporte.Text != "")
             {
                 cmdRegistrar.Enabled = true;
             }

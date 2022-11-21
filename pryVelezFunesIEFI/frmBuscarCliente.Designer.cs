@@ -158,6 +158,7 @@
             this.dtpFecha.Size = new System.Drawing.Size(171, 22);
             this.dtpFecha.TabIndex = 98;
             this.dtpFecha.Value = new System.DateTime(2022, 11, 8, 0, 0, 0, 0);
+            this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
             // 
             // lstBarrio
             // 

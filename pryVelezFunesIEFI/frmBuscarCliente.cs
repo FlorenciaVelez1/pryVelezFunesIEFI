@@ -196,5 +196,10 @@ namespace pryVelezFunesIEFI
         {
             Chequeo();
         }
+
+        private void dtpFecha_ValueChanged(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
     }
 }

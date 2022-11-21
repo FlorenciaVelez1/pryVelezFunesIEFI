@@ -34,6 +34,14 @@
             this.tabOpciones = new System.Windows.Forms.TabControl();
             this.tabClientes = new System.Windows.Forms.TabPage();
             this.GrillaClientes = new System.Windows.Forms.DataGridView();
+            this.columIDSocioCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columNomApellCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columDireccCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columBarrioCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columActivCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columTelefonoCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columFechaInscripCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columSaldoCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmdImprimirCli = new System.Windows.Forms.Button();
             this.cmdExportarCli = new System.Windows.Forms.Button();
             this.lblCantClienteCli = new System.Windows.Forms.Label();
@@ -45,7 +53,15 @@
             this.tabBarrio = new System.Windows.Forms.TabPage();
             this.cmdImprimirBar = new System.Windows.Forms.Button();
             this.cmdExportarBar = new System.Windows.Forms.Button();
-            this.GrillaBar = new System.Windows.Forms.DataGridView();
+            this.GrillaBarrio = new System.Windows.Forms.DataGridView();
+            this.columIDSocioBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columNomApellBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columDireccionBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columBarrioBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columActividadBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columTelefonoBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columFechaInscripBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columSaldoBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblBarrio = new System.Windows.Forms.Label();
             this.lstBarrio = new System.Windows.Forms.ComboBox();
             this.lblCantClienBar = new System.Windows.Forms.Label();
@@ -68,24 +84,6 @@
             this.lblCantClieNom3 = new System.Windows.Forms.Label();
             this.lblTotalIngrNom3 = new System.Windows.Forms.Label();
             this.GrillaActividad = new System.Windows.Forms.DataGridView();
-            this.cmdSalirActividad = new System.Windows.Forms.Button();
-            this.cmdConsultarActividad = new System.Windows.Forms.Button();
-            this.columIDSocioCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columNomApellCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columDireccCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columBarrioCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columActivCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columTelefonoCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columFechaInscripCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columSaldoCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columIDSocioBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columNomApellBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columDireccionBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columBarrioBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columActividadBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columTelefonoBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columFechaInscripBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columSaldoBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columIDSocioAct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columNomApellAct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columDireccionAct = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -94,11 +92,15 @@
             this.columTelefonoAct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columFechaInscipAct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columSaldoAct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmdSalirActividad = new System.Windows.Forms.Button();
+            this.cmdConsultarActividad = new System.Windows.Forms.Button();
+            this.prtVentana = new System.Windows.Forms.PrintDialog();
+            this.prtDocument = new System.Drawing.Printing.PrintDocument();
             this.tabOpciones.SuspendLayout();
             this.tabClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaClientes)).BeginInit();
             this.tabBarrio.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GrillaBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrillaBarrio)).BeginInit();
             this.tabActividad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaActividad)).BeginInit();
             this.SuspendLayout();
@@ -182,8 +184,73 @@
             this.GrillaClientes.Size = new System.Drawing.Size(755, 363);
             this.GrillaClientes.TabIndex = 38;
             // 
+            // columIDSocioCli
+            // 
+            this.columIDSocioCli.HeaderText = "ID Socio";
+            this.columIDSocioCli.MinimumWidth = 6;
+            this.columIDSocioCli.Name = "columIDSocioCli";
+            this.columIDSocioCli.ReadOnly = true;
+            this.columIDSocioCli.Width = 125;
+            // 
+            // columNomApellCli
+            // 
+            this.columNomApellCli.HeaderText = "Nombre y Apellido";
+            this.columNomApellCli.MinimumWidth = 6;
+            this.columNomApellCli.Name = "columNomApellCli";
+            this.columNomApellCli.ReadOnly = true;
+            this.columNomApellCli.Width = 125;
+            // 
+            // columDireccCli
+            // 
+            this.columDireccCli.HeaderText = "Direccion";
+            this.columDireccCli.MinimumWidth = 6;
+            this.columDireccCli.Name = "columDireccCli";
+            this.columDireccCli.ReadOnly = true;
+            this.columDireccCli.Width = 125;
+            // 
+            // columBarrioCli
+            // 
+            this.columBarrioCli.HeaderText = "Barrio";
+            this.columBarrioCli.MinimumWidth = 6;
+            this.columBarrioCli.Name = "columBarrioCli";
+            this.columBarrioCli.ReadOnly = true;
+            this.columBarrioCli.Width = 125;
+            // 
+            // columActivCli
+            // 
+            this.columActivCli.HeaderText = "Actividad";
+            this.columActivCli.MinimumWidth = 6;
+            this.columActivCli.Name = "columActivCli";
+            this.columActivCli.ReadOnly = true;
+            this.columActivCli.Width = 125;
+            // 
+            // columTelefonoCli
+            // 
+            this.columTelefonoCli.HeaderText = "Telefono";
+            this.columTelefonoCli.MinimumWidth = 6;
+            this.columTelefonoCli.Name = "columTelefonoCli";
+            this.columTelefonoCli.ReadOnly = true;
+            this.columTelefonoCli.Width = 125;
+            // 
+            // columFechaInscripCli
+            // 
+            this.columFechaInscripCli.HeaderText = "Fecha de Inscripcion";
+            this.columFechaInscripCli.MinimumWidth = 6;
+            this.columFechaInscripCli.Name = "columFechaInscripCli";
+            this.columFechaInscripCli.ReadOnly = true;
+            this.columFechaInscripCli.Width = 125;
+            // 
+            // columSaldoCli
+            // 
+            this.columSaldoCli.HeaderText = "Saldo";
+            this.columSaldoCli.MinimumWidth = 6;
+            this.columSaldoCli.Name = "columSaldoCli";
+            this.columSaldoCli.ReadOnly = true;
+            this.columSaldoCli.Width = 125;
+            // 
             // cmdImprimirCli
             // 
+            this.cmdImprimirCli.Enabled = false;
             this.cmdImprimirCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdImprimirCli.Location = new System.Drawing.Point(8, 374);
             this.cmdImprimirCli.Name = "cmdImprimirCli";
@@ -191,9 +258,11 @@
             this.cmdImprimirCli.TabIndex = 35;
             this.cmdImprimirCli.Text = "Imprimir";
             this.cmdImprimirCli.UseVisualStyleBackColor = true;
+            this.cmdImprimirCli.Click += new System.EventHandler(this.cmdImprimirCli_Click);
             // 
             // cmdExportarCli
             // 
+            this.cmdExportarCli.Enabled = false;
             this.cmdExportarCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdExportarCli.Location = new System.Drawing.Point(294, 374);
             this.cmdExportarCli.Name = "cmdExportarCli";
@@ -276,7 +345,7 @@
             // 
             this.tabBarrio.Controls.Add(this.cmdImprimirBar);
             this.tabBarrio.Controls.Add(this.cmdExportarBar);
-            this.tabBarrio.Controls.Add(this.GrillaBar);
+            this.tabBarrio.Controls.Add(this.GrillaBarrio);
             this.tabBarrio.Controls.Add(this.lblBarrio);
             this.tabBarrio.Controls.Add(this.lstBarrio);
             this.tabBarrio.Controls.Add(this.lblCantClienBar);
@@ -305,6 +374,7 @@
             this.cmdImprimirBar.TabIndex = 40;
             this.cmdImprimirBar.Text = "Imprimir";
             this.cmdImprimirBar.UseVisualStyleBackColor = true;
+            this.cmdImprimirBar.Click += new System.EventHandler(this.cmdImprimirBar_Click);
             // 
             // cmdExportarBar
             // 
@@ -317,10 +387,10 @@
             this.cmdExportarBar.UseVisualStyleBackColor = true;
             this.cmdExportarBar.Click += new System.EventHandler(this.cmdExportarBar_Click);
             // 
-            // GrillaBar
+            // GrillaBarrio
             // 
-            this.GrillaBar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GrillaBar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.GrillaBarrio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GrillaBarrio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.columIDSocioBar,
             this.columNomApellBar,
             this.columDireccionBar,
@@ -329,14 +399,78 @@
             this.columTelefonoBar,
             this.columFechaInscripBar,
             this.columSaldoBar});
-            this.GrillaBar.Location = new System.Drawing.Point(0, 57);
-            this.GrillaBar.Margin = new System.Windows.Forms.Padding(4);
-            this.GrillaBar.Name = "GrillaBar";
-            this.GrillaBar.ReadOnly = true;
-            this.GrillaBar.RowHeadersVisible = false;
-            this.GrillaBar.RowHeadersWidth = 51;
-            this.GrillaBar.Size = new System.Drawing.Size(755, 306);
-            this.GrillaBar.TabIndex = 37;
+            this.GrillaBarrio.Location = new System.Drawing.Point(0, 57);
+            this.GrillaBarrio.Margin = new System.Windows.Forms.Padding(4);
+            this.GrillaBarrio.Name = "GrillaBarrio";
+            this.GrillaBarrio.ReadOnly = true;
+            this.GrillaBarrio.RowHeadersVisible = false;
+            this.GrillaBarrio.RowHeadersWidth = 51;
+            this.GrillaBarrio.Size = new System.Drawing.Size(755, 306);
+            this.GrillaBarrio.TabIndex = 37;
+            // 
+            // columIDSocioBar
+            // 
+            this.columIDSocioBar.HeaderText = "ID Socio";
+            this.columIDSocioBar.MinimumWidth = 6;
+            this.columIDSocioBar.Name = "columIDSocioBar";
+            this.columIDSocioBar.ReadOnly = true;
+            this.columIDSocioBar.Width = 125;
+            // 
+            // columNomApellBar
+            // 
+            this.columNomApellBar.HeaderText = "Nombre y Apellido";
+            this.columNomApellBar.MinimumWidth = 6;
+            this.columNomApellBar.Name = "columNomApellBar";
+            this.columNomApellBar.ReadOnly = true;
+            this.columNomApellBar.Width = 125;
+            // 
+            // columDireccionBar
+            // 
+            this.columDireccionBar.HeaderText = "Direccion";
+            this.columDireccionBar.MinimumWidth = 6;
+            this.columDireccionBar.Name = "columDireccionBar";
+            this.columDireccionBar.ReadOnly = true;
+            this.columDireccionBar.Width = 125;
+            // 
+            // columBarrioBar
+            // 
+            this.columBarrioBar.HeaderText = "Barrio";
+            this.columBarrioBar.MinimumWidth = 6;
+            this.columBarrioBar.Name = "columBarrioBar";
+            this.columBarrioBar.ReadOnly = true;
+            this.columBarrioBar.Width = 125;
+            // 
+            // columActividadBar
+            // 
+            this.columActividadBar.HeaderText = "Actividad";
+            this.columActividadBar.MinimumWidth = 6;
+            this.columActividadBar.Name = "columActividadBar";
+            this.columActividadBar.ReadOnly = true;
+            this.columActividadBar.Width = 125;
+            // 
+            // columTelefonoBar
+            // 
+            this.columTelefonoBar.HeaderText = "Telefono";
+            this.columTelefonoBar.MinimumWidth = 6;
+            this.columTelefonoBar.Name = "columTelefonoBar";
+            this.columTelefonoBar.ReadOnly = true;
+            this.columTelefonoBar.Width = 125;
+            // 
+            // columFechaInscripBar
+            // 
+            this.columFechaInscripBar.HeaderText = "Fecha de Inscripcion";
+            this.columFechaInscripBar.MinimumWidth = 6;
+            this.columFechaInscripBar.Name = "columFechaInscripBar";
+            this.columFechaInscripBar.ReadOnly = true;
+            this.columFechaInscripBar.Width = 125;
+            // 
+            // columSaldoBar
+            // 
+            this.columSaldoBar.HeaderText = "Saldo";
+            this.columSaldoBar.MinimumWidth = 6;
+            this.columSaldoBar.Name = "columSaldoBar";
+            this.columSaldoBar.ReadOnly = true;
+            this.columSaldoBar.Width = 125;
             // 
             // lblBarrio
             // 
@@ -607,158 +741,6 @@
             this.GrillaActividad.Size = new System.Drawing.Size(755, 306);
             this.GrillaActividad.TabIndex = 6;
             // 
-            // cmdSalirActividad
-            // 
-            this.cmdSalirActividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdSalirActividad.Location = new System.Drawing.Point(452, 475);
-            this.cmdSalirActividad.Margin = new System.Windows.Forms.Padding(4);
-            this.cmdSalirActividad.Name = "cmdSalirActividad";
-            this.cmdSalirActividad.Size = new System.Drawing.Size(115, 33);
-            this.cmdSalirActividad.TabIndex = 8;
-            this.cmdSalirActividad.Text = "Salir";
-            this.cmdSalirActividad.UseVisualStyleBackColor = true;
-            this.cmdSalirActividad.Click += new System.EventHandler(this.cmdSalirActividad_Click);
-            // 
-            // cmdConsultarActividad
-            // 
-            this.cmdConsultarActividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdConsultarActividad.Location = new System.Drawing.Point(640, 475);
-            this.cmdConsultarActividad.Margin = new System.Windows.Forms.Padding(4);
-            this.cmdConsultarActividad.Name = "cmdConsultarActividad";
-            this.cmdConsultarActividad.Size = new System.Drawing.Size(115, 33);
-            this.cmdConsultarActividad.TabIndex = 7;
-            this.cmdConsultarActividad.Text = "Consultar";
-            this.cmdConsultarActividad.UseVisualStyleBackColor = true;
-            this.cmdConsultarActividad.Click += new System.EventHandler(this.cmdConsultarActividad_Click);
-            // 
-            // columIDSocioCli
-            // 
-            this.columIDSocioCli.HeaderText = "ID Socio";
-            this.columIDSocioCli.MinimumWidth = 6;
-            this.columIDSocioCli.Name = "columIDSocioCli";
-            this.columIDSocioCli.ReadOnly = true;
-            this.columIDSocioCli.Width = 125;
-            // 
-            // columNomApellCli
-            // 
-            this.columNomApellCli.HeaderText = "Nombre y Apellido";
-            this.columNomApellCli.MinimumWidth = 6;
-            this.columNomApellCli.Name = "columNomApellCli";
-            this.columNomApellCli.ReadOnly = true;
-            this.columNomApellCli.Width = 125;
-            // 
-            // columDireccCli
-            // 
-            this.columDireccCli.HeaderText = "Direccion";
-            this.columDireccCli.MinimumWidth = 6;
-            this.columDireccCli.Name = "columDireccCli";
-            this.columDireccCli.ReadOnly = true;
-            this.columDireccCli.Width = 125;
-            // 
-            // columBarrioCli
-            // 
-            this.columBarrioCli.HeaderText = "Barrio";
-            this.columBarrioCli.MinimumWidth = 6;
-            this.columBarrioCli.Name = "columBarrioCli";
-            this.columBarrioCli.ReadOnly = true;
-            this.columBarrioCli.Width = 125;
-            // 
-            // columActivCli
-            // 
-            this.columActivCli.HeaderText = "Actividad";
-            this.columActivCli.MinimumWidth = 6;
-            this.columActivCli.Name = "columActivCli";
-            this.columActivCli.ReadOnly = true;
-            this.columActivCli.Width = 125;
-            // 
-            // columTelefonoCli
-            // 
-            this.columTelefonoCli.HeaderText = "Telefono";
-            this.columTelefonoCli.MinimumWidth = 6;
-            this.columTelefonoCli.Name = "columTelefonoCli";
-            this.columTelefonoCli.ReadOnly = true;
-            this.columTelefonoCli.Width = 125;
-            // 
-            // columFechaInscripCli
-            // 
-            this.columFechaInscripCli.HeaderText = "Fecha de Inscripcion";
-            this.columFechaInscripCli.MinimumWidth = 6;
-            this.columFechaInscripCli.Name = "columFechaInscripCli";
-            this.columFechaInscripCli.ReadOnly = true;
-            this.columFechaInscripCli.Width = 125;
-            // 
-            // columSaldoCli
-            // 
-            this.columSaldoCli.HeaderText = "Saldo";
-            this.columSaldoCli.MinimumWidth = 6;
-            this.columSaldoCli.Name = "columSaldoCli";
-            this.columSaldoCli.ReadOnly = true;
-            this.columSaldoCli.Width = 125;
-            // 
-            // columIDSocioBar
-            // 
-            this.columIDSocioBar.HeaderText = "ID Socio";
-            this.columIDSocioBar.MinimumWidth = 6;
-            this.columIDSocioBar.Name = "columIDSocioBar";
-            this.columIDSocioBar.ReadOnly = true;
-            this.columIDSocioBar.Width = 125;
-            // 
-            // columNomApellBar
-            // 
-            this.columNomApellBar.HeaderText = "Nombre y Apellido";
-            this.columNomApellBar.MinimumWidth = 6;
-            this.columNomApellBar.Name = "columNomApellBar";
-            this.columNomApellBar.ReadOnly = true;
-            this.columNomApellBar.Width = 125;
-            // 
-            // columDireccionBar
-            // 
-            this.columDireccionBar.HeaderText = "Direccion";
-            this.columDireccionBar.MinimumWidth = 6;
-            this.columDireccionBar.Name = "columDireccionBar";
-            this.columDireccionBar.ReadOnly = true;
-            this.columDireccionBar.Width = 125;
-            // 
-            // columBarrioBar
-            // 
-            this.columBarrioBar.HeaderText = "Barrio";
-            this.columBarrioBar.MinimumWidth = 6;
-            this.columBarrioBar.Name = "columBarrioBar";
-            this.columBarrioBar.ReadOnly = true;
-            this.columBarrioBar.Width = 125;
-            // 
-            // columActividadBar
-            // 
-            this.columActividadBar.HeaderText = "Actividad";
-            this.columActividadBar.MinimumWidth = 6;
-            this.columActividadBar.Name = "columActividadBar";
-            this.columActividadBar.ReadOnly = true;
-            this.columActividadBar.Width = 125;
-            // 
-            // columTelefonoBar
-            // 
-            this.columTelefonoBar.HeaderText = "Telefono";
-            this.columTelefonoBar.MinimumWidth = 6;
-            this.columTelefonoBar.Name = "columTelefonoBar";
-            this.columTelefonoBar.ReadOnly = true;
-            this.columTelefonoBar.Width = 125;
-            // 
-            // columFechaInscripBar
-            // 
-            this.columFechaInscripBar.HeaderText = "Fecha de Inscripcion";
-            this.columFechaInscripBar.MinimumWidth = 6;
-            this.columFechaInscripBar.Name = "columFechaInscripBar";
-            this.columFechaInscripBar.ReadOnly = true;
-            this.columFechaInscripBar.Width = 125;
-            // 
-            // columSaldoBar
-            // 
-            this.columSaldoBar.HeaderText = "Saldo";
-            this.columSaldoBar.MinimumWidth = 6;
-            this.columSaldoBar.Name = "columSaldoBar";
-            this.columSaldoBar.ReadOnly = true;
-            this.columSaldoBar.Width = 125;
-            // 
             // columIDSocioAct
             // 
             this.columIDSocioAct.HeaderText = "ID Socio";
@@ -823,11 +805,43 @@
             this.columSaldoAct.ReadOnly = true;
             this.columSaldoAct.Width = 125;
             // 
+            // cmdSalirActividad
+            // 
+            this.cmdSalirActividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdSalirActividad.Location = new System.Drawing.Point(452, 475);
+            this.cmdSalirActividad.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdSalirActividad.Name = "cmdSalirActividad";
+            this.cmdSalirActividad.Size = new System.Drawing.Size(115, 33);
+            this.cmdSalirActividad.TabIndex = 8;
+            this.cmdSalirActividad.Text = "Salir";
+            this.cmdSalirActividad.UseVisualStyleBackColor = true;
+            this.cmdSalirActividad.Click += new System.EventHandler(this.cmdSalirActividad_Click);
+            // 
+            // cmdConsultarActividad
+            // 
+            this.cmdConsultarActividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdConsultarActividad.Location = new System.Drawing.Point(640, 475);
+            this.cmdConsultarActividad.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdConsultarActividad.Name = "cmdConsultarActividad";
+            this.cmdConsultarActividad.Size = new System.Drawing.Size(115, 33);
+            this.cmdConsultarActividad.TabIndex = 7;
+            this.cmdConsultarActividad.Text = "Consultar";
+            this.cmdConsultarActividad.UseVisualStyleBackColor = true;
+            this.cmdConsultarActividad.Click += new System.EventHandler(this.cmdConsultarActividad_Click);
+            // 
+            // prtVentana
+            // 
+            this.prtVentana.UseEXDialog = true;
+            // 
+            // prtDocument
+            // 
+            this.prtDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.prtDocument_PrintPage);
+            // 
             // frmListadoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(767, 546);
+            this.ClientSize = new System.Drawing.Size(767, 545);
             this.Controls.Add(this.tabOpciones);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -841,7 +855,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.GrillaClientes)).EndInit();
             this.tabBarrio.ResumeLayout(false);
             this.tabBarrio.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GrillaBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrillaBarrio)).EndInit();
             this.tabActividad.ResumeLayout(false);
             this.tabActividad.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaActividad)).EndInit();
@@ -883,7 +897,7 @@
         private System.Windows.Forms.ComboBox lstBarrio;
         private System.Windows.Forms.Label lblActividad;
         private System.Windows.Forms.ComboBox lstActividad;
-        private System.Windows.Forms.DataGridView GrillaBar;
+        private System.Windows.Forms.DataGridView GrillaBarrio;
         private System.Windows.Forms.Button cmdImprimirCli;
         private System.Windows.Forms.Button cmdExportarCli;
         private System.Windows.Forms.Button cmdImprimirBar;
@@ -915,5 +929,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columTelefonoAct;
         private System.Windows.Forms.DataGridViewTextBoxColumn columFechaInscipAct;
         private System.Windows.Forms.DataGridViewTextBoxColumn columSaldoAct;
+        private System.Windows.Forms.PrintDialog prtVentana;
+        private System.Drawing.Printing.PrintDocument prtDocument;
     }
 }

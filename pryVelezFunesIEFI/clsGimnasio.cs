@@ -9,6 +9,9 @@ using System.Data.OleDb;
 using System.Windows.Forms;
 //Agrego system para usar el streamwriter
 using System.IO;
+//Agrego system para el procedimiento Imprimir
+using System.Drawing;
+using System.Drawing.Printing;
 namespace pryVelezFunesIEFI
 {
     internal class clsGimnasio
@@ -503,6 +506,174 @@ namespace pryVelezFunesIEFI
             catch (Exception)
             {
                 MessageBox.Show("Tus datos no han podido ser exportados.");
+            }
+        }
+        public void ImprimirCli(PrintPageEventArgs reporte)
+        {
+            try
+            {
+                Font TipoLetra = new Font("Arial", 8);
+                Font TipoLTitulo = new Font("Arial", 10);
+                Font TipoLTituloPrin = new Font("Arial", 20);
+                Int32 LineaPag = 150;
+                reporte.Graphics.DrawString("Listado de Clientes", TipoLTituloPrin, Brushes.Black, 280, 50);
+                reporte.Graphics.DrawString("ID Socio", TipoLTitulo, Brushes.DarkBlue, 30, 125);
+                reporte.Graphics.DrawString("Nombre y Apellido", TipoLTitulo, Brushes.DarkBlue, 100, 125);
+                reporte.Graphics.DrawString("Dirección", TipoLTitulo, Brushes.DarkBlue, 240, 125);
+                reporte.Graphics.DrawString("Barrio", TipoLTitulo, Brushes.DarkBlue, 390, 125);
+                reporte.Graphics.DrawString("Actividad", TipoLTitulo, Brushes.DarkBlue, 525, 125);
+                reporte.Graphics.DrawString("Teléfono", TipoLTitulo, Brushes.DarkBlue, 625, 125);
+                reporte.Graphics.DrawString("Inscripción", TipoLTitulo, Brushes.DarkBlue, 690, 125);
+                reporte.Graphics.DrawString("Saldo", TipoLTitulo, Brushes.DarkBlue, 765, 125);
+                Conexion.ConnectionString = Ruta;
+                Conexion.Open();
+                Comando.Connection = Conexion;
+                Comando.CommandType = CommandType.TableDirect;
+                Comando.CommandText = Tabla;
+                OleDbDataReader Lector = Comando.ExecuteReader();
+                if (Lector.HasRows)
+                {
+                    while (Lector.Read())
+                    {
+                        Int32 codBarrio = Lector.GetInt32(3);
+                        Int32 codAct = Lector.GetInt32(4);
+                        Int32 IDSOCIO = Lector.GetInt32(0);
+                        clsBarrio BarrioConsulta = new clsBarrio();
+                        BarrioConsulta.BuscarBarrio(codBarrio);
+                        clsActividad ActConsulta = new clsActividad();
+                        ActConsulta.BuscarActividad(codAct);
+                        clsInscripcion InfoClienteIns = new clsInscripcion();
+                        InfoClienteIns.Buscar(IDSOCIO);
+                        reporte.Graphics.DrawString(Lector.GetInt32(0).ToString(), TipoLetra, Brushes.Black, 30, LineaPag);
+                        reporte.Graphics.DrawString(Lector.GetString(1), TipoLetra, Brushes.Black, 100, LineaPag); 
+                        reporte.Graphics.DrawString(Lector.GetString(2), TipoLetra, Brushes.Black, 240, LineaPag); 
+                        reporte.Graphics.DrawString(BarrioConsulta.NomBarrio.ToString(), TipoLetra, Brushes.Black, 390, LineaPag); 
+                        reporte.Graphics.DrawString(ActConsulta.NomActividad.ToString(), TipoLetra, Brushes.Black, 525, LineaPag);
+                        reporte.Graphics.DrawString(Lector.GetInt32(5).ToString(), TipoLetra, Brushes.Black, 625, LineaPag);
+                        reporte.Graphics.DrawString(InfoClienteIns.Fecha_Inscripcion.ToString(), TipoLetra, Brushes.Black, 690, LineaPag);
+                        reporte.Graphics.DrawString(InfoClienteIns.SaldoSocio.ToString(), TipoLetra, Brushes.Black, 765 , LineaPag);
+                        LineaPag = LineaPag + 15;
+                    }
+                }
+                Conexion.Close();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+        }
+        public void ImprimirBar(PrintPageEventArgs reporte, Int32 CodBarrio)
+        {
+            try
+            {
+                Font TipoLetra = new Font("Arial", 8);
+                Font TipoLTitulo = new Font("Arial", 10);
+                Font TipoLTituloPrin = new Font("Arial", 20);
+                Int32 LineaPag = 150;
+                reporte.Graphics.DrawString("Listado de Clientes", TipoLTituloPrin, Brushes.Black, 280, 50);
+                reporte.Graphics.DrawString("ID Socio", TipoLTitulo, Brushes.DarkBlue, 30, 125);
+                reporte.Graphics.DrawString("Nombre y Apellido", TipoLTitulo, Brushes.DarkBlue, 100, 125);
+                reporte.Graphics.DrawString("Dirección", TipoLTitulo, Brushes.DarkBlue, 240, 125);
+                reporte.Graphics.DrawString("Barrio", TipoLTitulo, Brushes.DarkBlue, 390, 125);
+                reporte.Graphics.DrawString("Actividad", TipoLTitulo, Brushes.DarkBlue, 525, 125);
+                reporte.Graphics.DrawString("Teléfono", TipoLTitulo, Brushes.DarkBlue, 625, 125);
+                reporte.Graphics.DrawString("Inscripción", TipoLTitulo, Brushes.DarkBlue, 690, 125);
+                reporte.Graphics.DrawString("Saldo", TipoLTitulo, Brushes.DarkBlue, 765, 125);
+                Conexion.ConnectionString = Ruta;
+                Conexion.Open();
+                Comando.Connection = Conexion;
+                Comando.CommandType = CommandType.TableDirect;
+                Comando.CommandText = Tabla;
+                OleDbDataReader Lector = Comando.ExecuteReader();
+                if (Lector.HasRows)
+                {
+                    while (Lector.Read())
+                    {
+                        if (Lector.GetInt32(3) == CodBarrio)
+                        {
+                            Int32 codBarrio = Lector.GetInt32(3);
+                            Int32 codAct = Lector.GetInt32(4);
+                            Int32 IDSOCIO = Lector.GetInt32(0);
+                            clsBarrio BarrioConsulta = new clsBarrio();
+                            BarrioConsulta.BuscarBarrio(codBarrio);
+                            clsActividad ActConsulta = new clsActividad();
+                            ActConsulta.BuscarActividad(codAct);
+                            clsInscripcion InfoClienteIns = new clsInscripcion();
+                            InfoClienteIns.Buscar(IDSOCIO);
+                            reporte.Graphics.DrawString(Lector.GetInt32(0).ToString(), TipoLetra, Brushes.Black, 30, LineaPag);
+                            reporte.Graphics.DrawString(Lector.GetString(1), TipoLetra, Brushes.Black, 100, LineaPag);
+                            reporte.Graphics.DrawString(Lector.GetString(2), TipoLetra, Brushes.Black, 240, LineaPag);
+                            reporte.Graphics.DrawString(BarrioConsulta.NomBarrio.ToString(), TipoLetra, Brushes.Black, 390, LineaPag);
+                            reporte.Graphics.DrawString(ActConsulta.NomActividad.ToString(), TipoLetra, Brushes.Black, 525, LineaPag);
+                            reporte.Graphics.DrawString(Lector.GetInt32(5).ToString(), TipoLetra, Brushes.Black, 625, LineaPag);
+                            reporte.Graphics.DrawString(InfoClienteIns.Fecha_Inscripcion.ToString(), TipoLetra, Brushes.Black, 690, LineaPag);
+                            reporte.Graphics.DrawString(InfoClienteIns.SaldoSocio.ToString(), TipoLetra, Brushes.Black, 765, LineaPag);
+                            LineaPag = LineaPag + 15;
+                        }
+                    }
+                }
+                Conexion.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+        }
+        public void ImprimirAct(PrintPageEventArgs reporte,Int32 CodActividad)
+        {
+            try
+            {
+                Font TipoLetra = new Font("Arial", 8);
+                Font TipoLTitulo = new Font("Arial", 10);
+                Font TipoLTituloPrin = new Font("Arial", 20);
+                Int32 LineaPag = 150;
+                reporte.Graphics.DrawString("Listado de Clientes", TipoLTituloPrin, Brushes.Black, 280, 50);
+                reporte.Graphics.DrawString("ID Socio", TipoLTitulo, Brushes.DarkBlue, 30, 125);
+                reporte.Graphics.DrawString("Nombre y Apellido", TipoLTitulo, Brushes.DarkBlue, 100, 125);
+                reporte.Graphics.DrawString("Dirección", TipoLTitulo, Brushes.DarkBlue, 240, 125);
+                reporte.Graphics.DrawString("Barrio", TipoLTitulo, Brushes.DarkBlue, 390, 125);
+                reporte.Graphics.DrawString("Actividad", TipoLTitulo, Brushes.DarkBlue, 525, 125);
+                reporte.Graphics.DrawString("Teléfono", TipoLTitulo, Brushes.DarkBlue, 625, 125);
+                reporte.Graphics.DrawString("Inscripción", TipoLTitulo, Brushes.DarkBlue, 690, 125);
+                reporte.Graphics.DrawString("Saldo", TipoLTitulo, Brushes.DarkBlue, 765, 125);
+                Conexion.ConnectionString = Ruta;
+                Conexion.Open();
+                Comando.Connection = Conexion;
+                Comando.CommandType = CommandType.TableDirect;
+                Comando.CommandText = Tabla;
+                OleDbDataReader Lector = Comando.ExecuteReader();
+                if (Lector.HasRows)
+                {
+                    while (Lector.Read())
+                    {
+                        if (Lector.GetInt32(4) == CodActividad)
+                        {
+                            Int32 codBarrio = Lector.GetInt32(3);
+                            Int32 codAct = Lector.GetInt32(4);
+                            Int32 IDSOCIO = Lector.GetInt32(0);
+                            clsBarrio BarrioConsulta = new clsBarrio();
+                            BarrioConsulta.BuscarBarrio(codBarrio);
+                            clsActividad ActConsulta = new clsActividad();
+                            ActConsulta.BuscarActividad(codAct);
+                            clsInscripcion InfoClienteIns = new clsInscripcion();
+                            InfoClienteIns.Buscar(IDSOCIO);
+                            reporte.Graphics.DrawString(Lector.GetInt32(0).ToString(), TipoLetra, Brushes.Black, 30, LineaPag);
+                            reporte.Graphics.DrawString(Lector.GetString(1), TipoLetra, Brushes.Black, 100, LineaPag);
+                            reporte.Graphics.DrawString(Lector.GetString(2), TipoLetra, Brushes.Black, 240, LineaPag);
+                            reporte.Graphics.DrawString(BarrioConsulta.NomBarrio.ToString(), TipoLetra, Brushes.Black, 390, LineaPag);
+                            reporte.Graphics.DrawString(ActConsulta.NomActividad.ToString(), TipoLetra, Brushes.Black, 525, LineaPag);
+                            reporte.Graphics.DrawString(Lector.GetInt32(5).ToString(), TipoLetra, Brushes.Black, 625, LineaPag);
+                            reporte.Graphics.DrawString(InfoClienteIns.Fecha_Inscripcion.ToString(), TipoLetra, Brushes.Black, 690, LineaPag);
+                            reporte.Graphics.DrawString(InfoClienteIns.SaldoSocio.ToString(), TipoLetra, Brushes.Black, 765, LineaPag);
+                            LineaPag = LineaPag + 15;
+                        }
+                    }
+                }
+                Conexion.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
             }
         }
     }

@@ -12,6 +12,12 @@ namespace pryVelezFunesIEFI
 {
     public partial class frmListadoClientes : Form
     {
+        //Creo variables para verificar en que sector del formulario se quiere imprimir
+        bool VarImprimirCliente = false;
+        bool VarImprimirBarrio = false;
+        bool VarImprimirActividad = false;
+
+
         public frmListadoClientes()
         {
             InitializeComponent();
@@ -27,6 +33,8 @@ namespace pryVelezFunesIEFI
         }
         private void cmdConsultarActividad_Click(object sender, EventArgs e)
         {
+            cmdExportarAct.Enabled = true;
+            cmdImprimirAct.Enabled = true;
             Int32 codActividad = Convert.ToInt32(lstActividad.SelectedValue);
             clsGimnasio ConsultaAct = new clsGimnasio();
             ConsultaAct.ListarGrillaAct(GrillaActividad, codActividad);
@@ -45,13 +53,7 @@ namespace pryVelezFunesIEFI
             else
             {
                 cmdConsultarActividad.Enabled = true;
-                cmdExportarAct.Enabled = true;
-                cmdImprimirAct.Enabled = true;
             }
-        }
-        private void cmdImprimirAct_Click(object sender, EventArgs e)
-        {
-
         }
         private void cmdExportarAct_Click(object sender, EventArgs e)
         {
@@ -61,9 +63,11 @@ namespace pryVelezFunesIEFI
         }
         private void cmdConsultaBarrio_Click(object sender, EventArgs e)
         {
+            cmdImprimirBar.Enabled = true;
+            cmdExportarBar.Enabled = true;
             Int32 codBarrio = Convert.ToInt32(lstBarrio.SelectedValue);
             clsGimnasio ConsultaAct = new clsGimnasio();
-            ConsultaAct.ListarGrillaBar(GrillaBar, codBarrio);
+            ConsultaAct.ListarGrillaBar(GrillaBarrio, codBarrio);
             lblCantClienBar.Text = Convert.ToString(ConsultaAct.VarCantCliente);
             lblTotalIngresosBar.Text = Convert.ToString(ConsultaAct.VarTotalIngreso);
             lblPromedioBar.Text = Convert.ToString(((short)ConsultaAct.VarPromedio));
@@ -79,12 +83,12 @@ namespace pryVelezFunesIEFI
             else
             {
                 cmdConsultaBarrio.Enabled = true;
-                cmdImprimirBar.Enabled = true;
-                cmdExportarBar.Enabled = true;
             }
         }
         private void cmdConsultarCliente_Click(object sender, EventArgs e)
         {
+            cmdExportarCli.Enabled = true;
+            cmdImprimirCli.Enabled = true;
             clsGimnasio ConsultaCli = new clsGimnasio();
             ConsultaCli.ListarGrillaClie(GrillaClientes);
             lblCantClienteCli.Text = Convert.ToString(ConsultaCli.VarCantCliente);
@@ -114,6 +118,51 @@ namespace pryVelezFunesIEFI
         {
             clsGimnasio ExportarClientes = new clsGimnasio();
             ExportarClientes.ExportarClientes();
+        }
+        private void cmdImprimirAct_Click(object sender, EventArgs e)
+        {
+            VarImprimirActividad = true;
+            prtVentana.ShowDialog();
+            prtDocument.PrinterSettings = prtVentana.PrinterSettings;
+            prtDocument.Print();
+            this.Focus();
+        }
+        private void cmdImprimirCli_Click(object sender, EventArgs e)
+        {
+            VarImprimirCliente = true;
+            prtVentana.ShowDialog();
+            prtDocument.PrinterSettings = prtVentana.PrinterSettings;
+            prtDocument.Print();
+            this.Focus();
+        }
+        private void prtDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs pag)
+        {
+            clsGimnasio objGimnasio = new clsGimnasio();
+            if (VarImprimirCliente == true)
+            {
+                objGimnasio.ImprimirCli(pag);
+                VarImprimirCliente = false;
+            }
+            if(VarImprimirBarrio == true)
+            {
+                Int32 codBarrio = Convert.ToInt32( lstBarrio.SelectedValue);
+                objGimnasio.ImprimirBar(pag,codBarrio);
+                VarImprimirBarrio = false;
+            }
+            if (VarImprimirActividad == true)
+            {
+                Int32 codAct = Convert.ToInt32(lstActividad.SelectedValue);
+                objGimnasio.ImprimirAct(pag, codAct);
+                VarImprimirActividad = false;
+            }
+        }
+        private void cmdImprimirBar_Click(object sender, EventArgs pag)
+        {
+            VarImprimirBarrio = true;
+            prtVentana.ShowDialog();
+            prtDocument.PrinterSettings = prtVentana.PrinterSettings;
+            prtDocument.Print();
+            this.Focus();
         }
     }
 }

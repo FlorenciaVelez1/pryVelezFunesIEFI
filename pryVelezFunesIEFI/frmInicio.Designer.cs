@@ -38,9 +38,7 @@
             this.tsmBuscarCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmListado = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmClientes = new System.Windows.Forms.ToolStripMenuItem();
-            this.picFotoLogo = new System.Windows.Forms.PictureBox();
             this.msMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picFotoLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // msMenu
@@ -54,7 +52,7 @@
             this.msMenu.Location = new System.Drawing.Point(0, 0);
             this.msMenu.Name = "msMenu";
             this.msMenu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.msMenu.Size = new System.Drawing.Size(1057, 30);
+            this.msMenu.Size = new System.Drawing.Size(835, 28);
             this.msMenu.TabIndex = 0;
             this.msMenu.Text = "menuStrip1";
             // 
@@ -64,7 +62,7 @@
             this.tsmInformacion,
             this.tsmSalir});
             this.tsmSistemas.Name = "tsmSistemas";
-            this.tsmSistemas.Size = new System.Drawing.Size(81, 26);
+            this.tsmSistemas.Size = new System.Drawing.Size(81, 24);
             this.tsmSistemas.Text = "Sistemas";
             // 
             // tsmInformacion
@@ -87,7 +85,7 @@
             this.tsmRegistrarCliente,
             this.tsmBuscarCliente});
             this.tsmCliente.Name = "tsmCliente";
-            this.tsmCliente.Size = new System.Drawing.Size(75, 26);
+            this.tsmCliente.Size = new System.Drawing.Size(75, 24);
             this.tsmCliente.Text = "Clientes";
             // 
             // tsmRegistrarCliente
@@ -109,7 +107,7 @@
             this.tsmListado.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmClientes});
             this.tsmListado.Name = "tsmListado";
-            this.tsmListado.Size = new System.Drawing.Size(71, 26);
+            this.tsmListado.Size = new System.Drawing.Size(71, 24);
             this.tsmListado.Text = "Listado";
             // 
             // tsmClientes
@@ -119,22 +117,12 @@
             this.tsmClientes.Text = "Clientes";
             this.tsmClientes.Click += new System.EventHandler(this.tsmClientes_Click);
             // 
-            // picFotoLogo
-            // 
-            this.picFotoLogo.Image = ((System.Drawing.Image)(resources.GetObject("picFotoLogo.Image")));
-            this.picFotoLogo.Location = new System.Drawing.Point(0, 31);
-            this.picFotoLogo.Name = "picFotoLogo";
-            this.picFotoLogo.Size = new System.Drawing.Size(1057, 583);
-            this.picFotoLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picFotoLogo.TabIndex = 1;
-            this.picFotoLogo.TabStop = false;
-            // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1057, 626);
-            this.Controls.Add(this.picFotoLogo);
+            this.BackgroundImage = global::pryVelezFunesIEFI.Properties.Resources.gimfondo;
+            this.ClientSize = new System.Drawing.Size(835, 626);
             this.Controls.Add(this.msMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
@@ -144,7 +132,6 @@
             this.Text = "Pagina Principal";
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picFotoLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,7 +148,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmSalir;
         private System.Windows.Forms.ToolStripMenuItem tsmListado;
         private System.Windows.Forms.ToolStripMenuItem tsmClientes;
-        private System.Windows.Forms.PictureBox picFotoLogo;
     }
 }
 

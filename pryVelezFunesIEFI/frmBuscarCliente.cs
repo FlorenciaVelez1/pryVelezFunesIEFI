@@ -99,6 +99,7 @@ namespace pryVelezFunesIEFI
             CompletarLstAct.LlenarLst(lstActividad);
             lstBarrio.SelectedIndex = -1;
             lstActividad.SelectedIndex = -1;
+            dtpFecha.Value = DateTime.Now;
         }
         private void cmdModificar_Click(object sender, EventArgs e)
         {

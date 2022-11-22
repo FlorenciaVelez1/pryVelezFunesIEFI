@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarBarrio));
             this.lblAgregarBarrio = new System.Windows.Forms.Label();
             this.txtAgregarBarrio = new System.Windows.Forms.TextBox();
             this.cmdAgregar = new System.Windows.Forms.Button();
@@ -89,6 +90,7 @@
             this.Controls.Add(this.cmdAgregar);
             this.Controls.Add(this.txtAgregarBarrio);
             this.Controls.Add(this.lblAgregarBarrio);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmAgregarBarrio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

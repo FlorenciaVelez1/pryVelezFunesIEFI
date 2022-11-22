@@ -63,6 +63,16 @@ namespace pryVelezFunesIEFI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gimfondo {
+            get {
+                object obj = ResourceManager.GetObject("gimfondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_2 {
             get {
                 object obj = ResourceManager.GetObject("Logo 2", resourceCulture);
